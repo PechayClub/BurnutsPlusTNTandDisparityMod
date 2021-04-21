@@ -1,0 +1,39 @@
+{
+  "group": "tnt",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tnt:glue_block"
+    },
+    "2": {
+      "item": "tnt:glue_block"
+    },
+    "3": {
+      "item": "tnt:glue_block"
+    },
+    "4": {
+      "item": "tnt:renewable_energy_block"
+    },
+    "5": {
+      "item": "tnt:glue_block"
+    },
+    "6": {
+      "item": "tnt:glue_block"
+    },
+    "7": {
+      "item": "tnt:glue_block"
+    },
+    "8": {
+      "item": "tnt:glue_block"
+    }
+  },
+  "result": {
+    "item": "tnt:bbb_resistant_armor_armor_chestplate",
+    "count": 1
+  }
+}

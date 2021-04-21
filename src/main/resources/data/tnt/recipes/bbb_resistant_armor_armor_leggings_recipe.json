@@ -1,0 +1,36 @@
+{
+  "group": "tnt",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "tnt:glue_block"
+    },
+    "1": {
+      "item": "tnt:renewable_energy_block"
+    },
+    "2": {
+      "item": "tnt:glue_block"
+    },
+    "3": {
+      "item": "tnt:glue_block"
+    },
+    "5": {
+      "item": "tnt:glue_block"
+    },
+    "6": {
+      "item": "tnt:glue_block"
+    },
+    "8": {
+      "item": "tnt:glue_block"
+    }
+  },
+  "result": {
+    "item": "tnt:bbb_resistant_armor_armor_leggings",
+    "count": 1
+  }
+}

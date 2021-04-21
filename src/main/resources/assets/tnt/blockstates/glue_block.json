@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tnt:block/glue_block"
+    }
+  }
+}

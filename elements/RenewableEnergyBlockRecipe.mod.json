@@ -1,0 +1,46 @@
+{
+  "_fv": 17,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "Blocks.COAL_BLOCK"
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:RenewableEnergyBlock"
+    },
+    "name": "renewable_energy_block_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "group": "tnt",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tnt:bbb"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:stone_button"
+    }
+  ],
+  "result": {
+    "item": "tnt:remote_bbb",
+    "count": 1
+  }
+}

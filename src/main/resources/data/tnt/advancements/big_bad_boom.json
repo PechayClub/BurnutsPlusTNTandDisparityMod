@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "tnt:bbb"
+    },
+    "title": {
+      "translate": "advancements.big_bad_boom.title"
+    },
+    "description": {
+      "translate": "advancements.big_bad_boom.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "big_bad_boom": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "tnt:remote_bbb"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "minecraft:story/root"
+}

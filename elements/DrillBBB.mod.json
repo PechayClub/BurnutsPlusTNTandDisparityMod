@@ -1,0 +1,42 @@
+{
+  "_fv": 17,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "drillbbb",
+    "customModelName": "Normal",
+    "name": "Drill BBB",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 0,
+    "efficiency": 80.0,
+    "attackSpeed": 8.0,
+    "enchantability": 0,
+    "damageVsEntity": 80.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "DrillBBBDig"
+    },
+    "onEntityHitWith": {
+      "name": "DrillBBBDig"
+    },
+    "onItemInInventoryTick": {
+      "name": "RemoteBBBParticle"
+    },
+    "onItemInUseTick": {
+      "name": "RemoteBBBParticle"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "DrillBBBDig"
+    }
+  }
+}

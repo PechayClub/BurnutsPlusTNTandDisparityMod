@@ -1,0 +1,26 @@
+{
+  "_fv": 17,
+  "_type": "fluid",
+  "definition": {
+    "name": "GlueWater",
+    "textureStill": "gluewater",
+    "textureFlowing": "gluewater",
+    "luminosity": 0,
+    "density": 100000,
+    "viscosity": 100000,
+    "isGas": false,
+    "type": "WATER",
+    "generateBucket": true,
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "frequencyOnChunks": 1,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": [],
+    "onTickUpdate": {
+      "name": "GlueWaterUpdateTick"
+    }
+  }
+}

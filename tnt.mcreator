@@ -1,0 +1,603 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "BBB",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bbb"
+    },
+    {
+      "name": "BBBExplode",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bbb_explode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RemoteBBBExplode",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remote_bbb_explode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RemoteBBB",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remote_bbb"
+    },
+    {
+      "name": "RemoteBBBParticle",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remote_bbb_particle",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BigBadBoom",
+      "type": "achievement",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "big_bad_boom"
+    },
+    {
+      "name": "ShootableBBB",
+      "type": "gun",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shootable_bbb"
+    },
+    {
+      "name": "BBBRecipe",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bbb_recipe"
+    },
+    {
+      "name": "RemoteBBBRecipe",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remote_bbb_recipe"
+    },
+    {
+      "name": "ShootableBBBRecipe",
+      "type": "recipe",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shootable_bbb_recipe"
+    },
+    {
+      "name": "BounceBlock",
+      "type": "block",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bounce_block"
+    },
+    {
+      "name": "BounceBlockRecipe",
+      "type": "recipe",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bounce_block_recipe"
+    },
+    {
+      "name": "RenewableEnergyBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "renewable_energy_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RenewableEnergyBlock",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "renewable_energy_block"
+    },
+    {
+      "name": "DrillBBBDig",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drill_bbb_dig",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DrillBBB",
+      "type": "tool",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drill_bbb"
+    },
+    {
+      "name": "DLKEntityDies",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DLK",
+      "type": "mob",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk"
+    },
+    {
+      "name": "DLKItIsStruckByLightning",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_it_is_struck_by_lightning",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GlueWater",
+      "type": "fluid",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glue_water"
+    },
+    {
+      "name": "Sticky",
+      "type": "achievement",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sticky"
+    },
+    {
+      "name": "GlueBlockBlockDestroyed",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glue_block_block_destroyed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GlueBlock",
+      "type": "block",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glue_block"
+    },
+    {
+      "name": "GlueWaterUpdateTick",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glue_water_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DLKForest",
+      "type": "biome",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_forest"
+    },
+    {
+      "name": "DLKLand",
+      "type": "dimension",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_land",
+      "metadata": {
+        "ep": true
+      }
+    },
+    {
+      "name": "DLKLandPortalFrame",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_land_portal_frame"
+    },
+    {
+      "name": "DrillBBBRecipe",
+      "type": "recipe",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drill_bbb_recipe"
+    },
+    {
+      "name": "DLKLandPortalFrameRecipe",
+      "type": "recipe",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_land_portal_frame_recipe"
+    },
+    {
+      "name": "DLKPortalIgniterLoot",
+      "type": "loottable",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_portal_igniter_loot"
+    },
+    {
+      "name": "Stickman",
+      "type": "mob",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stickman"
+    },
+    {
+      "name": "BBBResistantArmorArmor",
+      "type": "armor",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "bbb_resistant_armor_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "BBBResistantArmorArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bbb_resistant_armor_armor_helmet_recipe"
+    },
+    {
+      "name": "BBBResistantArmorArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bbb_resistant_armor_armor_body_recipe"
+    },
+    {
+      "name": "BBBResistantArmorArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bbb_resistant_armor_armor_leggings_recipe"
+    },
+    {
+      "name": "BBBResistantArmorArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bbb_resistant_armor_armor_boots_recipe"
+    },
+    {
+      "name": "RenewableEnergyBlockRecipe",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "renewable_energy_block_recipe"
+    },
+    {
+      "name": "StickmanShooter",
+      "type": "mob",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stickman_shooter"
+    },
+    {
+      "name": "StickShooter",
+      "type": "gun",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stick_shooter"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "entity.tnt.stickman_shooter": "Stickman Shooter",
+      "entity.tnt.stickman": "Stickman",
+      "advancements.big_bad_boom.title": "Big Bad Boom",
+      "item.tnt.stick_shooter": "Stick Shooter",
+      "item.tnt.stickman_spawn_egg": "Stickman Spawn Egg",
+      "advancements.big_bad_boom.descr": "Use a Remote BBB.",
+      "entity.tnt.dlk": "DLK",
+      "block.tnt.glue_block": "Glue Block",
+      "item.tnt.stickman_shooter_spawn_egg": "Stickman Shooter Spawn Egg",
+      "item.tnt.remote_bbb": "Remote BBB",
+      "block.tnt.renewable_energy_block": "Renewable Energy Block",
+      "item.tnt.bbb_resistant_armor_armor_chestplate": "BBB Resistant Armor Chestplate",
+      "item.tnt.glue_water_bucket": "GlueWater Bucket",
+      "item.tnt.dlk_spawn_egg": "DLK Spawn Egg",
+      "item.tnt.bbb_resistant_armor_armor_boots": "BBB Resistant Armor Boots",
+      "advancements.sticky.title": "Sticky",
+      "item.tnt.drill_bbb": "Drill BBB",
+      "item.tnt.bbb_resistant_armor_armor_helmet": "BBB Resistant Armor Helmet",
+      "item.tnt.bbb_resistant_armor_armor_leggings": "BBB Resistant Armor Leggings",
+      "advancements.sticky.descr": "It\u0027s glue.",
+      "block.tnt.bbb": "BBB",
+      "item.tnt.dlk_land": "DLK Land Portal Igniter",
+      "block.tnt.bounce_block": "Bounce Block",
+      "fluid.glue_water": "GlueWater",
+      "item.tnt.shootable_bbb": "Shootable BBB",
+      "block.tnt.dlk_land_portal_frame": "DLK Land Portal Frame",
+      "biome.tnt.dlk_forest": "DLK Forest"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "tnt",
+    "modName": "TNT",
+    "version": "1.0.0",
+    "author": "Admin, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "All Rights Reserved",
+    "disableForgeVersionCheck": false,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "mcreator_link"
+    ],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.tnt",
+    "lockBaseModFiles": true
+  },
+  "mcreatorVersion": 202100112313
+}

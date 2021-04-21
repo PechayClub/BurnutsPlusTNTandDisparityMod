@@ -1,0 +1,49 @@
+{
+  "_fv": 17,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "shootablebbb",
+    "customModelName": "Normal",
+    "name": "Shootable BBB",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "none",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 8.0,
+    "bulletDamage": 80.0,
+    "bulletKnockback": 80,
+    "bulletParticles": true,
+    "bulletIgnitesFire": true,
+    "bulletItemTexture": {
+      "value": "CUSTOM:RemoteBBB"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "RemoteBBBExplode"
+    },
+    "onBulletHitsPlayer": {
+      "name": "RemoteBBBExplode"
+    },
+    "onBulletHitsEntity": {
+      "name": "RemoteBBBExplode"
+    },
+    "onBulletFlyingTick": {
+      "name": "RemoteBBBParticle"
+    }
+  }
+}
