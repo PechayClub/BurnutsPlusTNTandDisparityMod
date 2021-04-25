@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="tnt"
-version="3.0.1"
+version="4.0.350-Alpha4"
 displayName="TNT"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
@@ -17,12 +17,6 @@ authors="Admin, MCreator"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.tnt]]
-    modId="forge"
-    mandatory=true
-    versionRange="[36.1.0]"
-    ordering="NONE"
-    side="BOTH"
 
 [[dependencies.tnt]]
     modId="mcreator_link"

@@ -582,11 +582,11 @@
   "workspaceSettings": {
     "modid": "tnt",
     "modName": "TNT",
-    "version": "3.0.1",
+    "version": "4.0.350-Alpha4",
     "author": "Admin, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
-    "disableForgeVersionCheck": false,
+    "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
@@ -597,7 +597,7 @@
     "currentGenerator": "forge-1.16.5",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.tnt",
-    "lockBaseModFiles": true
+    "lockBaseModFiles": false
   },
   "mcreatorVersion": 202100112313
 }
