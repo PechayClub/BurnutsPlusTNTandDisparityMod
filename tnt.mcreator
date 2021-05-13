@@ -540,12 +540,51 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "stick_shooter"
+    },
+    {
+      "name": "StickmanSpawnRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stickman_spawn_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StickmanSpawn",
+      "type": "item",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stickman_spawn"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.tnt.stickman_spawn": "Stickman Spawn",
       "entity.tnt.stickman_shooter": "Stickman Shooter",
       "entity.tnt.stickman": "Stickman",
       "advancements.big_bad_boom.title": "Big Bad Boom",
@@ -599,5 +638,5 @@
     "modElementsPackage": "net.mcreator.tnt",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100112313
+  "mcreatorVersion": 202100118117
 }

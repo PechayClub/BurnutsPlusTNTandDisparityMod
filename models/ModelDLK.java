@@ -1,5 +1,5 @@
-// Made with Blockbench 3.7.5
-// Exported for Minecraft version 1.15
+// Made with Blockbench 3.8.4
+// Exported for Minecraft version 1.15 - 1.16
 // Paste this class into your mod and generate all required imports
 
 public static class ModelDLK extends EntityModel<Entity> {
@@ -17,43 +17,44 @@ public static class ModelDLK extends EntityModel<Entity> {
 		textureHeight = 32;
 
 		body = new ModelRenderer(this);
-		body.setRotationPoint(0.0F, 0.0F, 0.0F);
-		body.setTextureOffset(16, 16).addBox(-4.0F, -2.0F, -2.0F, 8.0F, 12.0F, 4.0F, 2.0F, true);
+		body.setRotationPoint(0.0F, 12.0F, 0.0F);
+		body.setTextureOffset(16, 16).addBox(-4.0F, -14.0F, -2.0F, 8.0F, 12.0F, 4.0F, 2.0F, true);
 
 		leftArm = new ModelRenderer(this);
-		leftArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
+		leftArm.setRotationPoint(-6.0F, -12.0F, 0.0F);
 		body.addChild(leftArm);
-		leftArm.setTextureOffset(40, 16).addBox(-5.0F, -4.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.0F, false);
+		leftArm.setTextureOffset(40, 16).addBox(-4.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.0F, false);
 
 		head = new ModelRenderer(this);
-		head.setRotationPoint(0.0F, -2.0F, 0.0F);
+		head.setRotationPoint(0.0F, -16.0F, 0.0F);
 		body.addChild(head);
-		head.setTextureOffset(0, 0).addBox(-4.0F, -10.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, true);
+		head.setTextureOffset(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, true);
 
 		rightArm = new ModelRenderer(this);
-		rightArm.setRotationPoint(5.0F, 2.0F, 0.0F);
+		rightArm.setRotationPoint(6.0F, -12.0F, 0.0F);
 		body.addChild(rightArm);
-		rightArm.setTextureOffset(40, 16).addBox(1.0F, -4.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.0F, true);
+		rightArm.setTextureOffset(40, 16).addBox(0.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.0F, true);
 
 		leftLeg = new ModelRenderer(this);
-		leftLeg.setRotationPoint(-1.9F, 12.0F, 0.0F);
+		leftLeg.setRotationPoint(-2.0F, 12.0F, 0.0F);
 		setRotationAngle(leftLeg, 0.0F, -1.5708F, 0.0F);
 		leftLeg.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
 
 		leftleg2 = new ModelRenderer(this);
-		leftleg2.setRotationPoint(0.0F, 6.0F, 0.0F);
+		leftleg2.setRotationPoint(0.1F, 6.0F, 0.0F);
 		leftLeg.addChild(leftleg2);
-		leftleg2.setTextureOffset(32, 6).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+		leftleg2.setTextureOffset(32, 6).addBox(-2.1F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
 
 		rightLeg = new ModelRenderer(this);
-		rightLeg.setRotationPoint(1.9F, 12.0F, 0.0F);
+		rightLeg.setRotationPoint(2.0F, 12.0F, 0.0F);
 		setRotationAngle(rightLeg, 0.0F, -1.5708F, 0.0F);
 		rightLeg.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, true);
 
 		rightleg2 = new ModelRenderer(this);
-		rightleg2.setRotationPoint(0.0F, 6.0F, 0.0F);
+		rightleg2.setRotationPoint(-0.1F, 6.0F, 0.0F);
 		rightLeg.addChild(rightleg2);
-		rightleg2.setTextureOffset(32, 6).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+		setRotationAngle(rightleg2, -1.5708F, 0.0F, 0.0F);
+		rightleg2.setTextureOffset(32, 6).addBox(-1.9F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
 	}
 
 	@Override

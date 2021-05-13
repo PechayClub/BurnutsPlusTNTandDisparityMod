@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "gun",
   "definition": {
     "renderType": 0,
@@ -12,7 +12,7 @@
     },
     "stackSize": 1,
     "ammoItem": {
-      "value": ""
+      "value": "CUSTOM:StickmanSpawn"
     },
     "shootConstantly": false,
     "usageCount": 100,
@@ -24,12 +24,12 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "bulletPower": 1.0,
-    "bulletDamage": 20.0,
+    "bulletDamage": 5.0,
     "bulletKnockback": 0,
     "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "CUSTOM:RemoteBBB"
+      "value": ""
     },
     "bulletModel": "ModelStickman",
     "customBulletModelTexture": "stickman.png"

@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "remote_bbb",
+    "texture": "stickmanspawn",
     "customModelName": "Normal",
-    "name": "Remote BBB",
+    "name": "Stickman Spawn",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "COMBAT"
     },
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 0.0,
@@ -29,32 +29,8 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "RemoteBBBParticle"
-    },
     "onRightClickedOnBlock": {
-      "name": "RemoteBBBExplode"
-    },
-    "onCrafted": {
-      "name": "RemoteBBBParticle"
-    },
-    "onEntityHitWith": {
-      "name": "RemoteBBBExplode"
-    },
-    "onItemInInventoryTick": {
-      "name": "RemoteBBBParticle"
-    },
-    "onItemInUseTick": {
-      "name": "RemoteBBBParticle"
-    },
-    "onStoppedUsing": {
-      "name": "RemoteBBBParticle"
-    },
-    "onEntitySwing": {
-      "name": "RemoteBBBExplode"
-    },
-    "onDroppedByPlayer": {
-      "name": "RemoteBBBParticle"
+      "name": "StickmanSpawnRightClickedOnBlock"
     }
   }
 }
