@@ -742,8 +742,8 @@
   "language_map": {
     "en_us": {
       "item.tnt.stickman_spawn": "Stickman Spawn",
-      "item.tnt.ekor_sound": "Ekor Sound",
       "entity.tnt.stickman_shooter": "Stickman Shooter",
+      "item.tnt.ekor_sound": "Ekor Sound",
       "entity.tnt.stickman": "Stickman",
       "advancements.big_bad_boom.title": "Big Bad Boom",
       "advancements.big_bad_boom.descr": "Use a Remote BBB.",
