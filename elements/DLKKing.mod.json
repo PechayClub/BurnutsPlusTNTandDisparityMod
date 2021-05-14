@@ -2,10 +2,10 @@
   "_fv": 18,
   "_type": "mob",
   "definition": {
-    "mobName": "DLK",
+    "mobName": "DLK King",
     "mobLabel": "",
-    "mobModelName": "ModelDLK",
-    "mobModelTexture": "dlk.png",
+    "mobModelName": "ModelDLKKing",
+    "mobModelTexture": "dlkking.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
@@ -23,8 +23,8 @@
     "creativeTab": {
       "value": "MISC"
     },
-    "isBoss": false,
-    "bossBarColor": "PINK",
+    "isBoss": true,
+    "bossBarColor": "WHITE",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
       "value": ""
@@ -52,8 +52,8 @@
     "movementSpeed": 0.1,
     "armorBaseValue": 20.0,
     "trackingRange": 128,
-    "health": 80,
-    "xpAmount": 10,
+    "health": 800,
+    "xpAmount": 1000,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -91,7 +91,7 @@
     "stepSound": {
       "value": ""
     },
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
     },
@@ -102,7 +102,13 @@
       "name": "DLKItIsStruckByLightning"
     },
     "whenMobDies": {
-      "name": "DLKEntityDies"
+      "name": "DLKKingEntityDies"
+    },
+    "onMobTickUpdate": {
+      "name": "DLKKingOnEntityTickUpdate"
+    },
+    "onInitialSpawn": {
+      "name": "DLKKingOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
@@ -115,8 +121,8 @@
       "value": ""
     },
     "rangedItemType": "Default item",
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 5,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

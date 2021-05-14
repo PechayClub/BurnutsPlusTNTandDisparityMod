@@ -578,6 +578,163 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "stickman_spawn"
+    },
+    {
+      "name": "DLKKing",
+      "type": "mob",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_king"
+    },
+    {
+      "name": "DLKKingOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_king_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DLKKingOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_king_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EkorShooterBulletHitsPlayer",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ekor_shooter_bullet_hits_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EkorSound",
+      "type": "item",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ekor_sound"
+    },
+    {
+      "name": "EkorShooter",
+      "type": "gun",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ekor_shooter"
+    },
+    {
+      "name": "Ekor",
+      "type": "mob",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ekor"
+    },
+    {
+      "name": "DLKKingEntityDies",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_king_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ArmorEffect",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "armor_effect",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -585,6 +742,7 @@
   "language_map": {
     "en_us": {
       "item.tnt.stickman_spawn": "Stickman Spawn",
+      "item.tnt.ekor_sound": "Ekor Sound",
       "entity.tnt.stickman_shooter": "Stickman Shooter",
       "entity.tnt.stickman": "Stickman",
       "advancements.big_bad_boom.title": "Big Bad Boom",
@@ -595,8 +753,12 @@
       "block.tnt.glue_block": "Glue Block",
       "item.tnt.stickman_shooter_spawn_egg": "Stickman Shooter Spawn Egg",
       "item.tnt.remote_bbb": "Remote BBB",
+      "item.tnt.dlk_king_spawn_egg": "DLK King Spawn Egg",
+      "item.tnt.ekor_shooter": "Ekor Shooter",
       "block.tnt.renewable_energy_block": "Renewable Energy Block",
       "item.tnt.bbb_resistant_armor_armor_chestplate": "BBB Resistant Armor Chestplate",
+      "entity.tnt.dlk_king": "DLK King",
+      "item.tnt.ekor_spawn_egg": "Ekor Spawn Egg",
       "item.tnt.glue_water_bucket": "GlueWater Bucket",
       "item.tnt.dlk_spawn_egg": "DLK Spawn Egg",
       "item.tnt.bbb_resistant_armor_armor_boots": "BBB Resistant Armor Boots",
@@ -605,6 +767,7 @@
       "item.tnt.bbb_resistant_armor_armor_helmet": "BBB Resistant Armor Helmet",
       "item.tnt.bbb_resistant_armor_armor_leggings": "BBB Resistant Armor Leggings",
       "advancements.sticky.descr": "It\u0027s glue.",
+      "entity.tnt.ekor": "Ekor",
       "block.tnt.bbb": "BBB",
       "item.tnt.dlk_land": "DLK Land Portal Igniter",
       "block.tnt.bounce_block": "Bounce Block",
@@ -630,9 +793,7 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [
-      "mcreator_link"
-    ],
+    "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.tnt",

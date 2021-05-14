@@ -10,6 +10,18 @@
     "textureLeggings": "bbbresistantarmor_leggings",
     "enableBoots": true,
     "textureBoots": "bbbresistantarmor_boots",
+    "onHelmetTick": {
+      "name": "ArmorEffect"
+    },
+    "onBodyTick": {
+      "name": "ArmorEffect"
+    },
+    "onLeggingsTick": {
+      "name": "ArmorEffect"
+    },
+    "onBootsTick": {
+      "name": "ArmorEffect"
+    },
     "creativeTab": {
       "value": "COMBAT"
     },

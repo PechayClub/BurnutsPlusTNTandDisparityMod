@@ -18,11 +18,5 @@ authors="Admin, MCreator"
     side="BOTH"
 
 
-[[dependencies.tnt]]
-    modId="mcreator_link"
-    mandatory=true
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
 
