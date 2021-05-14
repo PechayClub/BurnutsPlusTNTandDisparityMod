@@ -742,8 +742,8 @@
   "language_map": {
     "en_us": {
       "item.tnt.stickman_spawn": "Stickman Spawn",
-      "entity.tnt.stickman_shooter": "Stickman Shooter",
       "item.tnt.ekor_sound": "Ekor Sound",
+      "entity.tnt.stickman_shooter": "Stickman Shooter",
       "entity.tnt.stickman": "Stickman",
       "advancements.big_bad_boom.title": "Big Bad Boom",
       "advancements.big_bad_boom.descr": "Use a Remote BBB.",
@@ -784,7 +784,7 @@
   "workspaceSettings": {
     "modid": "tnt",
     "modName": "TNT",
-    "version": "4.0.350-Alpha4",
+    "version": "0.3.1alpha-build.0177",
     "author": "Admin, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
