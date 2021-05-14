@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tnt_and_disparity:blocks/dlklandportalframe",
+    "up": "tnt_and_disparity:blocks/dlklandportalframe",
+    "north": "tnt_and_disparity:blocks/dlklandportalframe",
+    "east": "tnt_and_disparity:blocks/dlklandportalframe",
+    "south": "tnt_and_disparity:blocks/dlklandportalframe",
+    "west": "tnt_and_disparity:blocks/dlklandportalframe",
+    "particle": "tnt_and_disparity:blocks/dlklandportalframe"
+  }
+}

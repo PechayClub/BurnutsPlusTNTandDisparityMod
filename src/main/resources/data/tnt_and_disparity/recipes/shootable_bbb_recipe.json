@@ -1,0 +1,19 @@
+{
+  "group": "tnt_and_disparity",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "tnt_and_disparity:remote_bbb"
+    },
+    {
+      "item": "minecraft:crossbow"
+    }
+  ],
+  "result": {
+    "item": "tnt_and_disparity:shootable_bbb",
+    "count": 1
+  }
+}

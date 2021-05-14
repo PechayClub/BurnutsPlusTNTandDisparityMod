@@ -1,0 +1,16 @@
+{
+  "group": "tnt_and_disparity",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:slime_block"
+    },
+    {
+      "item": "minecraft:glass"
+    }
+  ],
+  "result": {
+    "item": "tnt_and_disparity:bounce_block",
+    "count": 1
+  }
+}

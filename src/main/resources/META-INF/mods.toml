@@ -3,14 +3,14 @@ loaderVersion="[36,)"
 license="All Rights Reserved"
 
 [[mods]]
-modId="tnt"
+modId="tnt_and_disparity"
 version="0.3.1alpha-build.0177"
-displayName="TNT"
+displayName="TNT and Disparity"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
 authors="Admin, MCreator"
 
-[[dependencies.tnt]]
+[[dependencies.tnt_and_disparity]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"

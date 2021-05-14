@@ -1,0 +1,19 @@
+{
+  "group": "tnt_and_disparity",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tnt_and_disparity:bbb"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:stone_button"
+    }
+  ],
+  "result": {
+    "item": "tnt_and_disparity:remote_bbb",
+    "count": 1
+  }
+}

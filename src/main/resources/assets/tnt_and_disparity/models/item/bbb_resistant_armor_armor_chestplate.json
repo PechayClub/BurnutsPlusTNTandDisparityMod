@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tnt_and_disparity:items/bbbresistantarmor_body"
+  }
+}

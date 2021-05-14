@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tnt_and_disparity:block/renewable_energy_block"
+    }
+  }
+}

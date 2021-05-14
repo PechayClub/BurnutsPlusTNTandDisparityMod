@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "tnt_and_disparity:items/drillbbb"
+  }
+}

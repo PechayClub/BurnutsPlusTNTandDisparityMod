@@ -1,0 +1,39 @@
+{
+  "group": "tnt_and_disparity",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "2": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "3": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "4": {
+      "item": "tnt_and_disparity:renewable_energy_block"
+    },
+    "5": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "6": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "7": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "8": {
+      "item": "tnt_and_disparity:glue_block"
+    }
+  },
+  "result": {
+    "item": "tnt_and_disparity:bbb_resistant_armor_armor_chestplate",
+    "count": 1
+  }
+}

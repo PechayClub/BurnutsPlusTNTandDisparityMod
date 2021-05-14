@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tnt_and_disparity:blocks/bbb",
+    "up": "tnt_and_disparity:blocks/bbb",
+    "north": "tnt_and_disparity:blocks/renewableenergyblock",
+    "east": "tnt_and_disparity:blocks/renewableenergyblock",
+    "south": "tnt_and_disparity:blocks/renewableenergyblock",
+    "west": "tnt_and_disparity:blocks/renewableenergyblock",
+    "particle": "tnt_and_disparity:blocks/bbb"
+  }
+}

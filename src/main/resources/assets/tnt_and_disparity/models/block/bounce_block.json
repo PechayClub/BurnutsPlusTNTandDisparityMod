@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tnt_and_disparity:blocks/bbb",
+    "up": "tnt_and_disparity:blocks/bbb",
+    "north": "tnt_and_disparity:blocks/bounceblock",
+    "east": "tnt_and_disparity:blocks/bounceblock",
+    "south": "tnt_and_disparity:blocks/bounceblock",
+    "west": "tnt_and_disparity:blocks/bounceblock",
+    "particle": "tnt_and_disparity:blocks/bbb"
+  }
+}

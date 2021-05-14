@@ -1,0 +1,27 @@
+{
+  "group": "tnt_and_disparity",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 4 ",
+    "6 8"
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:stone_button"
+    },
+    "4": {
+      "item": "tnt_and_disparity:remote_bbb"
+    },
+    "6": {
+      "item": "minecraft:repeater"
+    },
+    "8": {
+      "item": "minecraft:redstone_wire"
+    }
+  },
+  "result": {
+    "item": "tnt_and_disparity:drill_bbb",
+    "count": 1
+  }
+}
