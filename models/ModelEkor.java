@@ -6,13 +6,12 @@ public static class ModelEkor extends EntityModel<Entity> {
 	private final ModelRenderer bone;
 
 	public ModelEkor() {
-		textureWidth = 64;
-		textureHeight = 64;
+		textureWidth = 128;
+		textureHeight = 128;
 
 		bone = new ModelRenderer(this);
-		bone.setRotationPoint(0.0F, 24.0F, 0.0F);
-		bone.setTextureOffset(0, 0).addBox(-8.0F, -16.0F, 0.0F, 16.0F, 16.0F, 0.0F, 0.0F, false);
-
+		bone.setRotationPoint(0.0F, -8.0F, 0.0F);
+		bone.setTextureOffset(0, 0).addBox(-33.0F, -32.0F, 0.0F, 64.0F, 64.0F, 0.0F, 0.0F, false);
 	}
 
 	@Override

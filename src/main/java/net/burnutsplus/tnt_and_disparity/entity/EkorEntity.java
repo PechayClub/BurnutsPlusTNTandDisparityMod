@@ -14,11 +14,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
-import net.minecraft.pathfinding.FlyingPathNavigator;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemGroup;
@@ -31,10 +28,9 @@ import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
+import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.ai.goal.Goal;
-import net.minecraft.entity.ai.controller.FlyingMovementController;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
@@ -44,20 +40,16 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.block.BlockState;
 
 import net.burnutsplus.tnt_and_disparity.item.EkorShooterItem;
 import net.burnutsplus.tnt_and_disparity.entity.renderer.EkorRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
-import java.util.Random;
-import java.util.EnumSet;
-
 @TntAndDisparityModElements.ModElement.Tag
 public class EkorEntity extends TntAndDisparityModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0f, 4f))
-					.build("ekor").setRegistryName("ekor");
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.8f)).build("ekor").setRegistryName("ekor");
 	public EkorEntity(TntAndDisparityModElements instance) {
 		super(instance, 41);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EkorRenderer.ModelRegisterHandler());
@@ -89,7 +81,6 @@ public class EkorEntity extends TntAndDisparityModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 20);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 0);
-			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.6);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -103,8 +94,6 @@ public class EkorEntity extends TntAndDisparityModElements.ModElement {
 			super(type, world);
 			experienceValue = 10;
 			setNoAI(false);
-			this.moveController = new FlyingMovementController(this, 10, true);
-			this.navigator = new FlyingPathNavigator(this, this.world);
 		}
 
 		@Override
@@ -115,63 +104,16 @@ public class EkorEntity extends TntAndDisparityModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new Goal() {
-				{
-					this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
-				}
-				public boolean shouldExecute() {
-					if (CustomEntity.this.getAttackTarget() != null && !CustomEntity.this.getMoveHelper().isUpdating()) {
-						return true;
-					} else {
-						return false;
-					}
-				}
-
-				@Override
-				public boolean shouldContinueExecuting() {
-					return CustomEntity.this.getMoveHelper().isUpdating() && CustomEntity.this.getAttackTarget() != null
-							&& CustomEntity.this.getAttackTarget().isAlive();
-				}
-
-				@Override
-				public void startExecuting() {
-					LivingEntity livingentity = CustomEntity.this.getAttackTarget();
-					Vector3d vec3d = livingentity.getEyePosition(1);
-					CustomEntity.this.moveController.setMoveTo(vec3d.x, vec3d.y, vec3d.z, 1);
-				}
-
-				@Override
-				public void tick() {
-					LivingEntity livingentity = CustomEntity.this.getAttackTarget();
-					if (CustomEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
-						CustomEntity.this.attackEntityAsMob(livingentity);
-					} else {
-						double d0 = CustomEntity.this.getDistanceSq(livingentity);
-						if (d0 < 16) {
-							Vector3d vec3d = livingentity.getEyePosition(1);
-							CustomEntity.this.moveController.setMoveTo(vec3d.x, vec3d.y, vec3d.z, 1);
-						}
-					}
-				}
-			});
-			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.8, 20) {
-				@Override
-				protected Vector3d getPosition() {
-					Random random = CustomEntity.this.getRNG();
-					double dir_x = CustomEntity.this.getPosX() + ((random.nextFloat() * 2 - 1) * 16);
-					double dir_y = CustomEntity.this.getPosY() + ((random.nextFloat() * 2 - 1) * 16);
-					double dir_z = CustomEntity.this.getPosZ() + ((random.nextFloat() * 2 - 1) * 16);
-					return new Vector3d(dir_x, dir_y, dir_z);
-				}
-			});
-			this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, VillagerEntity.class, true, true));
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, IronGolemEntity.class, true, true));
-			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, SnowGolemEntity.class, true, true));
-			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, StickmanEntity.CustomEntity.class, true, true));
-			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, StickmanShooterEntity.CustomEntity.class, true, true));
-			this.targetSelector.addGoal(10, new HurtByTargetGoal(this));
+			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
+			this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.8));
+			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
+			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
+			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, VillagerEntity.class, true, true));
+			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, IronGolemEntity.class, true, true));
+			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SnowGolemEntity.class, true, true));
+			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, StickmanEntity.CustomEntity.class, true, true));
+			this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, StickmanShooterEntity.CustomEntity.class, true, true));
 			this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
 				@Override
 				public boolean shouldContinueExecuting() {
@@ -195,34 +137,8 @@ public class EkorEntity extends TntAndDisparityModElements.ModElement {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 		}
 
-		@Override
-		public boolean onLivingFall(float l, float d) {
-			return false;
-		}
-
-		@Override
-		public boolean attackEntityFrom(DamageSource source, float amount) {
-			if (source == DamageSource.FALL)
-				return false;
-			return super.attackEntityFrom(source, amount);
-		}
-
 		public void attackEntityWithRangedAttack(LivingEntity target, float flval) {
 			EkorShooterItem.shoot(this, target);
-		}
-
-		@Override
-		protected void updateFallState(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
-		}
-
-		@Override
-		public void setNoGravity(boolean ignored) {
-			super.setNoGravity(true);
-		}
-
-		public void livingTick() {
-			super.livingTick();
-			this.setNoGravity(true);
 		}
 	}
 }
