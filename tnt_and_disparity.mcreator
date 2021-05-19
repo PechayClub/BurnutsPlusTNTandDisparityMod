@@ -524,15 +524,6 @@
       "registry_name": "renewable_energy_block_recipe"
     },
     {
-      "name": "StickmanShooter",
-      "type": "mob",
-      "sortid": 33,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "stickman_shooter"
-    },
-    {
       "name": "StickShooter",
       "type": "gun",
       "sortid": 34,
@@ -766,7 +757,6 @@
       "item.tnt.dlk_king_spawn_egg": "DLK King Spawn Egg",
       "item.tnt.ekor_shooter": "Ekor Shooter",
       "biome.tnt_disparity.dlk_forest": "DLK Forest",
-      "entity.tnt_and_disparity.stickman_shooter": "Stickman Shooter",
       "block.tnt.renewable_energy_block": "Renewable Energy Block",
       "entity.tnt_and_disparity.ekor": "Ekor",
       "item.tnt_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
@@ -800,7 +790,6 @@
       "item.tnt_disparity.ekor_sound": "Ekor Sound",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_chestplate": "BBB Resistant Armor Chestplate",
       "item.tnt_disparity.stickman_spawn_egg": "Stickman Spawn Egg",
-      "item.tnt_and_disparity.stickman_shooter_spawn_egg": "Stickman Shooter Spawn Egg",
       "entity.tnt_disparity.ekor": "Ekor",
       "block.tnt_and_disparity.glue_block": "Glue Block",
       "item.tnt_and_disparity.stick_shooter": "Stick Shooter",

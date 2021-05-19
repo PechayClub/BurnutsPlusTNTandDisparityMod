@@ -113,7 +113,6 @@ public class EkorEntity extends TntAndDisparityModElements.ModElement {
 			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, IronGolemEntity.class, true, true));
 			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SnowGolemEntity.class, true, true));
 			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, StickmanEntity.CustomEntity.class, true, true));
-			this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, StickmanShooterEntity.CustomEntity.class, true, true));
 			this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
 				@Override
 				public boolean shouldContinueExecuting() {

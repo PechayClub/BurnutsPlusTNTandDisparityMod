@@ -108,10 +108,10 @@
     "rangedAttackItem": {
       "value": ""
     },
-    "rangedItemType": "Default item",
+    "rangedItemType": "StickShooter",
     "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
-    "spawningProbability": 20,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 100,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,

@@ -64,7 +64,7 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 20, 4, 4));
+		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 100, 4, 4));
 	}
 
 	@Override
@@ -93,6 +93,7 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 			super(type, world);
 			experienceValue = 0;
 			setNoAI(false);
+			enablePersistence();
 		}
 
 		@Override
@@ -119,6 +120,11 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
+		}
+
+		@Override
+		public boolean canDespawn(double distanceToClosestPlayer) {
+			return false;
 		}
 
 		@Override
