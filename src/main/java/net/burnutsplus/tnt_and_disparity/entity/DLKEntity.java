@@ -70,7 +70,12 @@ public class DLKEntity extends TntAndDisparityModElements.ModElement {
 
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 5, 1, 1));
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("tnt_and_disparity:dlk_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 100, 1, 1));
 	}
 
 	@Override
