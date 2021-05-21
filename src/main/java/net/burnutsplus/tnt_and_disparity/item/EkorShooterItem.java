@@ -57,7 +57,7 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(100));
+			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1));
 			setRegistryName("ekor_shooter");
 		}
 
