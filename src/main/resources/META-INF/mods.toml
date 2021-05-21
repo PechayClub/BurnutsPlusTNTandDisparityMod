@@ -19,4 +19,10 @@ authors="Burnuts Gaming, MCreator"
 
 
 
+[[dependencies.tnt_and_disparity]]
+    modId="twilight_forest"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
