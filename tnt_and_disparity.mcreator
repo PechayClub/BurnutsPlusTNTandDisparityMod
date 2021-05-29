@@ -256,6 +256,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -621,6 +625,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -692,6 +712,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -726,102 +750,179 @@
           }
         ]
       }
+    },
+    {
+      "name": "GoToDLKLand",
+      "type": "achievement",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "go_to_dlk_land"
+    },
+    {
+      "name": "GoBoom",
+      "type": "achievement",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "go_boom"
+    },
+    {
+      "name": "StickmanSpawnRecipe",
+      "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stickman_spawn_recipe"
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "ekorekors",
+      "files": [
+        "ekorekor"
+      ],
+      "category": "hostile",
+      "subtitle": "Ekor Ekors"
+    },
+    {
+      "name": "dlkdies",
+      "files": [
+        "dlkdies"
+      ],
+      "category": "hostile",
+      "subtitle": "DLK Dies"
+    },
+    {
+      "name": "dlkdlks",
+      "files": [
+        "dlkdlks"
+      ],
+      "category": "neutral",
+      "subtitle": "DLK DLKs"
+    },
+    {
+      "name": "dlkhurt",
+      "files": [
+        "dlkhurt"
+      ],
+      "category": "hostile",
+      "subtitle": "DLK Dying"
+    },
+    {
+      "name": "dlkkingsaying",
+      "files": [
+        "dlkkingsaying"
+      ],
+      "category": "hostile",
+      "subtitle": "DLK King Saying"
+    }
+  ],
   "language_map": {
     "en_us": {
-      "block.tnt_disparity.dlk_land_portal_frame": "DLK Land Portal Frame",
-      "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
-      "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
-      "entity.tnt.stickman_shooter": "Stickman Shooter",
-      "item.tnt.ekor_sound": "Ekor Sound",
       "entity.tnt.stickman": "Stickman",
-      "advancements.big_bad_boom.title": "Big Bad Boom",
       "item.tnt_disparity.drill_bbb": "Drill Big Bad Boom",
       "item.tnt_disparity.stickman_shooter_spawn_egg": "Stickman Shooter Spawn Egg",
-      "advancements.big_bad_boom.descr": "Use a Remote Big Bad Boom.",
-      "item.tnt.stickman_spawn_egg": "Stickman Spawn Egg",
       "item.tnt.stick_shooter": "Stick Shooter",
-      "item.tnt_disparity.glue_water_bucket": "GlueWater Bucket",
-      "block.tnt_disparity.bbb": "Big Bad Boom",
-      "entity.tnt_disparity.dlk": "DLK",
-      "entity.tnt.dlk": "DLK",
-      "entity.tnt_and_disparity.stickman": "Stickman",
-      "entity.tnt_disparity.stickman": "Stickman",
-      "item.tnt_and_disparity.remote_bbb": "Remote Big Bad Boom",
-      "block.tnt_and_disparity.renewable_energy_block": "Renewable Energy Block",
+      "advancements.big_bad_boom.descr": "Use a Remote Big Bad Boom.",
+      "subtitles.ekorekors": "Ekor Ekors",
+      "advancements.go_to_dlk_land.descr": "The place were DLKs are.",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_leggings": "Big Bad Boom Resistant Armor Leggings",
       "item.tnt.remote_bbb": "Remote Big Bad Boom",
-      "item.tnt.dlk_king_spawn_egg": "DLK King Spawn Egg",
-      "item.tnt.ekor_shooter": "Ekor Shooter",
       "biome.tnt_disparity.dlk_forest": "DLK Forest",
-      "block.tnt.renewable_energy_block": "Renewable Energy Block",
       "entity.tnt_and_disparity.ekor": "Ekor",
-      "item.tnt_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
       "entity.tnt.dlk_king": "DLK King",
       "item.tnt_and_disparity.stickman_spawn": "Stickman Spawn",
-      "block.tnt_disparity.glue_block": "Glue Block",
-      "item.tnt.bbb_resistant_armor_armor_boots": "Big Bad Boom Resistant Armor Boots",
       "item.tnt_disparity.remote_bbb": "Remote Big Bad Boom",
-      "item.tnt_and_disparity.drill_bbb": "Drill Big Bad Boom",
-      "item.tnt_disparity.stickman_spawn": "Stickman Spawn",
-      "item.tnt_and_disparity.stickman_spawn_egg": "Stickman Spawn Egg",
-      "item.tnt_disparity.bbb_resistant_armor_armor_boots": "Big Bad Boom Resistant Armor Boots",
+      "item.tnt.bbb_resistant_armor_armor_boots": "Big Bad Boom Resistant Armor Boots",
       "item.tnt_disparity.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
       "item.tnt.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
-      "item.tnt_and_disparity.shootable_bbb": "Shootable Big Bad Boom",
       "item.tnt.bbb_resistant_armor_armor_leggings": "Big Bad Boom Resistant Armor Leggings",
-      "advancements.sticky.descr": "It\u0027s glue.",
-      "entity.tnt_disparity.stickman_shooter": "Stickman Shooter",
-      "entity.tnt.ekor": "Ekor",
       "block.tnt.bbb": "Big Bad Boom",
       "item.tnt.dlk_land": "DLK Land Portal Igniter",
-      "item.tnt_disparity.dlk_spawn_egg": "DLK Spawn Egg",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
       "block.tnt_and_disparity.dlk_land_portal_frame": "DLK Land Portal Frame",
       "item.tnt.shootable_bbb": "Shootable Big Bad Boom",
       "block.tnt.dlk_land_portal_frame": "DLK Land Portal Frame",
       "item.tnt_disparity.ekor_spawn_egg": "Ekor Spawn Egg",
-      "item.tnt.stickman_spawn": "Stickman Spawn",
       "item.tnt_and_disparity.ekor_spawn_egg": "Ekor Spawn Egg",
-      "entity.tnt_and_disparity.dlk": "DLK",
-      "item.tnt_disparity.ekor_sound": "Ekor Sound",
-      "item.tnt_and_disparity.bbb_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
       "item.tnt_disparity.stickman_spawn_egg": "Stickman Spawn Egg",
       "entity.tnt_disparity.ekor": "Ekor",
       "block.tnt_and_disparity.glue_block": "Glue Block",
-      "item.tnt_and_disparity.stick_shooter": "Stick Shooter",
-      "block.tnt.glue_block": "Glue Block",
-      "item.tnt.stickman_shooter_spawn_egg": "Stickman Shooter Spawn Egg",
       "block.tnt_disparity.renewable_energy_block": "Renewable Energy Block",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_boots": "Big Bad Boom Resistant Armor Boots",
-      "item.tnt_disparity.stick_shooter": "Stick Shooter",
       "item.tnt_disparity.dlk_land": "DLK Land Portal Igniter",
-      "entity.tnt_disparity.dlk_king": "DLK King",
       "item.tnt.bbb_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
-      "block.tnt_and_disparity.bbb": "Big Bad Boom",
       "block.tnt_and_disparity.bounce_block": "Bounce Block",
       "item.tnt_disparity.ekor_shooter": "Ekor Shooter",
-      "item.tnt_disparity.shootable_bbb": "Shootable Big Bad Boom",
-      "item.tnt.ekor_spawn_egg": "Ekor Spawn Egg",
       "item.tnt_and_disparity.dlk_spawn_egg": "DLK Spawn Egg",
       "item.tnt.dlk_spawn_egg": "DLK Spawn Egg",
-      "item.tnt.glue_water_bucket": "Glue Bucket",
       "item.tnt_disparity.bbb_resistant_armor_armor_leggings": "Big Bad Boom Resistant Armor Leggings",
+      "subtitles.dlkdies": "DLK Dies",
+      "subtitles.dlkdlks": "DLK DLKs",
+      "entity.tnt_and_disparity.dlk_king": "DLK King",
+      "subtitles.dlkhurt": "DLK Dying",
+      "block.tnt_disparity.bounce_block": "Bounce Block",
+      "biome.tnt_and_disparity.dlk_forest": "DLK Forest",
+      "fluid.glue_water": "GlueWater",
+      "biome.tnt.dlk_forest": "DLK Forest",
+      "block.tnt_disparity.dlk_land_portal_frame": "DLK Land Portal Frame",
+      "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
+      "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
+      "entity.tnt.stickman_shooter": "Stickman Shooter",
+      "item.tnt.ekor_sound": "Ekor Sound",
+      "advancements.big_bad_boom.title": "Big Bad Boom",
+      "item.tnt.stickman_spawn_egg": "Stickman Spawn Egg",
+      "item.tnt_disparity.glue_water_bucket": "GlueWater Bucket",
+      "block.tnt_disparity.bbb": "Big Bad Boom",
+      "entity.tnt_disparity.dlk": "DLK",
+      "entity.tnt_and_disparity.stickman": "Stickman",
+      "entity.tnt.dlk": "DLK",
+      "entity.tnt_disparity.stickman": "Stickman",
+      "item.tnt_and_disparity.remote_bbb": "Remote Big Bad Boom",
+      "block.tnt_and_disparity.renewable_energy_block": "Renewable Energy Block",
+      "item.tnt.dlk_king_spawn_egg": "DLK King Spawn Egg",
+      "item.tnt.ekor_shooter": "Ekor Shooter",
+      "block.tnt.renewable_energy_block": "Renewable Energy Block",
+      "item.tnt_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
+      "block.tnt_disparity.glue_block": "Glue Block",
+      "advancements.go_to_dlk_land.title": "Go To DLK Land",
+      "item.tnt_and_disparity.drill_bbb": "Drill Big Bad Boom",
+      "item.tnt_disparity.stickman_spawn": "Stickman Spawn",
+      "item.tnt_and_disparity.stickman_spawn_egg": "Stickman Spawn Egg",
+      "item.tnt_disparity.bbb_resistant_armor_armor_boots": "Big Bad Boom Resistant Armor Boots",
+      "item.tnt_and_disparity.shootable_bbb": "Shootable BBB",
+      "subtitles.dlkkingsaying": "DLK King Saying",
+      "advancements.sticky.descr": "It\u0027s glue.",
+      "entity.tnt_disparity.stickman_shooter": "Stickman Shooter",
+      "entity.tnt.ekor": "Ekor",
+      "item.tnt_disparity.dlk_spawn_egg": "DLK Spawn Egg",
+      "item.tnt.stickman_spawn": "Stickman Spawn",
+      "entity.tnt_and_disparity.dlk": "DLK",
+      "item.tnt_disparity.ekor_sound": "Ekor Sound",
+      "item.tnt_and_disparity.bbb_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
+      "advancements.go_boom.descr": "DLKs explodese upon death.",
+      "item.tnt_and_disparity.stick_shooter": "Stick Shooter",
+      "item.tnt.stickman_shooter_spawn_egg": "Stickman Shooter Spawn Egg",
+      "block.tnt.glue_block": "Glue Block",
+      "item.tnt_disparity.stick_shooter": "Stick Shooter",
+      "advancements.go_boom.title": "Go Boom",
+      "entity.tnt_disparity.dlk_king": "DLK King",
+      "block.tnt_and_disparity.bbb": "Big Bad Boom",
+      "item.tnt.ekor_spawn_egg": "Ekor Spawn Egg",
+      "item.tnt_disparity.shootable_bbb": "Shootable Big Bad Boom",
+      "item.tnt.glue_water_bucket": "Glue Bucket",
       "advancements.sticky.title": "Sticky",
       "item.tnt_and_disparity.glue_water_bucket": "GlueWater Bucket",
       "item.tnt_and_disparity.ekor_sound": "Ekor Sound",
       "item.tnt.drill_bbb": "Drill Big Bad Boom",
-      "entity.tnt_and_disparity.dlk_king": "DLK King",
-      "block.tnt_disparity.bounce_block": "Bounce Block",
-      "biome.tnt_and_disparity.dlk_forest": "DLK Forest",
       "item.tnt_disparity.bbb_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
       "block.tnt.bounce_block": "Bounce Block",
-      "item.tnt_and_disparity.ekor_shooter": "Ekor Shooter",
-      "fluid.glue_water": "GlueWater",
-      "biome.tnt.dlk_forest": "DLK Forest"
+      "item.tnt_and_disparity.ekor_shooter": "Ekor Shooter"
     }
   },
   "foldersRoot": {
@@ -831,7 +932,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.3.1alpha-build.0218",
+    "version": "0.3.1alpha-build.0301",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",

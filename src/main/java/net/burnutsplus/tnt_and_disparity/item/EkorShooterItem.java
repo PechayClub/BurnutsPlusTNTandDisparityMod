@@ -30,13 +30,10 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
-import net.burnutsplus.tnt_and_disparity.procedures.EkorShooterBulletHitsPlayerProcedure;
 import net.burnutsplus.tnt_and_disparity.entity.renderer.EkorShooterRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
 import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
 
 @TntAndDisparityModElements.ModElement.Tag
 public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
@@ -78,7 +75,8 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 		}
 
 		@Override
-		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
+		public void onUsingTick(ItemStack itemstack, LivingEntity entityLiving, int count) {
+			World world = entityLiving.world;
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
 				double x = entity.getPosX();
@@ -88,6 +86,7 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 					ArrowCustomEntity entityarrow = shoot(world, entity, random, 10f, 40, 0);
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 					entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
+					entity.stopActiveHand();
 				}
 			}
 		}
@@ -128,40 +127,9 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 		}
 
 		@Override
-		public void onCollideWithPlayer(PlayerEntity entity) {
-			super.onCollideWithPlayer(entity);
-			Entity sourceentity = this.func_234616_v_();
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			World world = this.world;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				EkorShooterBulletHitsPlayerProcedure.executeProcedure($_dependencies);
-			}
-		}
-
-		@Override
 		protected void arrowHit(LivingEntity entity) {
 			super.arrowHit(entity);
 			entity.setArrowCountInEntity(entity.getArrowCountInEntity() - 1);
-			Entity sourceentity = this.func_234616_v_();
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			World world = this.world;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				EkorShooterBulletHitsPlayerProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override
@@ -189,7 +157,7 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:ekorekors")),
 				SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
@@ -209,7 +177,7 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		entity.world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:ekorekors")),
 				SoundCategory.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}

@@ -63,7 +63,7 @@ import java.util.HashMap;
 public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(0.6f, 1.8f)).build("dlk_king").setRegistryName("dlk_king");
+			.size(0.7999999999999999f, 2.4f)).build("dlk_king").setRegistryName("dlk_king");
 	public DLKKingEntity(TntAndDisparityModElements instance) {
 		super(instance, 36);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new DLKKingRenderer.ModelRegisterHandler());
@@ -134,13 +134,18 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 		}
 
 		@Override
+		public net.minecraft.util.SoundEvent getAmbientSound() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdlks"));
+		}
+
+		@Override
 		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkhurt"));
 		}
 
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdies"));
 		}
 
 		@Override
@@ -189,6 +194,7 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 			Entity entity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -208,6 +214,10 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				DLKKingOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
 			}
 			return retval;

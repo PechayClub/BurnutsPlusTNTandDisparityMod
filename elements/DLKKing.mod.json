@@ -4,12 +4,12 @@
   "definition": {
     "mobName": "DLK King",
     "mobLabel": "",
-    "mobModelName": "ModelDLKKingModel",
+    "mobModelName": "ModelDLKKing",
     "mobModelTexture": "dlkking.png",
     "mobModelGlowTexture": "",
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.9,
+    "modelWidth": 0.7999999999999999,
+    "modelHeight": 2.4,
+    "modelShadowSize": 1.2000000000000002,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
@@ -80,13 +80,13 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:dlkdlks"
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:dlkhurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:dlkdies"
     },
     "stepSound": {
       "value": ""

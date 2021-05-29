@@ -14,10 +14,10 @@
     "ammoItem": {
       "value": ""
     },
-    "shootConstantly": false,
+    "shootConstantly": true,
     "usageCount": 0,
     "actionSound": {
-      "value": "entity.arrow.shoot"
+      "value": "CUSTOM:ekorekors"
     },
     "hasGlow": false,
     "animation": "none",
@@ -32,12 +32,6 @@
       "value": "CUSTOM:EkorSound"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": "",
-    "onBulletHitsPlayer": {
-      "name": "EkorShooterBulletHitsPlayer"
-    },
-    "onBulletHitsEntity": {
-      "name": "EkorShooterBulletHitsPlayer"
-    }
+    "customBulletModelTexture": ""
   }
 }

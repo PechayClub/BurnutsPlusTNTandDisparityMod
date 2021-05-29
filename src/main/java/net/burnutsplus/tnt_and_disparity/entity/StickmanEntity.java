@@ -40,13 +40,14 @@ import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.block.material.Material;
 
 import net.burnutsplus.tnt_and_disparity.entity.renderer.StickmanRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
 @TntAndDisparityModElements.ModElement.Tag
 public class StickmanEntity extends TntAndDisparityModElements.ModElement {
-	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.6f, 1.4f)).build("stickman").setRegistryName("stickman");
 	public StickmanEntity(TntAndDisparityModElements instance) {
@@ -64,13 +65,14 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 100, 4, 4));
+		event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(entity, 100, 1, 1));
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				MonsterEntity::canMonsterSpawn);
+				(entityType, world, reason, pos,
+						random) -> (world.getBlockState(pos.down()).getMaterial() == Material.ORGANIC && world.getLightSubtracted(pos, 0) > 8));
 	}
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
@@ -93,7 +95,6 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 			super(type, world);
 			experienceValue = 0;
 			setNoAI(false);
-			enablePersistence();
 		}
 
 		@Override
@@ -120,11 +121,6 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
-		}
-
-		@Override
-		public boolean canDespawn(double distanceToClosestPlayer) {
-			return false;
 		}
 
 		@Override

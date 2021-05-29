@@ -1,1 +1,52 @@
-{}
+{
+  "ekorekors": {
+    "category": "hostile",
+    "subtitle": "subtitles.ekorekors",
+    "sounds": [
+      {
+        "name": "tnt_and_disparity:ekorekor",
+        "stream": false
+      }
+    ]
+  },
+  "dlkdies": {
+    "category": "hostile",
+    "subtitle": "subtitles.dlkdies",
+    "sounds": [
+      {
+        "name": "tnt_and_disparity:dlkdies",
+        "stream": false
+      }
+    ]
+  },
+  "dlkdlks": {
+    "category": "neutral",
+    "subtitle": "subtitles.dlkdlks",
+    "sounds": [
+      {
+        "name": "tnt_and_disparity:dlkdlks",
+        "stream": false
+      }
+    ]
+  },
+  "dlkhurt": {
+    "category": "hostile",
+    "subtitle": "subtitles.dlkhurt",
+    "sounds": [
+      {
+        "name": "tnt_and_disparity:dlkhurt",
+        "stream": false
+      }
+    ]
+  },
+  "dlkkingsaying": {
+    "category": "hostile",
+    "subtitle": "subtitles.dlkkingsaying",
+    "sounds": [
+      {
+        "name": "tnt_and_disparity:dlkkingsaying",
+        "stream": false
+      }
+    ]
+  }
+}

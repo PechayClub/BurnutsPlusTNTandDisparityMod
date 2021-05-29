@@ -45,6 +45,16 @@ public class TntAndDisparityModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public TntAndDisparityModElements() {
+		sounds.put(new ResourceLocation("tnt_and_disparity", "ekorekors"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tnt_and_disparity", "ekorekors")));
+		sounds.put(new ResourceLocation("tnt_and_disparity", "dlkdies"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tnt_and_disparity", "dlkdies")));
+		sounds.put(new ResourceLocation("tnt_and_disparity", "dlkdlks"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tnt_and_disparity", "dlkdlks")));
+		sounds.put(new ResourceLocation("tnt_and_disparity", "dlkhurt"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tnt_and_disparity", "dlkhurt")));
+		sounds.put(new ResourceLocation("tnt_and_disparity", "dlkkingsaying"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tnt_and_disparity", "dlkkingsaying")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("tnt_and_disparity").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

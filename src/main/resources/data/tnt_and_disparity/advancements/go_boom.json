@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "tnt_and_disparity:bbb"
+    },
+    "title": {
+      "translate": "advancements.go_boom.title"
+    },
+    "description": {
+      "translate": "advancements.go_boom.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "go_boom": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "parent": "tnt_and_disparity:go_to_dlk_land"
+}

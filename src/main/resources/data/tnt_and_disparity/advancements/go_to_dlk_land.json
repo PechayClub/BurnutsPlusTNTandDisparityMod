@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "tnt_and_disparity:dlk_land"
+    },
+    "title": {
+      "translate": "advancements.go_to_dlk_land.title"
+    },
+    "description": {
+      "translate": "advancements.go_to_dlk_land.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "go_to_dlk_land": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "tnt_and_disparity:dlk_land"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0
+  },
+  "parent": "minecraft:story/root"
+}
