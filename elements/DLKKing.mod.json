@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "DLK King",
     "mobLabel": "",
-    "mobModelName": "ModelDLKKing",
+    "mobModelName": "ModelDLKKingModel",
     "mobModelTexture": "dlkking.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
@@ -50,7 +50,7 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 20.0,
     "movementSpeed": 0.1,
-    "armorBaseValue": 20.0,
+    "armorBaseValue": 40.0,
     "trackingRange": 128,
     "health": 800,
     "xpAmount": 1000,

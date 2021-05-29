@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "DLK",
     "mobLabel": "",
-    "mobModelName": "ModelDLK",
+    "mobModelName": "ModelDLKModel",
     "mobModelTexture": "dlk.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
