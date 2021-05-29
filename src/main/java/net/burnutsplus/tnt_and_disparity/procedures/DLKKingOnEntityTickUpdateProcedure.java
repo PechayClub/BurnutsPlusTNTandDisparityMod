@@ -3,7 +3,6 @@ package net.burnutsplus.tnt_and_disparity.procedures;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.MobEntity;
@@ -47,8 +46,6 @@ public class DLKKingOnEntityTickUpdateProcedure extends TntAndDisparityModElemen
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		world.getPendingBlockTicks().scheduleTick(new BlockPos((int) x, (int) y, (int) z),
-				world.getBlockState(new BlockPos((int) x, (int) y, (int) z)).getBlock(), (int) 200);
 		if (world instanceof ServerWorld) {
 			Entity entityToSpawn = new DLKEntity.CustomEntity(DLKEntity.entity, (World) world);
 			entityToSpawn.setLocationAndAngles(x, z, y, (float) 1, (float) 1);

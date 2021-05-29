@@ -831,7 +831,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.3.1alpha-build.0204",
+    "version": "0.3.1alpha-build.0211",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
@@ -840,9 +840,7 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [
-      "twilight_forest"
-    ],
+    "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.burnutsplus.tnt_and_disparity",
