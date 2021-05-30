@@ -646,35 +646,6 @@
       }
     },
     {
-      "name": "EkorShooterBulletHitsPlayer",
-      "type": "procedure",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ekor_shooter_bullet_hits_player",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "EkorSound",
       "type": "item",
       "sortid": 40,
@@ -884,21 +855,21 @@
       "item.tnt.stick_shooter": "Stick Shooter",
       "advancements.big_bad_boom.descr": "Use a Remote BBB.",
       "subtitles.ekorekors": "Ekor Ekors",
-      "block.tnt_and_disparity.glue_stairs": "Glue Stairs",
       "advancements.go_to_dlk_land.descr": "The place were DLKs are.",
+      "block.tnt_and_disparity.glue_stairs": "Glue Stairs",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_leggings": "BBB Resistant Armor Leggings",
       "item.tnt.remote_bbb": "Remote Big Bad Boom",
       "biome.tnt_disparity.dlk_forest": "DLK Forest",
       "entity.tnt_and_disparity.ekor": "Ekor",
-      "entity.tnt.dlk_king": "DLK King",
       "item.tnt_and_disparity.stickman_spawn": "Stickman Spawn",
+      "entity.tnt.dlk_king": "DLK King",
       "item.tnt_disparity.remote_bbb": "Remote Big Bad Boom",
       "item.tnt.bbb_resistant_armor_armor_boots": "Big Bad Boom Resistant Armor Boots",
       "item.tnt_disparity.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
       "item.tnt.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
       "item.tnt.bbb_resistant_armor_armor_leggings": "Big Bad Boom Resistant Armor Leggings",
-      "item.tnt.dlk_land": "DLK Land Portal Igniter",
       "block.tnt.bbb": "Big Bad Boom",
+      "item.tnt.dlk_land": "DLK Land Portal Igniter",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_helmet": "BBB Resistant Armor Helmet",
       "block.tnt_and_disparity.dlk_land_portal_frame": "DLK Land Portal Frame",
       "item.tnt.shootable_bbb": "Shootable Big Bad Boom",
@@ -991,7 +962,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.0alpha-build.0435",
+    "version": "0.4.0alpha-build.0436",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",
