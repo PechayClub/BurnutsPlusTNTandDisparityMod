@@ -1,0 +1,73 @@
+repositories {
+  maven {
+    // location of the maven that hosts JEI files
+  name = "Progwml6 maven"
+  url = "https://dvs1.progwml6.com/files/maven/"
+  }
+  maven {
+    // location of a maven mirror for JEI files, as a fallback
+     name = "ModMaven"
+  url = "https://modmaven.k-4u.nl"
+  }     
+}
+
+dependencies {
+  compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.6.4.90:api")
+  runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.6.4.90")
+}
+
+repositories {
+  maven {
+    url = 'https://maven.blamejared.com/'
+  }
+}
+
+dependencies {
+  runtimeOnly fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:1.16.5-5.0.0-135")
+  compileOnly fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:1.16.5-5.0.0-135")
+}
+
+repositories {
+  maven {
+    url = "https://maven.theillusivec4.top/"
+  }
+}
+
+dependencies {
+  runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.5.1")
+  compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.5.1:api")
+}
+
+repositories {
+  maven {
+    url = "https://maven.blamejared.com"
+  }
+}
+
+dependencies {
+  compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-50:api")
+  runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-50")
+}
+
+repositories {
+  maven {
+    url = 'https://modmaven.dev/'
+  }
+}
+
+dependencies {
+  compileOnly fg.deobf("teamtwilight:twilightforest:4.0.482:universal")
+  runtimeOnly fg.deobf("teamtwilight:twilightforest:4.0.482:universal")
+}
+
+repositories {
+  maven {
+    url = 'https://maven.tterrag.com/'
+  }
+}
+
+dependencies {
+  runtimeOnly fg.deobf("team.chisel.ctm:CTM:MC1.16.1-1.1.2.6")
+  compileOnly fg.deobf("team.chisel.ctm:CTM:MC1.16.1-1.1.2.6")
+}
+
