@@ -22,15 +22,15 @@ You landed in a world that is more than you expect.
     side="BOTH"
 
 
-
 [[dependencies.tnt_and_disparity]]
-    modId="just_enough_items"
-    mandatory=false
+    modId="twilightforest"
+    mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
+
 [[dependencies.tnt_and_disparity]]
-    modId="immersiveengineering"
+    modId="just_enough_items"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
