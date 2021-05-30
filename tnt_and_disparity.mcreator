@@ -777,6 +777,51 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "stickman_spawn_recipe"
+    },
+    {
+      "name": "GlueStairs",
+      "type": "block",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glue_stairs"
+    },
+    {
+      "name": "GlueSlab",
+      "type": "block",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glue_slab"
+    },
+    {
+      "name": "GlueFence",
+      "type": "block",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glue_fence"
+    },
+    {
+      "name": "GlueFenceGate",
+      "type": "block",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glue_fence_gate"
+    },
+    {
+      "name": "GlueTrapDoor",
+      "type": "block",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glue_trap_door"
     }
   ],
   "variable_elements": [],
@@ -831,6 +876,7 @@
       "advancements.big_bad_boom.descr": "Use a Remote BBB.",
       "subtitles.ekorekors": "Ekor Ekors",
       "advancements.go_to_dlk_land.descr": "The place were DLKs are.",
+      "block.tnt_and_disparity.glue_stairs": "Glue Stairs",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_leggings": "BBB Resistant Armor Leggings",
       "item.tnt.remote_bbb": "Remote Big Bad Boom",
       "biome.tnt_disparity.dlk_forest": "DLK Forest",
@@ -855,6 +901,7 @@
       "block.tnt_and_disparity.glue_block": "Glue Block",
       "block.tnt_disparity.renewable_energy_block": "Renewable Energy Block",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_boots": "BBB Resistant Armor Boots",
+      "block.tnt_and_disparity.glue_fence_gate": "Glue Stairs",
       "item.tnt_disparity.dlk_land": "DLK Land Portal Igniter",
       "item.tnt.bbb_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
       "block.tnt_and_disparity.bounce_block": "Bounce Block",
@@ -864,6 +911,7 @@
       "item.tnt.dlk_spawn_egg": "DLK Spawn Egg",
       "subtitles.dlkdies": "DLK Dies",
       "subtitles.dlkdlks": "DLK DLKs",
+      "block.tnt_and_disparity.glue_fence": "Glue Stairs",
       "entity.tnt_and_disparity.dlk_king": "DLK King",
       "subtitles.dlkhurt": "DLK Dying",
       "block.tnt_disparity.bounce_block": "Bounce Block",
@@ -900,7 +948,9 @@
       "advancements.sticky.descr": "It\u0027s glue.",
       "entity.tnt_disparity.stickman_shooter": "Stickman Shooter",
       "entity.tnt.ekor": "Ekor",
+      "block.tnt_and_disparity.glue_trap_door": "Glue Stairs",
       "item.tnt_disparity.dlk_spawn_egg": "DLK Spawn Egg",
+      "block.tnt_and_disparity.glue_slab": "Glue Stairs",
       "item.tnt.stickman_spawn": "Stickman Spawn",
       "entity.tnt_and_disparity.dlk": "DLK",
       "item.tnt_disparity.ekor_sound": "Ekor Sound",
@@ -932,7 +982,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.3.1alpha-build.0388",
+    "version": "0.4.0alpha-build.0411",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",

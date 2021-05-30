@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tnt_and_disparity:block/glue_slab"
+    },
+    "type=top": {
+      "model": "tnt_and_disparity:block/glue_slab_top"
+    },
+    "type=double": {
+      "model": "tnt_and_disparity:block/glue_slab_full"
+    }
+  }
+}

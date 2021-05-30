@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "tnt_and_disparity:blocks/gluewater",
+    "top": "tnt_and_disparity:blocks/gluewater",
+    "side": "tnt_and_disparity:blocks/gluewater"
+  }
+}

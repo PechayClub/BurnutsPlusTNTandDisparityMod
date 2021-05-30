@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "tnt_and_disparity:blocks/gluewater",
+    "particle": "tnt_and_disparity:blocks/gluewater"
+  }
+}
