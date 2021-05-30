@@ -48,7 +48,7 @@ public class DLKKingOnEntityTickUpdateProcedure extends TntAndDisparityModElemen
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		world.getPendingBlockTicks().scheduleTick(new BlockPos((int) x, (int) y, (int) z),
-				world.getBlockState(new BlockPos((int) x, (int) y, (int) z)).getBlock(), (int) 100);
+				world.getBlockState(new BlockPos((int) x, (int) y, (int) z)).getBlock(), (int) 200);
 		if (world instanceof ServerWorld) {
 			Entity entityToSpawn = new DLKEntity.CustomEntity(DLKEntity.entity, (World) world);
 			entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
