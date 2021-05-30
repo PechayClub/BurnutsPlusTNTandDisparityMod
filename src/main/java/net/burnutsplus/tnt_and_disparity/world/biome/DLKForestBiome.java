@@ -107,7 +107,7 @@ public class DLKForestBiome extends TntAndDisparityModElements.ModElement {
 				DefaultBiomeFeatures.withOverworldOres(biomeGenerationSettings);
 				DefaultBiomeFeatures.withFrozenTopLayer(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
-				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(DLKEntity.entity, 100, 1, 1));
+				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(DLKEntity.entity, 40, 1, 4));
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(0.5f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();

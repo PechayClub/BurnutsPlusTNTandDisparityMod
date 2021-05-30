@@ -109,8 +109,8 @@
           "value": "CUSTOM:DLK"
         },
         "minGroup": 1,
-        "maxGroup": 1,
-        "weight": 100,
+        "maxGroup": 4,
+        "weight": 40,
         "spawnType": "monster"
       }
     ]

@@ -1,5 +1,6 @@
 package net.burnutsplus.tnt_and_disparity.procedures;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
@@ -54,10 +55,12 @@ public class DLKEntityDiesProcedure extends TntAndDisparityModElements.ModElemen
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+		if (world instanceof ServerWorld) {
+			((ServerWorld) world).spawnParticle(ParticleTypes.CRIT, x, y, z, (int) 8, 8, 8, 8, 1);
+		}
 		if (world instanceof World && !((World) world).isRemote) {
 			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 8, Explosion.Mode.DESTROY);
 		}
-		world.addParticle(ParticleTypes.ENCHANTED_HIT, x, y, z, 8, 8, 8);
 		if (entity instanceof ServerPlayerEntity) {
 			Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 					.getAdvancement(new ResourceLocation("tnt_and_disparity:go_boom"));
