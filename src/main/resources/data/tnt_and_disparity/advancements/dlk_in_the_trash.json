@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "tnt_and_disparity:bbb"
+    },
+    "title": {
+      "translate": "advancements.dlk_in_the_trash.title"
+    },
+    "description": {
+      "translate": "advancements.dlk_in_the_trash.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "dlk_in_the_trash": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 500
+  },
+  "parent": "tnt_and_disparity:big_bad_boom"
+}

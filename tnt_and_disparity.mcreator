@@ -802,6 +802,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "dlk_castle"
+    },
+    {
+      "name": "DLKInTheTrash",
+      "type": "achievement",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dlk_in_the_trash"
     }
   ],
   "variable_elements": [],
@@ -868,6 +877,7 @@
       "item.tnt_disparity.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
       "item.tnt.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
       "item.tnt.bbb_resistant_armor_armor_leggings": "Big Bad Boom Resistant Armor Leggings",
+      "advancements.dlk_in_the_trash.descr": "Kill the DLK King",
       "item.tnt.dlk_land": "DLK Land Portal Igniter",
       "block.tnt.bbb": "Big Bad Boom",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_helmet": "BBB Resistant Armor Helmet",
@@ -945,6 +955,7 @@
       "block.tnt_and_disparity.bbb": "BBB",
       "item.tnt.ekor_spawn_egg": "Ekor Spawn Egg",
       "item.tnt_disparity.shootable_bbb": "Shootable Big Bad Boom",
+      "advancements.dlk_in_the_trash.title": "DLK In The Trash",
       "item.tnt.glue_water_bucket": "Glue Bucket",
       "advancements.sticky.title": "Sticky",
       "item.tnt_and_disparity.glue_water_bucket": "Glue Bucket",
@@ -962,7 +973,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.0alpha-build.0438",
+    "version": "0.4.0alpha-build.0445",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",
