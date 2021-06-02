@@ -45,8 +45,8 @@ repositories {
 }
 
 dependencies {
-  compileOnly fg.deobf("teamtwilight:twilightforest:4.0.482:universal")
-  runtimeOnly fg.deobf("teamtwilight:twilightforest:4.0.482:universal")
+  compileOnly fg.deobf("teamtwilight:twilightforest:4.0.490:universal")
+  runtimeOnly fg.deobf("teamtwilight:twilightforest:4.0.490:universal")
 }
 
 repositories {
