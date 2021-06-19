@@ -1,8 +1,8 @@
-#TNT and Disparity Mod
+## TNT and Disparity Mod
 
 Adventure with Burnuts.
 
-#Notes:
+## Notes:
 
 Comments are now allowed in our Curseforge project.
 
