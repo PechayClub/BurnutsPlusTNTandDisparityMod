@@ -11,7 +11,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.Minecraft;
 
 import net.burnutsplus.tnt_and_disparity.entity.DLKKingEntity;
 
@@ -32,6 +34,8 @@ public class DLKKingRenderer {
 					}
 				};
 			});
+			RenderingRegistry.registerEntityRenderingHandler(DLKKingEntity.arrow,
+					renderManager -> new SpriteRenderer(renderManager, Minecraft.getInstance().getItemRenderer()));
 		}
 	}
 

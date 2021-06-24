@@ -49,7 +49,7 @@
     "attackStrength": 40,
     "attackKnockback": 0.0,
     "knockbackResistance": 20.0,
-    "movementSpeed": 0.1,
+    "movementSpeed": 0.5,
     "armorBaseValue": 40.0,
     "trackingRange": 128,
     "health": 800,
@@ -113,9 +113,9 @@
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
-    "ranged": false,
+    "ranged": true,
     "rangedAttackItem": {
-      "value": ""
+      "value": "CUSTOM:ShootableBBB"
     },
     "rangedItemType": "Default item",
     "spawnThisMob": false,
