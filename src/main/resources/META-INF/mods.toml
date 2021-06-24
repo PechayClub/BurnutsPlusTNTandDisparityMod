@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="tnt_and_disparity"
-version="0.4.0alpha-build.0448"
+version="0.4.0alpha-build.0504"
 displayName="TNT and Disparity"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
@@ -31,6 +31,12 @@ You landed in a world that is more than you expect.
 
 [[dependencies.tnt_and_disparity]]
     modId="just_enough_items"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.tnt_and_disparity]]
+    modId="immersiveengineering"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

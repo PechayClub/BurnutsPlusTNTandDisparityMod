@@ -18,6 +18,16 @@ dependencies {
 
 repositories {
   maven {
+    url = "https://maven.blamejared.com"
+  }
+}
+
+dependencies {
+  implementation fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:1.16.5-5.0.0-135")
+}
+
+repositories {
+  maven {
     url = "https://maven.theillusivec4.top/"
   }
 }
@@ -34,13 +44,15 @@ repositories {
 }
 
 dependencies {
-  compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-50:api")
-  runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-50")
+  implementation fg.deobf("vazkii.patchouli:Patchouli:1.16.4-50")
 }
 
 repositories {
+ maven {
+    url = "https://www.dogforce-games.com/maven/"
+  }
   maven {
-    url = 'https://modmaven.dev/'
+    url = "https://modmaven.dev/"
   }
 }
 
@@ -51,12 +63,11 @@ dependencies {
 
 repositories {
   maven {
-    url = 'https://maven.tterrag.com/'
+    url = "https://maven.tterrag.com"
   }
 }
 
 dependencies {
-  runtimeOnly fg.deobf("team.chisel.ctm:CTM:MC1.16.1-1.1.2.6")
-  compileOnly fg.deobf("team.chisel.ctm:CTM:MC1.16.1-1.1.2.6")
+  implementation fg.deobf("team.chisel.ctm:CTM:MC1.16.1-1.1.2.6")
 }
 

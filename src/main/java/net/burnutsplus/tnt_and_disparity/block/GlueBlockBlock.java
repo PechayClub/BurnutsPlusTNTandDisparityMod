@@ -2,19 +2,23 @@
 package net.burnutsplus.tnt_and_disparity.block;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.common.ToolType;
 
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.burnutsplus.tnt_and_disparity.item.DrillBBBItem;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
 import java.util.List;
@@ -35,9 +39,13 @@ public class GlueBlockBlock extends TntAndDisparityModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WATER).sound(SoundType.GROUND).hardnessAndResistance(1000f, 100f).setLightLevel(s -> 0)
-					.harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool());
+			super(Block.Properties.create(Material.WATER).sound(SoundType.GROUND).hardnessAndResistance(1000f, 100f).setLightLevel(s -> 0));
 			setRegistryName("glue_block");
+		}
+
+		@Override
+		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
+			return new ItemStack(DrillBBBItem.block, (int) (1));
 		}
 
 		@Override

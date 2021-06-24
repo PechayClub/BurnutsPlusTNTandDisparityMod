@@ -14,7 +14,7 @@
     "ammoItem": {
       "value": ""
     },
-    "shootConstantly": true,
+    "shootConstantly": false,
     "usageCount": 0,
     "actionSound": {
       "value": "entity.arrow.shoot"
@@ -34,6 +34,12 @@
     "bulletModel": "Default",
     "customBulletModelTexture": "",
     "onBulletHitsBlock": {
+      "name": "RemoteBBBExplode"
+    },
+    "onBulletHitsPlayer": {
+      "name": "RemoteBBBExplode"
+    },
+    "onBulletHitsEntity": {
       "name": "RemoteBBBExplode"
     },
     "onBulletFlyingTick": {
