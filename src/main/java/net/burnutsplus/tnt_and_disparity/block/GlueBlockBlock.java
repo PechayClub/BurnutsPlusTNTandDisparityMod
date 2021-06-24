@@ -39,7 +39,7 @@ public class GlueBlockBlock extends TntAndDisparityModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WATER).sound(SoundType.GROUND).hardnessAndResistance(1000f, 100f).setLightLevel(s -> 0));
+			super(Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(1000f, 100f).setLightLevel(s -> 0));
 			setRegistryName("glue_block");
 		}
 
