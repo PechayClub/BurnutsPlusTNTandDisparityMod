@@ -4,8 +4,8 @@
   "definition": {
     "structure": "dlk_castle",
     "randomlyRotateStructure": true,
-    "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 3000,
+    "surfaceDetectionType": "First block",
+    "spawnProbability": 2500,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",

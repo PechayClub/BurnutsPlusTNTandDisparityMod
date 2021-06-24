@@ -104,8 +104,8 @@
     "whenMobDies": {
       "name": "DLKKingEntityDies"
     },
-    "onMobTickUpdate": {
-      "name": "DLKKingOnEntityTickUpdate"
+    "whenMobIsHurt": {
+      "name": "DLKKingEntityIsHurt"
     },
     "onInitialSpawn": {
       "name": "DLKKingOnInitialEntitySpawn"

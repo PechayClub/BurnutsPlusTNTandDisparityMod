@@ -58,7 +58,7 @@ public class DLKKingEntityDiesProcedure extends TntAndDisparityModElements.ModEl
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("NOOOOOOOOOOOOOOO!!!"), (true));
+			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("NOOOOOOOOOOOOOOO!!!"), (false));
 		}
 		if (world instanceof ServerWorld) {
 			((ServerWorld) world).spawnParticle(ParticleTypes.CRIT, x, y, z, (int) 40, 40, 40, 40, 1);

@@ -63,7 +63,7 @@ public class DLKKingOnInitialEntitySpawnProcedure extends TntAndDisparityModElem
 					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 		}
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Do you wanna challenge me? Then lets fight."), (true));
+			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Do you wanna challenge me? Then lets fight."), (false));
 		}
 	}
 }
