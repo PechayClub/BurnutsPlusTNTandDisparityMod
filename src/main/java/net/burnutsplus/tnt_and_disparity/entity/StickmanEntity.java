@@ -17,11 +17,14 @@ import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.ReturnToVillageGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -42,6 +45,7 @@ import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.material.Material;
 
+import net.burnutsplus.tnt_and_disparity.item.StickmanSpawnItem;
 import net.burnutsplus.tnt_and_disparity.entity.renderer.StickmanRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
@@ -109,13 +113,15 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
 			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 1));
 			this.goalSelector.addGoal(4, new AvoidEntityGoal(this, DLKEntity.CustomEntity.class, (float) 6, 1, 1.2));
-			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
-			this.goalSelector.addGoal(7, new SwimGoal(this));
-			this.goalSelector.addGoal(8, new LeapAtTargetGoal(this, (float) 0.5));
-			this.goalSelector.addGoal(9, new OpenDoorGoal(this, true));
-			this.goalSelector.addGoal(10, new OpenDoorGoal(this, false));
-			this.goalSelector.addGoal(11, new ReturnToVillageGoal(this, 0.6, false));
+			this.goalSelector.addGoal(5,
+					new TemptGoal(this, 1, Ingredient.fromItems(new ItemStack(StickmanSpawnItem.block, (int) (1)).getItem()), false));
+			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
+			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
+			this.goalSelector.addGoal(8, new SwimGoal(this));
+			this.goalSelector.addGoal(9, new LeapAtTargetGoal(this, (float) 0.5));
+			this.goalSelector.addGoal(10, new OpenDoorGoal(this, true));
+			this.goalSelector.addGoal(11, new OpenDoorGoal(this, false));
+			this.goalSelector.addGoal(12, new ReturnToVillageGoal(this, 0.6, false));
 		}
 
 		@Override
