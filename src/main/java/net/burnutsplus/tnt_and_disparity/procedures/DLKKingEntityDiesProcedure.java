@@ -1,13 +1,11 @@
 package net.burnutsplus.tnt_and_disparity.procedures;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -59,9 +57,6 @@ public class DLKKingEntityDiesProcedure extends TntAndDisparityModElements.ModEl
 		IWorld world = (IWorld) dependencies.get("world");
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("NOOOOOOOOOOOOOOO!!!"), (false));
-		}
-		if (world instanceof ServerWorld) {
-			((ServerWorld) world).spawnParticle(ParticleTypes.CRIT, x, y, z, (int) 40, 40, 40, 40, 1);
 		}
 		if (world instanceof World && !((World) world).isRemote) {
 			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 80, Explosion.Mode.DESTROY);

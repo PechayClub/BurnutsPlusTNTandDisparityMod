@@ -47,9 +47,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingOnInitialEntitySpawnProcedure;
-import net.burnutsplus.tnt_and_disparity.procedures.DLKKingEntityIsHurtProcedure;
+import net.burnutsplus.tnt_and_disparity.procedures.DLKKingItIsStruckByLightningProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingEntityDiesProcedure;
-import net.burnutsplus.tnt_and_disparity.procedures.DLKItIsStruckByLightningProcedure;
 import net.burnutsplus.tnt_and_disparity.entity.renderer.DLKKingRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
@@ -157,29 +156,17 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 			Entity entity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				DLKItIsStruckByLightningProcedure.executeProcedure($_dependencies);
+				DLKKingItIsStruckByLightningProcedure.executeProcedure($_dependencies);
 			}
 		}
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			Entity sourceentity = source.getTrueSource();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DLKKingEntityIsHurtProcedure.executeProcedure($_dependencies);
-			}
 			if (source.getImmediateSource() instanceof ArrowEntity)
 				return false;
 			if (source == DamageSource.FALL)

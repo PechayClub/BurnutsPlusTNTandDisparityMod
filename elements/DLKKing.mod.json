@@ -99,13 +99,10 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "onStruckByLightning": {
-      "name": "DLKItIsStruckByLightning"
+      "name": "DLKKingItIsStruckByLightning"
     },
     "whenMobDies": {
       "name": "DLKKingEntityDies"
-    },
-    "whenMobIsHurt": {
-      "name": "DLKKingEntityIsHurt"
     },
     "onInitialSpawn": {
       "name": "DLKKingOnInitialEntitySpawn"

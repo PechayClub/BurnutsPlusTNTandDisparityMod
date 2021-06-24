@@ -3,7 +3,6 @@ package net.burnutsplus.tnt_and_disparity.procedures;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
-import net.minecraft.particles.ParticleTypes;
 
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
@@ -44,6 +43,5 @@ public class DLKItIsStruckByLightningProcedure extends TntAndDisparityModElement
 		if (world instanceof World && !((World) world).isRemote) {
 			((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 8, Explosion.Mode.DESTROY);
 		}
-		world.addParticle(ParticleTypes.INSTANT_EFFECT, x, y, z, 8, 8, 8);
 	}
 }
