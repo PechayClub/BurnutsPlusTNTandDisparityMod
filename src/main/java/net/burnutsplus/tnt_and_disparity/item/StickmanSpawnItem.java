@@ -67,8 +67,8 @@ public class StickmanSpawnItem extends TntAndDisparityModElements.ModElement {
 			ItemStack itemstack = context.getItem();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
+				$_dependencies.put("x", x);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				StickmanSpawnRightClickedOnBlockProcedure.executeProcedure($_dependencies);

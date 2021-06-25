@@ -2,11 +2,14 @@
   "group": "tnt_and_disparity",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "  2",
+    "0 2",
     " 4 ",
     "6 8"
   ],
   "key": {
+    "0": {
+      "item": "minecraft:netherite_pickaxe"
+    },
     "2": {
       "item": "minecraft:stone_button"
     },

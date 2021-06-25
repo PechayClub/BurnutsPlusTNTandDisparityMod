@@ -171,6 +171,8 @@ public class DLKEntity extends TntAndDisparityModElements.ModElement {
 				return false;
 			if (source == DamageSource.CACTUS)
 				return false;
+			if (source.isExplosion())
+				return false;
 			if (source.getDamageType().equals("trident"))
 				return false;
 			if (source == DamageSource.ANVIL)

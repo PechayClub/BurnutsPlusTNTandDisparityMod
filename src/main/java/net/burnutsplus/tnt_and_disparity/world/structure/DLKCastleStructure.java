@@ -70,7 +70,9 @@ public class DLKCastleStructure extends TntAndDisparityModElements.ModElement {
 							boolean blockCriteria = false;
 							if (blockAt.getBlock() == GlueWaterBlock.block.getDefaultState().getBlock())
 								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.ANDESITE.getDefaultState().getBlock())
+							if (blockAt.getBlock() == Blocks.VOID_AIR.getDefaultState().getBlock())
+								blockCriteria = true;
+							if (blockAt.getBlock() == Blocks.CAVE_AIR.getDefaultState().getBlock())
 								blockCriteria = true;
 							if (!blockCriteria)
 								continue;
