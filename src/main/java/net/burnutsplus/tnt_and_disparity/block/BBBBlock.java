@@ -341,7 +341,7 @@ public class BBBBlock extends TntAndDisparityModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("BBB");
+			return new StringTextComponent("Big Bad Boom");
 		}
 
 		@Override

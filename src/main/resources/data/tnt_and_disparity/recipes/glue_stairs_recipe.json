@@ -1,0 +1,33 @@
+{
+  "group": "tnt_and_disparity",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "3": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "4": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "6": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "7": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "8": {
+      "item": "tnt_and_disparity:glue_block"
+    }
+  },
+  "result": {
+    "item": "tnt_and_disparity:glue_stairs",
+    "count": 1
+  }
+}

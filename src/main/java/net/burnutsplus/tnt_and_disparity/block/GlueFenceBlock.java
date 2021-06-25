@@ -43,7 +43,7 @@ public class GlueFenceBlock extends TntAndDisparityModElements.ModElement {
 	}
 	public static class CustomBlock extends FenceBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(1000f, 100f).setLightLevel(s -> 0));
+			super(Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(100f, 2400f).setLightLevel(s -> 0));
 			setRegistryName("glue_fence");
 		}
 

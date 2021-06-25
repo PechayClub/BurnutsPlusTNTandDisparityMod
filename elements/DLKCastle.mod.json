@@ -4,19 +4,26 @@
   "definition": {
     "structure": "dlk_castle",
     "randomlyRotateStructure": true,
-    "surfaceDetectionType": "First block",
+    "surfaceDetectionType": "First motion blocking block",
     "spawnProbability": 2500,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": 0,
-    "spawnXOffset": 0,
-    "spawnZOffset": 0,
+    "spawnHeightOffset": 10,
+    "spawnXOffset": 10,
+    "spawnZOffset": 10,
     "spawnWorldTypes": [
       "CUSTOM:DLKLand"
     ],
-    "restrictionBlocks": [],
+    "restrictionBlocks": [
+      {
+        "value": "CUSTOM:GlueWater"
+      },
+      {
+        "value": "Blocks.STONE#5"
+      }
+    ],
     "restrictionBiomes": [],
-    "ignoreBlocks": "STRUCTURE_BLOCK"
+    "ignoreBlocks": "AIR_AND_STRUCTURE_BLOCK"
   }
 }

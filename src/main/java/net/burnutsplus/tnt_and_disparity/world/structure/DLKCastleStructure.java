@@ -28,7 +28,10 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockState;
 
+import net.burnutsplus.tnt_and_disparity.block.GlueWaterBlock;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
 import java.util.Random;
@@ -61,11 +64,19 @@ public class DLKCastleStructure extends TntAndDisparityModElements.ModElement {
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
-							int j = world.getHeight(Heightmap.Type.WORLD_SURFACE_WG, i, k);
+							int j = world.getHeight(Heightmap.Type.OCEAN_FLOOR_WG, i, k);
 							j -= 1;
+							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
+							boolean blockCriteria = false;
+							if (blockAt.getBlock() == GlueWaterBlock.block.getDefaultState().getBlock())
+								blockCriteria = true;
+							if (blockAt.getBlock() == Blocks.ANDESITE.getDefaultState().getBlock())
+								blockCriteria = true;
+							if (!blockCriteria)
+								continue;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
-							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
+							BlockPos spawnTo = new BlockPos(i + 10, j + 10, k + 10);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
@@ -73,9 +84,8 @@ public class DLKCastleStructure extends TntAndDisparityModElements.ModElement {
 									.getTemplateDefaulted(new ResourceLocation("tnt_and_disparity", "dlk_castle"));
 							if (template == null)
 								return false;
-							template.func_237144_a_(world, spawnTo,
-									new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
-											.addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false),
+							template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
+									.addProcessor(BlockIgnoreStructureProcessor.AIR_AND_STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false),
 									random);
 						}
 					}

@@ -39,7 +39,7 @@ public class DLKLandPortalFrameBlock extends TntAndDisparityModElements.ModEleme
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(1000f, 100f).setLightLevel(s -> 0));
+			super(Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(100f, 2400f).setLightLevel(s -> 0));
 			setRegistryName("dlk_land_portal_frame");
 		}
 

@@ -1,0 +1,24 @@
+{
+  "group": "tnt_and_disparity",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "1": {
+      "item": "minecraft:stick"
+    },
+    "2": {
+      "item": "tnt_and_disparity:remote_bbb"
+    }
+  },
+  "result": {
+    "item": "tnt_and_disparity:dlk_land",
+    "count": 1
+  }
+}

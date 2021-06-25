@@ -42,9 +42,9 @@ public class GlueStairsBlock extends TntAndDisparityModElements.ModElement {
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(
-					Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(1000f, 100f).setLightLevel(s -> 0))
+					Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(100f, 2400f).setLightLevel(s -> 0))
 							.getDefaultState(),
-					Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(1000f, 100f).setLightLevel(s -> 0));
+					Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(100f, 2400f).setLightLevel(s -> 0));
 			setRegistryName("glue_stairs");
 		}
 

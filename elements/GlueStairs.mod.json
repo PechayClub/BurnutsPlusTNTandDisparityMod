@@ -35,8 +35,8 @@
     ],
     "name": "Glue Stairs",
     "specialInfo": [],
-    "hardness": 1000.0,
-    "resistance": 100.0,
+    "hardness": 100.0,
+    "resistance": 2400.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
