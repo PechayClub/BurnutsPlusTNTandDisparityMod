@@ -680,6 +680,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -1060,11 +1076,11 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.0alpha-build.0525",
+    "version": "0.4.0alpha-build.0535",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",
-    "license": "All Rights Reserved",
+    "license": "GNU Lesser General Public License version 2.1 (LGPLv2.1)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "637565801192247219",

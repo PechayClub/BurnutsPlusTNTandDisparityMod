@@ -42,15 +42,15 @@ public class DrillBBBItem extends TntAndDisparityModElements.ModElement {
 			}
 
 			public float getEfficiency() {
-				return 80f;
+				return 200f;
 			}
 
 			public float getAttackDamage() {
-				return 78f;
+				return 198f;
 			}
 
 			public int getHarvestLevel() {
-				return 0;
+				return 20;
 			}
 
 			public int getEnchantability() {
