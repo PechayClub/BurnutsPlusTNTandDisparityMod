@@ -48,5 +48,15 @@
         "stream": false
       }
     ]
+  },
+  "dryout": {
+    "category": "record",
+    "subtitle": "subtitles.dryout",
+    "sounds": [
+      {
+        "name": "tnt_and_disparity:djvi-dry-out-2.0-mp3",
+        "stream": true
+      }
+    ]
   }
 }

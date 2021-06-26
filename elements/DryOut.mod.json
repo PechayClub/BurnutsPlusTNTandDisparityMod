@@ -1,0 +1,19 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "dryout",
+    "name": "DJVI - Dry Out 2.0",
+    "description": "Credit to DJVI for the Music from Free Download.",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:dryout"
+    },
+    "specialInfo": [
+      "Credit to DJVI for the Music from Free Download."
+    ],
+    "hasGlow": false
+  }
+}
