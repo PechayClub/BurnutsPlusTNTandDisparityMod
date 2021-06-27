@@ -1,4 +1,4 @@
-[![Curseforge](http://cf.way2muchnoise.eu/full_tnt-and-disparity_downloads.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_tnt-and-disparity_all.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity)
+[![Curseforge](http://cf.way2muchnoise.eu/full_tnt-and-disparity_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/tnt-and-disparity/files) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_tnt-and-disparity_all.svg)](https://www.curseforge.com/minecraft/mc-mods/tnt-and-disparity/files)
 ==============
 ## TNT and Disparity Mod
 
