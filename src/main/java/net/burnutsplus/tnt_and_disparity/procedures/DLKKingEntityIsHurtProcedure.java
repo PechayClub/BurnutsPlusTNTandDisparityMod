@@ -10,7 +10,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.MobEntity;
@@ -61,7 +60,7 @@ public class DLKKingEntityIsHurtProcedure extends TntAndDisparityModElements.Mod
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((entity instanceof ServerPlayerEntity)) {
+		if (((entity instanceof StickmanEntity.CustomEntity) == (entity instanceof PlayerEntity))) {
 			if (world instanceof ServerWorld) {
 				Entity entityToSpawn = new DLKEntity.CustomEntity(DLKEntity.entity, (World) world);
 				entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
@@ -71,7 +70,7 @@ public class DLKKingEntityIsHurtProcedure extends TntAndDisparityModElements.Mod
 				world.addEntity(entityToSpawn);
 			}
 		}
-		if (((entity instanceof StickmanEntity.CustomEntity) == (entity instanceof ServerPlayerEntity))) {
+		if ((entity instanceof StickmanEntity.CustomEntity)) {
 			if (world instanceof World && !world.isRemote()) {
 				((World) world)
 						.playSound(null, new BlockPos((int) x, (int) y, (int) z),
