@@ -16,9 +16,9 @@
     "rewardRecipes": [],
     "rewardFunction": "No function",
     "rewardXP": 500,
-    "achievementType": "task",
+    "achievementType": "goal",
     "parent": {
-      "value": "CUSTOM:BigBadBoom"
+      "value": "CUSTOM:GoBoom"
     },
     "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"43\" y=\"45\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }

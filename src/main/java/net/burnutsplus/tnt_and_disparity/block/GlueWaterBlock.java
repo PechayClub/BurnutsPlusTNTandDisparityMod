@@ -13,7 +13,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.feature.LakesFeature;
@@ -39,15 +38,11 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.burnutsplus.tnt_and_disparity.procedures.GlueWaterUpdateTickProcedure;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
 import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
 
 @TntAndDisparityModElements.ModElement.Tag
 public class GlueWaterBlock extends TntAndDisparityModElements.ModElement {
@@ -86,22 +81,6 @@ public class GlueWaterBlock extends TntAndDisparityModElements.ModElement {
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("glue_water");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("glue_water_flowing");
 		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.WATER)) {
-			@Override
-			public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-				super.tick(state, world, pos, random);
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					GlueWaterUpdateTickProcedure.executeProcedure($_dependencies);
-				}
-				world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
-			}
 		}.setRegistryName("glue_water"));
 		elements.items.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(ItemGroup.MISC))
 				.setRegistryName("glue_water_bucket"));
@@ -116,7 +95,7 @@ public class GlueWaterBlock extends TntAndDisparityModElements.ModElement {
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, BlockStateFeatureConfig config) {
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == World.OVERWORLD)
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("tnt_and_disparity:dlk_land")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -131,6 +110,19 @@ public class GlueWaterBlock extends TntAndDisparityModElements.ModElement {
 	}
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("ocean").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("river").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("swamp").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("beach").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("the_void").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.LOCAL_MODIFICATIONS).add(() -> configuredFeature);
 	}
 }

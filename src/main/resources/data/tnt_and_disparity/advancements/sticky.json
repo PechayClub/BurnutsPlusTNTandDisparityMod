@@ -27,5 +27,5 @@
   "rewards": {
     "experience": 10
   },
-  "parent": "minecraft:story/root"
+  "parent": "tnt_and_disparity:go_to_dlk_land"
 }

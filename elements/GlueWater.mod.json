@@ -16,11 +16,24 @@
     },
     "frequencyOnChunks": 1,
     "spawnWorldTypes": [
-      "Surface"
+      "CUSTOM:DLKLand"
     ],
-    "restrictionBiomes": [],
-    "onTickUpdate": {
-      "name": "GlueWaterUpdateTick"
-    }
+    "restrictionBiomes": [
+      {
+        "value": "ocean"
+      },
+      {
+        "value": "river"
+      },
+      {
+        "value": "swamp"
+      },
+      {
+        "value": "beaches"
+      },
+      {
+        "value": "void"
+      }
+    ]
   }
 }

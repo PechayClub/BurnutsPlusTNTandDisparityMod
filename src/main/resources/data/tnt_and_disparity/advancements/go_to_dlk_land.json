@@ -9,7 +9,7 @@
     "description": {
       "translate": "advancements.go_to_dlk_land.descr"
     },
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true
@@ -25,5 +25,5 @@
   "rewards": {
     "experience": 0
   },
-  "parent": "minecraft:story/root"
+  "parent": "minecraft:adventure/root"
 }

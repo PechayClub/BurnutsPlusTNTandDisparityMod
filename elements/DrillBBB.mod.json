@@ -10,7 +10,7 @@
     "creativeTab": {
       "value": "TOOLS"
     },
-    "toolType": "Pickaxe",
+    "toolType": "MultiTool",
     "harvestLevel": 20,
     "efficiency": 200.0,
     "attackSpeed": 8.0,

@@ -7,14 +7,15 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
@@ -26,6 +27,9 @@ import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 import java.util.Map;
 import java.util.HashMap;
 
+import com.google.common.collect.Multimap;
+import com.google.common.collect.ImmutableMultimap;
+
 @TntAndDisparityModElements.ModElement.Tag
 public class DrillBBBItem extends TntAndDisparityModElements.ModElement {
 	@ObjectHolder("tnt_and_disparity:drill_bbb")
@@ -36,31 +40,7 @@ public class DrillBBBItem extends TntAndDisparityModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		elements.items.add(() -> new PickaxeItem(new IItemTier() {
-			public int getMaxUses() {
-				return 0;
-			}
-
-			public float getEfficiency() {
-				return 200f;
-			}
-
-			public float getAttackDamage() {
-				return 198f;
-			}
-
-			public int getHarvestLevel() {
-				return 20;
-			}
-
-			public int getEnchantability() {
-				return 0;
-			}
-
-			public Ingredient getRepairMaterial() {
-				return Ingredient.EMPTY;
-			}
-		}, 1, 4f, new Item.Properties().group(ItemGroup.TOOLS)) {
+		elements.items.add(() -> new ItemToolCustom() {
 			@Override
 			public ActionResultType onItemUse(ItemUseContext context) {
 				ActionResultType retval = super.onItemUse(context);
@@ -142,5 +122,51 @@ public class DrillBBBItem extends TntAndDisparityModElements.ModElement {
 				}
 			}
 		}.setRegistryName("drill_bbb"));
+	}
+	private static class ItemToolCustom extends Item {
+		protected ItemToolCustom() {
+			super(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(0));
+		}
+
+		@Override
+		public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot) {
+			if (equipmentSlot == EquipmentSlotType.MAINHAND) {
+				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+				builder.putAll(super.getAttributeModifiers(equipmentSlot));
+				builder.put(Attributes.ATTACK_DAMAGE,
+						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 198f, AttributeModifier.Operation.ADDITION));
+				builder.put(Attributes.ATTACK_SPEED,
+						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", 4, AttributeModifier.Operation.ADDITION));
+				return builder.build();
+			}
+			return super.getAttributeModifiers(equipmentSlot);
+		}
+
+		@Override
+		public boolean canHarvestBlock(BlockState state) {
+			return 20 >= state.getHarvestLevel();
+		}
+
+		@Override
+		public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
+			return 200f;
+		}
+
+		@Override
+		public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+			stack.damageItem(1, attacker, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
+			return true;
+		}
+
+		@Override
+		public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
+			stack.damageItem(1, entityLiving, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
+			return true;
+		}
+
+		@Override
+		public int getItemEnchantability() {
+			return 0;
+		}
 	}
 }

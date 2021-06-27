@@ -9,7 +9,7 @@
     "description": {
       "translate": "advancements.dlk_in_the_trash.descr"
     },
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
@@ -22,5 +22,5 @@
   "rewards": {
     "experience": 500
   },
-  "parent": "tnt_and_disparity:big_bad_boom"
+  "parent": "tnt_and_disparity:go_boom"
 }
