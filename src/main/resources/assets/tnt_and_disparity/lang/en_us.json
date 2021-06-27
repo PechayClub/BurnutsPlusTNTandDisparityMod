@@ -1,7 +1,7 @@
 {
   "subtitles.dryout": "DJVI - Dry Out 2.0",
-  "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
   "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
+  "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
   "advancements.big_bad_boom.title": "Big Bad Boom",
   "advancements.big_bad_boom.descr": "Use a Remote BBB.",
   "entity.tnt_and_disparity.stickman": "Stickman",
@@ -28,6 +28,7 @@
   "item.tnt_and_disparity.dry_out.desc": "DJVI - Dry Out 2.0",
   "entity.tnt_and_disparity.dlk": "DLK",
   "item.tnt_and_disparity.bbb_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
+  "subtitles.dlkkingstickman": "DLK King Saying about Stickman",
   "advancements.go_boom.descr": "DLKs explodese upon death.",
   "block.tnt_and_disparity.glue_block": "Glue Block",
   "item.tnt_and_disparity.stick_shooter": "Stick Shooter",

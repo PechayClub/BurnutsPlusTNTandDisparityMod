@@ -503,17 +503,17 @@
       "type": "procedure",
       "sortid": 35,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "stickman_spawn_right_clicked_on_block",
       "metadata": {
         "dependencies": [
           {
-            "name": "y",
+            "name": "x",
             "type": "number"
           },
           {
-            "name": "x",
+            "name": "y",
             "type": "number"
           },
           {
@@ -541,7 +541,7 @@
       "type": "mob",
       "sortid": 36,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {},
       "registry_name": "dlk_king"
     },
@@ -772,6 +772,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -945,13 +949,21 @@
       ],
       "category": "record",
       "subtitle": "DJVI - Dry Out 2.0"
+    },
+    {
+      "name": "dlkkingstickman",
+      "files": [
+        "dlkkingstickman"
+      ],
+      "category": "hostile",
+      "subtitle": "DLK King Saying about Stickman"
     }
   ],
   "language_map": {
     "en_us": {
       "subtitles.dryout": "DJVI - Dry Out 2.0",
-      "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
       "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
+      "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
       "advancements.big_bad_boom.title": "Big Bad Boom",
       "advancements.big_bad_boom.descr": "Use a Remote BBB.",
       "entity.tnt_and_disparity.stickman": "Stickman",
@@ -978,6 +990,7 @@
       "item.tnt_and_disparity.dry_out.desc": "DJVI - Dry Out 2.0",
       "entity.tnt_and_disparity.dlk": "DLK",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
+      "subtitles.dlkkingstickman": "DLK King Saying about Stickman",
       "advancements.go_boom.descr": "DLKs explodese upon death.",
       "block.tnt_and_disparity.glue_block": "Glue Block",
       "item.tnt_and_disparity.stick_shooter": "Stick Shooter",
@@ -1009,7 +1022,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.0alpha-build.0540",
+    "version": "0.4.0alpha-build.0551",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",

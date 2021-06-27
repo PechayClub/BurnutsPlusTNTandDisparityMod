@@ -46,10 +46,10 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 40,
+    "attackStrength": 80,
     "attackKnockback": 0.0,
     "knockbackResistance": 20.0,
-    "movementSpeed": 0.5,
+    "movementSpeed": 0.2,
     "armorBaseValue": 40.0,
     "trackingRange": 128,
     "health": 800,
@@ -104,6 +104,9 @@
     "whenMobDies": {
       "name": "DLKKingEntityDies"
     },
+    "whenMobIsHurt": {
+      "name": "DLKKingEntityIsHurt"
+    },
     "onInitialSpawn": {
       "name": "DLKKingOnInitialEntitySpawn"
     },
@@ -113,9 +116,9 @@
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
-    "ranged": true,
+    "ranged": false,
     "rangedAttackItem": {
-      "value": "CUSTOM:ShootableBBB"
+      "value": ""
     },
     "rangedItemType": "Default item",
     "spawnThisMob": false,

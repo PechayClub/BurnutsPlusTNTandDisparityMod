@@ -58,5 +58,15 @@
         "stream": true
       }
     ]
+  },
+  "dlkkingstickman": {
+    "category": "hostile",
+    "subtitle": "subtitles.dlkkingstickman",
+    "sounds": [
+      {
+        "name": "tnt_and_disparity:dlkkingstickman",
+        "stream": false
+      }
+    ]
   }
 }

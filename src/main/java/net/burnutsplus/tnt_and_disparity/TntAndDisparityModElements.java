@@ -57,6 +57,8 @@ public class TntAndDisparityModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("tnt_and_disparity", "dlkkingsaying")));
 		sounds.put(new ResourceLocation("tnt_and_disparity", "dryout"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("tnt_and_disparity", "dryout")));
+		sounds.put(new ResourceLocation("tnt_and_disparity", "dlkkingstickman"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("tnt_and_disparity", "dlkkingstickman")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("tnt_and_disparity").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

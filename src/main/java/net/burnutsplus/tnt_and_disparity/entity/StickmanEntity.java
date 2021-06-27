@@ -34,7 +34,6 @@ import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
@@ -109,16 +108,15 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true));
-			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
-			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 1));
-			this.goalSelector.addGoal(4, new AvoidEntityGoal(this, DLKEntity.CustomEntity.class, (float) 6, 1, 1.2));
+			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 2, true));
+			this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 2));
 			this.goalSelector.addGoal(5,
-					new TemptGoal(this, 1, Ingredient.fromItems(new ItemStack(StickmanSpawnItem.block, (int) (1)).getItem()), false));
+					new TemptGoal(this, 2, Ingredient.fromItems(new ItemStack(StickmanSpawnItem.block, (int) (1)).getItem()), false));
 			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
 			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
 			this.goalSelector.addGoal(8, new SwimGoal(this));
-			this.goalSelector.addGoal(9, new LeapAtTargetGoal(this, (float) 0.5));
+			this.goalSelector.addGoal(9, new LeapAtTargetGoal(this, (float) 2));
 			this.goalSelector.addGoal(10, new OpenDoorGoal(this, true));
 			this.goalSelector.addGoal(11, new OpenDoorGoal(this, false));
 			this.goalSelector.addGoal(12, new ReturnToVillageGoal(this, 0.6, false));
