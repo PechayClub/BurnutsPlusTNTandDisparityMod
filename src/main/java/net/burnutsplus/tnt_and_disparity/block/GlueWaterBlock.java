@@ -28,6 +28,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -77,13 +78,16 @@ public class GlueWaterBlock extends TntAndDisparityModElements.ModElement {
 	public void initElements() {
 		fluidproperties = new ForgeFlowingFluid.Properties(() -> still, () -> flowing, FluidAttributes
 				.builder(new ResourceLocation("tnt_and_disparity:blocks/gluewater"), new ResourceLocation("tnt_and_disparity:blocks/gluewater"))
-				.luminosity(0).density(100000).viscosity(100000)).bucket(() -> bucket).block(() -> block);
+				.luminosity(0).density(100000).viscosity(100000).rarity(Rarity.COMMON)).explosionResistance(100f).bucket(() -> bucket)
+						.block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("glue_water");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("glue_water_flowing");
-		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.WATER)) {
-		}.setRegistryName("glue_water"));
-		elements.items.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(ItemGroup.MISC))
-				.setRegistryName("glue_water_bucket"));
+		elements.blocks
+				.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.WATER).hardnessAndResistance(100f).setLightLevel(s -> 0)) {
+				}.setRegistryName("glue_water"));
+		elements.items.add(() -> new BucketItem(still,
+				new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(ItemGroup.MISC).rarity(Rarity.COMMON))
+						.setRegistryName("glue_water_bucket"));
 	}
 	private static Feature<BlockStateFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;

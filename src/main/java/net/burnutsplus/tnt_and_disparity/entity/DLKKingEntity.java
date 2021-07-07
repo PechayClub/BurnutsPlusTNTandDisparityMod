@@ -63,7 +63,7 @@ import java.util.HashMap;
 public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(0.7999999999999999f, 2.4f)).build("dlk_king").setRegistryName("dlk_king");
+			.size(1.2f, 2.1999999999999997f)).build("dlk_king").setRegistryName("dlk_king");
 	public DLKKingEntity(TntAndDisparityModElements instance) {
 		super(instance, 36);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new DLKKingRenderer.ModelRegisterHandler());
@@ -175,7 +175,6 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 			Entity sourceentity = source.getTrueSource();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

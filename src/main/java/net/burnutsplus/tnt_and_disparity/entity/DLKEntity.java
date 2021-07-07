@@ -54,7 +54,7 @@ import java.util.HashMap;
 public class DLKEntity extends TntAndDisparityModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(0.7999999999999999f, 2.4f)).build("dlk").setRegistryName("dlk");
+			.size(1.2000000000000002f, 2.1999999999999997f)).build("dlk").setRegistryName("dlk");
 	public DLKEntity(TntAndDisparityModElements instance) {
 		super(instance, 14);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new DLKRenderer.ModelRegisterHandler());

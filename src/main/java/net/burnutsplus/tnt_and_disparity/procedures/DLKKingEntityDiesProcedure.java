@@ -12,18 +12,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
 
 import java.util.Map;
 import java.util.Iterator;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class DLKKingEntityDiesProcedure extends TntAndDisparityModElements.ModElement {
-	public DLKKingEntityDiesProcedure(TntAndDisparityModElements instance) {
-		super(instance, 42);
-	}
-
+public class DLKKingEntityDiesProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))

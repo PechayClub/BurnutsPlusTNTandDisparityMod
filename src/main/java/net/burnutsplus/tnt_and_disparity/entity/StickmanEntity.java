@@ -108,18 +108,18 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 2, true));
-			this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
-			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 2));
-			this.goalSelector.addGoal(5,
+			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 2, true));
+			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 2));
+			this.goalSelector.addGoal(4,
 					new TemptGoal(this, 2, Ingredient.fromItems(new ItemStack(StickmanSpawnItem.block, (int) (1)).getItem()), false));
-			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
-			this.goalSelector.addGoal(8, new SwimGoal(this));
-			this.goalSelector.addGoal(9, new LeapAtTargetGoal(this, (float) 2));
-			this.goalSelector.addGoal(10, new OpenDoorGoal(this, true));
-			this.goalSelector.addGoal(11, new OpenDoorGoal(this, false));
-			this.goalSelector.addGoal(12, new ReturnToVillageGoal(this, 0.6, false));
+			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
+			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
+			this.goalSelector.addGoal(7, new SwimGoal(this));
+			this.goalSelector.addGoal(8, new LeapAtTargetGoal(this, (float) 2));
+			this.goalSelector.addGoal(9, new OpenDoorGoal(this, true));
+			this.goalSelector.addGoal(10, new OpenDoorGoal(this, false));
+			this.goalSelector.addGoal(11, new ReturnToVillageGoal(this, 0.6, false));
 		}
 
 		@Override

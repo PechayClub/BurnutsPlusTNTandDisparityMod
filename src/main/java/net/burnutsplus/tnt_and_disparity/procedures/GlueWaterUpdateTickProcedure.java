@@ -5,17 +5,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.BlockState;
 
 import net.burnutsplus.tnt_and_disparity.block.GlueBlockBlock;
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
 
 import java.util.Map;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class GlueWaterUpdateTickProcedure extends TntAndDisparityModElements.ModElement {
-	public GlueWaterUpdateTickProcedure(TntAndDisparityModElements instance) {
-		super(instance, 19);
-	}
-
+public class GlueWaterUpdateTickProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))

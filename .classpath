@@ -42,7 +42,12 @@
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Azar2477 on Burnuts/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/teamtwilight/twilightforest/4.0.490_mapped_snapshot_20201028-1.16.3/twilightforest-4.0.490_mapped_snapshot_20201028-1.16.3-universal.jar">
+	<classpathentry sourcepath="C:/Users/Azar2477 on Burnuts/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/teamtwilight/twilightforest/4.0.504_mapped_snapshot_20201028-1.16.3/twilightforest-4.0.504_mapped_snapshot_20201028-1.16.3-sources.jar" kind="lib" path="C:/Users/Azar2477 on Burnuts/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/teamtwilight/twilightforest/4.0.504_mapped_snapshot_20201028-1.16.3/twilightforest-4.0.504_mapped_snapshot_20201028-1.16.3-universal.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Azar2477 on Burnuts/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/blusunrize/immersiveengineering/ImmersiveEngineering/1.16.5-5.0.0-135_mapped_snapshot_20201028-1.16.3/ImmersiveEngineering-1.16.5-5.0.0-135_mapped_snapshot_20201028-1.16.3-sources.jar" kind="lib" path="C:/Users/Azar2477 on Burnuts/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/blusunrize/immersiveengineering/ImmersiveEngineering/1.16.5-5.0.0-135_mapped_snapshot_20201028-1.16.3/ImmersiveEngineering-1.16.5-5.0.0-135_mapped_snapshot_20201028-1.16.3.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>

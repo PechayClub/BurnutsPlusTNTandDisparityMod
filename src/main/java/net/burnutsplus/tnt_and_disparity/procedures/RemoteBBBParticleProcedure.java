@@ -3,17 +3,11 @@ package net.burnutsplus.tnt_and_disparity.procedures;
 import net.minecraft.world.IWorld;
 import net.minecraft.particles.ParticleTypes;
 
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
 
 import java.util.Map;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class RemoteBBBParticleProcedure extends TntAndDisparityModElements.ModElement {
-	public RemoteBBBParticleProcedure(TntAndDisparityModElements instance) {
-		super(instance, 4);
-	}
-
+public class RemoteBBBParticleProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))

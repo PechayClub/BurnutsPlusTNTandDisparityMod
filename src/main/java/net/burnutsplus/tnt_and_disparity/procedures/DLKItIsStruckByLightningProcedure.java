@@ -4,17 +4,11 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
 
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
 
 import java.util.Map;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class DLKItIsStruckByLightningProcedure extends TntAndDisparityModElements.ModElement {
-	public DLKItIsStruckByLightningProcedure(TntAndDisparityModElements instance) {
-		super(instance, 16);
-	}
-
+public class DLKItIsStruckByLightningProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))

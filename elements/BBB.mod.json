@@ -1,5 +1,5 @@
 {
-  "_fv": 18,
+  "_fv": 21,
   "_type": "block",
   "definition": {
     "texture": "bbb",
@@ -51,7 +51,7 @@
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": true,
-    "canProvidePower": false,
+    "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
       "value": "TNT"
@@ -59,6 +59,7 @@
     "tickRate": 10,
     "tickRandomly": true,
     "isReplaceable": false,
+    "canProvidePower": false,
     "colorOnMap": "TNT",
     "creativePickItem": {
       "value": ""
@@ -73,6 +74,7 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
+    "isCustomSoundType": false,
     "soundOnStep": {
       "value": "GROUND"
     },

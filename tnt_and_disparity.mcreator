@@ -323,7 +323,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "glue_water"
+      "registry_name": "glue_water",
+      "metadata": {
+        "gb": true
+      }
     },
     {
       "name": "Sticky",
@@ -503,7 +506,7 @@
       "type": "procedure",
       "sortid": 35,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {},
       "registry_name": "stickman_spawn_right_clicked_on_block",
       "metadata": {
@@ -772,10 +775,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -962,8 +961,8 @@
   "language_map": {
     "en_us": {
       "subtitles.dryout": "DJVI - Dry Out 2.0",
-      "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
       "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
+      "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
       "advancements.big_bad_boom.title": "Big Bad Boom",
       "advancements.big_bad_boom.descr": "Use a Remote BBB.",
       "entity.tnt_and_disparity.stickman": "Stickman",
@@ -986,6 +985,7 @@
       "item.tnt_and_disparity.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
       "block.tnt_and_disparity.dlk_land_portal_frame": "DLK Land Portal Frame",
       "block.tnt_and_disparity.glue_slab": "Glue Slab",
+      "block.tnt_and_disparity.glue_water": "Glue Water",
       "item.tnt_and_disparity.ekor_spawn_egg": "Ekor Spawn Egg",
       "item.tnt_and_disparity.dry_out.desc": "DJVI - Dry Out 2.0",
       "entity.tnt_and_disparity.dlk": "DLK",
@@ -1003,7 +1003,7 @@
       "item.tnt_and_disparity.dlk_spawn_egg": "DLK Spawn Egg",
       "advancements.dlk_in_the_trash.title": "DLK In The Trash",
       "advancements.sticky.title": "Sticky",
-      "item.tnt_and_disparity.glue_water_bucket": "Glue Bucket",
+      "item.tnt_and_disparity.glue_water_bucket": "Glue Water Bucket",
       "subtitles.dlkdies": "DLK Dies",
       "subtitles.dlkdlks": "DLK DLKs",
       "item.tnt_and_disparity.ekor_sound": "Ekor Sound",
@@ -1012,7 +1012,8 @@
       "subtitles.dlkhurt": "DLK Dying",
       "biome.tnt_and_disparity.dlk_forest": "DLK Forest",
       "item.tnt_and_disparity.ekor_shooter": "Ekor Shooter",
-      "fluid.glue_water": "Glue"
+      "fluid.glue_water": "Glue",
+      "fluid.tnt_and_disparity.glue_water": "Glue Water"
     }
   },
   "foldersRoot": {
@@ -1022,7 +1023,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.0alpha-build.0552",
+    "version": "0.4.0alpha-build.0575",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",

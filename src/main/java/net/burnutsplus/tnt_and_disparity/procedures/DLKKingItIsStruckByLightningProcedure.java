@@ -7,17 +7,11 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
 
 import java.util.Map;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class DLKKingItIsStruckByLightningProcedure extends TntAndDisparityModElements.ModElement {
-	public DLKKingItIsStruckByLightningProcedure(TntAndDisparityModElements instance) {
-		super(instance, 55);
-	}
-
+public class DLKKingItIsStruckByLightningProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))

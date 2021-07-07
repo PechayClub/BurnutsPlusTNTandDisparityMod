@@ -48,7 +48,7 @@ public class StickmanSpawnRightClickedOnBlockProcedure extends TntAndDisparityMo
 		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof ServerWorld) {
 			Entity entityToSpawn = new StickmanEntity.CustomEntity(StickmanEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles(x, ~1, z, (float) 0, (float) 0);
+			entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
 			entityToSpawn.setRenderYawOffset((float) 0);
 			if (entityToSpawn instanceof MobEntity)
 				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),

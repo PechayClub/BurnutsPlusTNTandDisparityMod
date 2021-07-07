@@ -1,11 +1,10 @@
 
 package net.burnutsplus.tnt_and_disparity.world.structure;
 
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.IPlacementConfig;
@@ -32,22 +31,17 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.burnutsplus.tnt_and_disparity.block.GlueWaterBlock;
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
 import java.util.Random;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class DLKCastleStructure extends TntAndDisparityModElements.ModElement {
+@Mod.EventBusSubscriber
+public class DLKCastleStructure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
-	public DLKCastleStructure(TntAndDisparityModElements instance) {
-		super(instance, 52);
-		MinecraftForge.EVENT_BUS.register(this);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
-	}
+	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
-		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
+		public static void registerFeature(RegistryEvent.Register<Feature<?>> event) {
 			feature = new Feature<NoFeatureConfig>(NoFeatureConfig.field_236558_a_) {
 				@Override
 				public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, NoFeatureConfig config) {
@@ -101,7 +95,7 @@ public class DLKCastleStructure extends TntAndDisparityModElements.ModElement {
 		}
 	}
 	@SubscribeEvent
-	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+	public static void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);
 	}
 }

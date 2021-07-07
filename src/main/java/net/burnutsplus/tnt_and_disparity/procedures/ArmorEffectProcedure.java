@@ -7,17 +7,11 @@ import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
 
 import java.util.Map;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class ArmorEffectProcedure extends TntAndDisparityModElements.ModElement {
-	public ArmorEffectProcedure(TntAndDisparityModElements instance) {
-		super(instance, 43);
-	}
-
+public class ArmorEffectProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
