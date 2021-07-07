@@ -11,3 +11,4 @@ Comments are now allowed in our Curseforge project.
 If Forge 1.17 comes out we will start porting our mod to 1.17 after Twilight Forest and the other mods are ported to 1.17.
 
 We moved our repository from Pechayland to Team-Burnuts in github so Azar2477 will delete the old repository.
+We will start to change the license to GNU LGPL 2.1 for the Twilight Forest Integration after adding the Carminite Bases to the mod. AKA Alpha 0.4.1 Integration Test.
