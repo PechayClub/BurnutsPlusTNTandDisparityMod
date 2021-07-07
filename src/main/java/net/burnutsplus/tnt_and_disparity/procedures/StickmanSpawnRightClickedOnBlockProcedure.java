@@ -10,17 +10,11 @@ import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.Entity;
 
 import net.burnutsplus.tnt_and_disparity.entity.StickmanEntity;
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
 
 import java.util.Map;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class StickmanSpawnRightClickedOnBlockProcedure extends TntAndDisparityModElements.ModElement {
-	public StickmanSpawnRightClickedOnBlockProcedure(TntAndDisparityModElements instance) {
-		super(instance, 35);
-	}
-
+public class StickmanSpawnRightClickedOnBlockProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -50,6 +44,7 @@ public class StickmanSpawnRightClickedOnBlockProcedure extends TntAndDisparityMo
 			Entity entityToSpawn = new StickmanEntity.CustomEntity(StickmanEntity.entity, (World) world);
 			entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
 			entityToSpawn.setRenderYawOffset((float) 0);
+			entityToSpawn.setRotationYawHead((float) 0);
 			if (entityToSpawn instanceof MobEntity)
 				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
 						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
