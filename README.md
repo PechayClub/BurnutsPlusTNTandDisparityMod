@@ -11,3 +11,5 @@ Comments are now allowed in our Curseforge project.
 If Forge 1.17 comes out we will start porting our mod to 1.17 after Twilight Forest and the other mods are ported to 1.17.
 
 We will start to change the license to GNU LGPL 2.1 for the Twilight Forest Integration after adding the Carminite Bases to the mod. AKA Alpha 0.4.1 Integration Test.
+
+You noticed that we changed our logo. Go to this video for a announcement from News and Tips Shower. Video: https://youtu.be/a07i4ft1860
