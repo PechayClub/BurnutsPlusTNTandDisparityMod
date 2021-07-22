@@ -14,10 +14,14 @@ We will start to change the license to GNU LGPL 2.1 for the Twilight Forest Inte
 
 You noticed that we changed our logo. Go to this video for a announcement from News and Tips Shower. Video: https://youtu.be/a07i4ft1860
 
+Note: Wanna use DJVI's music? Go to his YouTube Channel, his videos has download links and not all are free to download sometimes without copyright (Even if it's under free download you still need to credit him): https://www.youtube.com/user/DJVITechno
+
+Note: We now have a official YouTube Channel for TNT and Disparity. Link is here: https://www.youtube.com/channel/UCDqFoP1kjmFA_-qmCvQ8C9g
+
 ## How To Build
 
 Prequisites:
-MCreator Latest EAP
+MCreator Latest EAP or Build
 Twilight Forest Dependancy Plugin: https://mcreator.net/plugin/76688/twilight-forest-dependancies
 
 Step 1:
