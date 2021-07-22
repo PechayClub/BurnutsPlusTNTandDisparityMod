@@ -53,7 +53,7 @@ public class CarminiteBaseRareStructure {
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 4500) {
+					if ((random.nextInt(1000000) + 1) <= 10000) {
 						int count = random.nextInt(1) + 1;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
@@ -62,9 +62,9 @@ public class CarminiteBaseRareStructure {
 							j -= 1;
 							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
 							boolean blockCriteria = false;
-							if (blockAt.getBlock() == Blocks.VOID_AIR.getDefaultState().getBlock())
+							if (blockAt.getBlock() == Blocks.VOID_AIR)
 								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.CAVE_AIR.getDefaultState().getBlock())
+							if (blockAt.getBlock() == Blocks.CAVE_AIR)
 								blockCriteria = true;
 							if (!blockCriteria)
 								continue;

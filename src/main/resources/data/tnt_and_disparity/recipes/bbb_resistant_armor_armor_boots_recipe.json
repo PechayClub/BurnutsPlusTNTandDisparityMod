@@ -7,16 +7,16 @@
   ],
   "key": {
     "0": {
-      "item": "tnt_and_disparity:renewable_energy_block"
+      "item": "tnt_and_disparity:glue_block"
     },
     "2": {
-      "item": "tnt_and_disparity:renewable_energy_block"
+      "item": "tnt_and_disparity:glue_block"
     },
     "3": {
-      "item": "tnt_and_disparity:glue_block"
+      "item": "tnt_and_disparity:bounce_block"
     },
     "5": {
-      "item": "tnt_and_disparity:glue_block"
+      "item": "tnt_and_disparity:bounce_block"
     }
   },
   "result": {

@@ -18,6 +18,7 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.burnutsplus.tnt_and_disparity.procedures.BBBResistantArmorArmorBootsTickEventProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.ArmorEffectProcedure;
 import net.burnutsplus.tnt_and_disparity.block.RenewableEnergyBlockBlock;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
@@ -64,7 +65,7 @@ public class BBBResistantArmorArmorItem extends TntAndDisparityModElements.ModEl
 
 			@Override
 			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(RenewableEnergyBlockBlock.block, (int) (1)));
+				return Ingredient.fromStacks(new ItemStack(RenewableEnergyBlockBlock.block));
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -168,7 +169,7 @@ public class BBBResistantArmorArmorItem extends TntAndDisparityModElements.ModEl
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
 					$_dependencies.put("world", world);
-					ArmorEffectProcedure.executeProcedure($_dependencies);
+					BBBResistantArmorArmorBootsTickEventProcedure.executeProcedure($_dependencies);
 				}
 			}
 		}.setRegistryName("bbb_resistant_armor_armor_boots"));

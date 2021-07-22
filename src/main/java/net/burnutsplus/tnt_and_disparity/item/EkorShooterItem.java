@@ -116,7 +116,7 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(EkorSoundItem.block, (int) (1));
+			return new ItemStack(EkorSoundItem.block);
 		}
 
 		@Override
@@ -138,6 +138,7 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
+			Entity imediatesourceentity = this;
 			if (this.inGround) {
 				this.remove();
 			}

@@ -3,13 +3,31 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tnt_and_disparity:bbb"
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "tnt_and_disparity:glue_water_bucket"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "minecraft:gunpowder"
     },
     {
       "item": "minecraft:redstone"
     },
     {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
       "item": "minecraft:stone_button"
+    },
+    {
+      "item": "minecraft:gunpowder"
     }
   ],
   "result": {

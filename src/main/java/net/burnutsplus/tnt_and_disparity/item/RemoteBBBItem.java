@@ -84,6 +84,7 @@ public class RemoteBBBItem extends TntAndDisparityModElements.ModElement {
 			BlockPos pos = context.getPos();
 			PlayerEntity entity = context.getPlayer();
 			Direction direction = context.getFace();
+			BlockState blockstate = world.getBlockState(pos);
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();

@@ -1,11 +1,11 @@
 {
-  "_fv": 21,
+  "_fv": 23,
   "_type": "structure",
   "definition": {
     "structure": "dlk_castle",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 2500,
+    "spawnProbability": 12000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",

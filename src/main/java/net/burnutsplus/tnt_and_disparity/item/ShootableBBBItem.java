@@ -120,7 +120,7 @@ public class ShootableBBBItem extends TntAndDisparityModElements.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(RemoteBBBItem.block, (int) (1));
+			return new ItemStack(RemoteBBBItem.block);
 		}
 
 		@Override
@@ -136,6 +136,7 @@ public class ShootableBBBItem extends TntAndDisparityModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			World world = this.world;
+			Entity imediatesourceentity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
@@ -155,6 +156,7 @@ public class ShootableBBBItem extends TntAndDisparityModElements.ModElement {
 			double y = this.getPosY();
 			double z = this.getPosZ();
 			World world = this.world;
+			Entity imediatesourceentity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
@@ -173,6 +175,7 @@ public class ShootableBBBItem extends TntAndDisparityModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
+			Entity imediatesourceentity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);

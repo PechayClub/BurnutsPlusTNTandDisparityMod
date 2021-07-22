@@ -48,6 +48,7 @@ public class DrillBBBItem extends TntAndDisparityModElements.ModElement {
 				BlockPos pos = context.getPos();
 				PlayerEntity entity = context.getPlayer();
 				Direction direction = context.getFace();
+				BlockState blockstate = world.getBlockState(pos);
 				int x = pos.getX();
 				int y = pos.getY();
 				int z = pos.getZ();
@@ -64,8 +65,8 @@ public class DrillBBBItem extends TntAndDisparityModElements.ModElement {
 			}
 
 			@Override
-			public boolean onBlockDestroyed(ItemStack itemstack, World world, BlockState bl, BlockPos pos, LivingEntity entity) {
-				boolean retval = super.onBlockDestroyed(itemstack, world, bl, pos, entity);
+			public boolean onBlockDestroyed(ItemStack itemstack, World world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
+				boolean retval = super.onBlockDestroyed(itemstack, world, blockstate, pos, entity);
 				int x = pos.getX();
 				int y = pos.getY();
 				int z = pos.getZ();
@@ -149,7 +150,7 @@ public class DrillBBBItem extends TntAndDisparityModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-			return 200f;
+			return 2000f;
 		}
 
 		@Override

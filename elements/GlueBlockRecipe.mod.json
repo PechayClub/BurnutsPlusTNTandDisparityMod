@@ -7,40 +7,40 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.GUNPOWDER"
+        "value": "CUSTOM:GlueWater.bucket"
       },
       {
         "value": "CUSTOM:GlueWater.bucket"
       },
       {
-        "value": "Items.GUNPOWDER"
+        "value": "CUSTOM:GlueWater.bucket"
       },
       {
-        "value": "Items.GUNPOWDER"
+        "value": "CUSTOM:GlueWater.bucket"
       },
       {
-        "value": "Items.REDSTONE"
+        "value": "CUSTOM:GlueWater.bucket"
       },
       {
-        "value": "Items.GUNPOWDER"
+        "value": "CUSTOM:GlueWater.bucket"
       },
       {
-        "value": "Items.GUNPOWDER"
+        "value": "CUSTOM:GlueWater.bucket"
       },
       {
-        "value": "Blocks.STONE_BUTTON"
+        "value": "CUSTOM:GlueWater.bucket"
       },
       {
-        "value": "Items.GUNPOWDER"
+        "value": "CUSTOM:GlueWater.bucket"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:RemoteBBB"
+      "value": "CUSTOM:GlueBlock"
     },
-    "name": "remote_bbb_recipe",
+    "name": "glue_block_recipe",
     "namespace": "mod"
   }
 }

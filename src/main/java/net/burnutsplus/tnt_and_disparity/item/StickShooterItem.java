@@ -83,12 +83,11 @@ public class StickShooterItem extends TntAndDisparityModElements.ModElement {
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				if (true) {
-					ItemStack stack = ShootableItem.getHeldAmmo(entity,
-							e -> e.getItem() == new ItemStack(StickmanSpawnItem.block, (int) (1)).getItem());
+					ItemStack stack = ShootableItem.getHeldAmmo(entity, e -> e.getItem() == StickmanSpawnItem.block);
 					if (stack == ItemStack.EMPTY) {
 						for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
 							ItemStack teststack = entity.inventory.mainInventory.get(i);
-							if (teststack != null && teststack.getItem() == new ItemStack(StickmanSpawnItem.block, (int) (1)).getItem()) {
+							if (teststack != null && teststack.getItem() == StickmanSpawnItem.block) {
 								stack = teststack;
 								break;
 							}
@@ -100,7 +99,7 @@ public class StickShooterItem extends TntAndDisparityModElements.ModElement {
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
 						} else {
-							if (new ItemStack(StickmanSpawnItem.block, (int) (1)).isDamageable()) {
+							if (new ItemStack(StickmanSpawnItem.block).isDamageable()) {
 								if (stack.attemptDamageItem(1, random, entity)) {
 									stack.shrink(1);
 									stack.setDamage(0);
@@ -150,7 +149,7 @@ public class StickShooterItem extends TntAndDisparityModElements.ModElement {
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return new ItemStack(StickmanSpawnItem.block, (int) (1));
+			return new ItemStack(StickmanSpawnItem.block);
 		}
 
 		@Override
@@ -167,6 +166,7 @@ public class StickShooterItem extends TntAndDisparityModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
+			Entity imediatesourceentity = this;
 			if (this.inGround) {
 				this.remove();
 			}

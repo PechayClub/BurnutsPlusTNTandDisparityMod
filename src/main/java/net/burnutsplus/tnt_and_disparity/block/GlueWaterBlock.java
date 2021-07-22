@@ -78,8 +78,8 @@ public class GlueWaterBlock extends TntAndDisparityModElements.ModElement {
 	public void initElements() {
 		fluidproperties = new ForgeFlowingFluid.Properties(() -> still, () -> flowing, FluidAttributes
 				.builder(new ResourceLocation("tnt_and_disparity:blocks/gluewater"), new ResourceLocation("tnt_and_disparity:blocks/gluewater"))
-				.luminosity(0).density(100000).viscosity(100000).rarity(Rarity.COMMON)).explosionResistance(100f).bucket(() -> bucket)
-						.block(() -> block);
+				.luminosity(0).density(100000).viscosity(100000).temperature(300).rarity(Rarity.COMMON)).explosionResistance(100f).tickRate(5)
+						.levelDecreasePerBlock(1).slopeFindDistance(4).bucket(() -> bucket).block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("glue_water");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("glue_water_flowing");
 		elements.blocks

@@ -19,7 +19,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
@@ -111,8 +110,7 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 2, true));
 			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
 			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 2));
-			this.goalSelector.addGoal(4,
-					new TemptGoal(this, 2, Ingredient.fromItems(new ItemStack(StickmanSpawnItem.block, (int) (1)).getItem()), false));
+			this.goalSelector.addGoal(4, new TemptGoal(this, 2, Ingredient.fromItems(StickmanSpawnItem.block), false));
 			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
 			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
 			this.goalSelector.addGoal(7, new SwimGoal(this));

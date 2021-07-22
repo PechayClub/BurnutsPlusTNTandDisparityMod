@@ -1,5 +1,5 @@
 {
-  "_fv": 21,
+  "_fv": 23,
   "_type": "tool",
   "definition": {
     "renderType": 0,
@@ -12,7 +12,7 @@
     },
     "toolType": "MultiTool",
     "harvestLevel": 20,
-    "efficiency": 200.0,
+    "efficiency": 2000.0,
     "attackSpeed": 8.0,
     "enchantability": 0,
     "damageVsEntity": 200.0,

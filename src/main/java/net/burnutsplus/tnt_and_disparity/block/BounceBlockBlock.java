@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.biome.BiomeColors;
 import net.minecraft.world.IWorldReader;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.FoliageColors;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.loot.LootContext;
@@ -74,6 +75,11 @@ public class BounceBlockBlock extends TntAndDisparityModElements.ModElement {
 		@Override
 		public float[] getBeaconColorMultiplier(BlockState state, IWorldReader world, BlockPos pos, BlockPos beaconPos) {
 			return new float[]{0f, 0f, 0f};
+		}
+
+		@Override
+		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
+			return 7;
 		}
 
 		@Override

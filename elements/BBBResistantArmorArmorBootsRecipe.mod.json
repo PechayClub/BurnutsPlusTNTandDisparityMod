@@ -1,5 +1,5 @@
 {
-  "_fv": 21,
+  "_fv": 23,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -19,15 +19,6 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:RenewableEnergyBlock"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:RenewableEnergyBlock"
-      },
-      {
         "value": "CUSTOM:GlueBlock"
       },
       {
@@ -35,6 +26,15 @@
       },
       {
         "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "CUSTOM:BounceBlock"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BounceBlock"
       }
     ],
     "recipeReturnStack": {

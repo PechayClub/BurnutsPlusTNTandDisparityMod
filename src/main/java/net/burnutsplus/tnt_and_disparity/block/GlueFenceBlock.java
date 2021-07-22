@@ -56,7 +56,7 @@ public class GlueFenceBlock extends TntAndDisparityModElements.ModElement {
 
 		@Override
 		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-			return new ItemStack(DrillBBBItem.block, (int) (1));
+			return new ItemStack(DrillBBBItem.block);
 		}
 
 		@Override

@@ -53,7 +53,7 @@ public class DLKCastleStructure {
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 2500) {
+					if ((random.nextInt(1000000) + 1) <= 12000) {
 						int count = random.nextInt(1) + 1;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
@@ -62,11 +62,11 @@ public class DLKCastleStructure {
 							j -= 1;
 							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
 							boolean blockCriteria = false;
-							if (blockAt.getBlock() == GlueWaterBlock.block.getDefaultState().getBlock())
+							if (blockAt.getBlock() == GlueWaterBlock.block)
 								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.VOID_AIR.getDefaultState().getBlock())
+							if (blockAt.getBlock() == Blocks.VOID_AIR)
 								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.CAVE_AIR.getDefaultState().getBlock())
+							if (blockAt.getBlock() == Blocks.CAVE_AIR)
 								blockCriteria = true;
 							if (!blockCriteria)
 								continue;

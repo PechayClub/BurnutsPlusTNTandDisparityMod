@@ -3,6 +3,9 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    {
       "item": "minecraft:slime_block"
     },
     {
