@@ -1,0 +1,46 @@
+{
+  "_fv": 23,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": "CUSTOM:GlueBlock"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:GlueTrapDoor"
+    },
+    "name": "glue_trap_door_recipe",
+    "namespace": "mod"
+  }
+}

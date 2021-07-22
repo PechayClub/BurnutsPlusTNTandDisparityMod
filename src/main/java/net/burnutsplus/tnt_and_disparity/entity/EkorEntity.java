@@ -48,8 +48,8 @@ import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 @TntAndDisparityModElements.ModElement.Tag
 public class EkorEntity extends TntAndDisparityModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(0.6f, 1.8f)).build("ekor").setRegistryName("ekor");
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(2f, 2f))
+					.build("ekor").setRegistryName("ekor");
 	public EkorEntity(TntAndDisparityModElements instance) {
 		super(instance, 41);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EkorRenderer.ModelRegisterHandler());

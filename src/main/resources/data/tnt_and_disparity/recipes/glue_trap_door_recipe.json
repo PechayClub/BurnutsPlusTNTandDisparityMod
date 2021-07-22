@@ -1,0 +1,26 @@
+{
+  "group": "tnt_and_disparity",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "1": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "2": {
+      "item": "tnt_and_disparity:glue_block"
+    },
+    "3": {
+      "item": "tnt_and_disparity:glue_block"
+    }
+  },
+  "result": {
+    "item": "tnt_and_disparity:glue_trap_door",
+    "count": 1
+  }
+}
