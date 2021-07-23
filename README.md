@@ -49,9 +49,9 @@ If you wan't to use our non-code assets that we create then please ask for permi
 
 - Immersive Engineering: None.
 
-- Mantle and Tinker's Construct: Not Available in 1.16.5 Yet.
+- ~~Mantle and Tinker's Construct: Not Available in 1.16.5 Yet.~~
 
-- Forestry: Not Available in 1.16.5 Yet.
+- ~~Forestry: Not Available in 1.16.5 Yet.~~
 
 ## 1.17 Port Status
 
