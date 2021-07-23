@@ -8,7 +8,7 @@ Adventure with Burnuts.
 
 Comments are now allowed in our Curseforge project.
 
-If Forge 1.17 comes out we will start porting our mod to 1.17 after Twilight Forest and the other mods are ported to 1.17.
+Forge 1.17.1 is now out and were waiting for the following mods to be ported before we port TNT and Disparity to 1.17.1.
 
 We will start to change the license to GNU LGPL 2.1 for the Twilight Forest Integration after adding the Carminite Bases to the mod. AKA Alpha 0.4.1 Integration Test.
 
@@ -34,3 +34,35 @@ Press build icon or generate .jar file icon. (Please do not select the play butt
 If you wan't to use our non-code assets that we create then please ask for permission if you want to modify it for your mods or add-ons.
 
 [(Located here)](src/main/resources/assets)
+
+## Integration Status
+
+- Twilight Forest: Working in Progress.
+
+- JEI: None.
+
+- Curios: None.
+
+- Patchouli: None.
+
+- CTM: None.
+
+- Immersive Engineering: None.
+
+- Mantle and Tinker's Construct: Not Available in 1.16.5 Yet.
+
+- Forestry: Not Available in 1.16.5 Yet.
+
+## 1.17 Port Status
+
+- Twilight Forest: Pending.
+
+- JEI: Pending.
+
+- Curios: Pending.
+
+- Patchouli: Pending.
+
+- CTM: Pending.
+
+- Immersive Engineering: Pending.
