@@ -1,5 +1,3 @@
-[![Curseforge](http://cf.way2muchnoise.eu/full_tnt-and-disparity_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/tnt-and-disparity) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_tnt-and-disparity_all.svg)](https://www.curseforge.com/minecraft/mc-mods/tnt-and-disparity)
-==============
 ## TNT and Disparity Mod
 
 Adventure with Burnuts.
