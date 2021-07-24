@@ -83,8 +83,8 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
-			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.2);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 800);
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.1);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 4000);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 40);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 80);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 20);
