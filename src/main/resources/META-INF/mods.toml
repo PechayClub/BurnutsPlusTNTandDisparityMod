@@ -4,10 +4,11 @@ license="GNU Lesser General Public License version 2.1 (LGPLv2.1)"
 
 [[mods]]
 modId="tnt_and_disparity"
-version="0.4.1alpha-build.0607"
+version="0.4.1alpha-build.0608"
 displayName="TNT and Disparity"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
+updateJSONURL="https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/update.json"
 logoFile="logo.png"
 authors="Burnuts Gaming, MCreator"
 description='''
