@@ -1,0 +1,15 @@
+{
+  "homepage": "https://mcreator.net/modification/76770/tnt-and-disparity",
+  "1.16.5": {
+    "0.4.1alpha-build.0608": "Added support for update.json", 
+    // List all versions of your mod for the given Minecraft version, along with their changelogs
+    ...
+  },
+  "promos": {
+    "1.16.5-latest": "0.4.1alpha-build.0608",
+    // Declare the latest "bleeding-edge" version of your mod for the given Minecraft version
+    "1.16.5-recommended": "0.4.1alpha-build.0608",
+    // Declare the latest "stable" version of your mod for the given Minecraft version
+    ...
+  }
+}
