@@ -37,7 +37,7 @@ Press build icon or generate .jar file icon. (Please do not select the play butt
 
 If you wan't to use our non-code assets that we create then please ask for permission if you want to modify it for your mods or add-ons.
 
-All Non-code assets will fall under this license except [DJVI - Dry Out 2.0](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/src/main/resources/assets/tnt_and_disparity/sounds/djvi-dry-out-2.0-mp3.ogg)
+All Non-code assets will fall under this license except [DJVI - Dry Out 2.0](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/src/main/resources/assets/tnt_and_disparity/sounds/djvi-dry-out-2.0-mp3.ogg).
 
 [(Located here)](src/main/resources/assets)
 
