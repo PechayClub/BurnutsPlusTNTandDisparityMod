@@ -18,6 +18,8 @@ Note: Wanna use DJVI's music? Go to his YouTube Channel, his videos has download
 
 Note: We now have a official YouTube Channel for TNT and Disparity. Link is here: https://www.youtube.com/channel/UCDqFoP1kjmFA_-qmCvQ8C9g
 
+We added support for update.json so you will be able to update TNT and Disparity
+
 ## How To Build
 
 Prequisites:
