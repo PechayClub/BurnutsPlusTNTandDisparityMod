@@ -1,3 +1,4 @@
+[![Curseforge](http://cf.way2muchnoise.eu/full_tnt-and-disparity_downloads.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_tnt-and-disparity_all.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity) [![License](https://img.shields.io/badge/License-GNU-blue.svg?style=flat-square)](https://opensource.org/licenses/LGPL-2.1) [![CLA assistant](https://cla-assistant.io/readme/badge/Team-Burnuts/BurnutsPlusTNTandDisparityMod)](https://cla-assistant.io/Team-Burnuts/BurnutsPlusTNTandDisparityMod)
 ## TNT and Disparity Mod
 
 Adventure with Burnuts.
@@ -18,6 +19,8 @@ Note: Wanna use DJVI's music? Go to his YouTube Channel, his videos has download
 
 Note: We now have a official YouTube Channel for TNT and Disparity. Link is here: https://www.youtube.com/channel/UCDqFoP1kjmFA_-qmCvQ8C9g
 
+We added support for update.json so you will be able to update TNT and Disparity
+
 ## How To Build
 
 Prequisites:
@@ -35,9 +38,18 @@ Press build icon or generate .jar file icon. (Please do not select the play butt
 
 If you wan't to use our non-code assets that we create then please ask for permission if you want to modify it for your mods or add-ons.
 
-All Non-code assets will fall under this license except [DJVI - Dry Out 2.0](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/src/main/resources/assets/tnt_and_disparity/sounds/djvi-dry-out-2.0-mp3.ogg)
+All Non-code assets will fall under this license except [DJVI - Dry Out 2.0](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/src/main/resources/assets/tnt_and_disparity/sounds/djvi-dry-out-2.0-mp3.ogg).
 
 [(Located here)](src/main/resources/assets)
+
+## CLA
+
+Before we can use your code via Pull Request, you need to sign our CLA [(Burnuts CLA)](https://cla-assistant.io/Team-Burnuts/BurnutsPlusTNTandDisparityMod), which you can do online.
+The CLA is necessary mainly because you own the copyright to your changes, even after your contribution 
+becomes part of our codebase, so we need your permission to use and distribute your code. We also need to be sure 
+of various other things—for instance that you'll tell us if you know that your code infringes on other people's patents. 
+You don't have to sign the CLA until after you've submitted your code for review and we approved it, but you must do it before
+ we can put your code into our codebase.
 
 ## Integration Status
 
