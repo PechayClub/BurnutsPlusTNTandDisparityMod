@@ -4,7 +4,7 @@
     "0.4.1alpha-build.0613": "Fixed missing Glue Water model.",
     "0.4.1alpha-build.0612": "Added DLK Houses and Fixed Structure Generation.", 
     "0.4.1alpha-build.0608": "Added support for update.json."
-  },
+  }
   "promos": {
     "1.16.5-latest": "0.4.1alpha-build.0613",
     "1.16.5-recommended": "0.4.1alpha-build.0613"
