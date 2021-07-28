@@ -20,22 +20,3 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build'
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    mavenVersionOption: 'Default'
-    mavenOptions: '-Xmx4096m'
-    mavenAuthenticateFeed: true
-    effectivePomSkip: true
-    sonarQubeRunAnalysis: true
-    isJacocoCoverageReportXML: true
-    sqMavenPluginVersionChoice: 'latest'
-    checkStyleRunAnalysis: true
-    pmdRunAnalysis: true
-    findBugsRunAnalysis: true
-    replaceExistingArchive: true
-    verbose: true
