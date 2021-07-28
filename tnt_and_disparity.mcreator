@@ -1021,8 +1021,8 @@
   "language_map": {
     "en_us": {
       "subtitles.dryout": "DJVI - Dry Out 2.0",
-      "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
       "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
+      "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
       "advancements.big_bad_boom.title": "Big Bad Boom",
       "advancements.big_bad_boom.descr": "Use a Remote BBB.",
       "entity.tnt_and_disparity.stickman": "Stickman",
@@ -1083,7 +1083,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.1alpha-build.0613",
+    "version": "0.4.1alpha-build.0614",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",
@@ -1108,7 +1108,7 @@
     "currentGenerator": "forge-1.16.5",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.burnutsplus.tnt_and_disparity",
-    "lockBaseModFiles": false
+    "lockBaseModFiles": true
   },
   "mcreatorVersion": 202100231709
 }
