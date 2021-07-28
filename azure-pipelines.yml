@@ -20,14 +20,28 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build'
-- task: Gradle@2
+- task: ArchiveFiles@2
   inputs:
-    gradleWrapperFile: 'gradlew'
-    tasks: 'build'
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'jar'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).jar'
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
     publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
-    gradleOptions: '-Xmx4096m'
-    sonarQubeRunAnalysis: false
-    spotBugsAnalysis: false
+    mavenVersionOption: 'Default'
+    mavenOptions: '-Xmx4096m'
+    mavenAuthenticateFeed: true
+    effectivePomSkip: true
+    sonarQubeRunAnalysis: true
+    isJacocoCoverageReportXML: true
+    sqMavenPluginVersionChoice: 'latest'
+    checkStyleRunAnalysis: true
+    pmdRunAnalysis: true
+    findBugsRunAnalysis: true
+    replaceExistingArchive: true
+    verbose: true
