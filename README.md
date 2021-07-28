@@ -1,4 +1,4 @@
-[![Curseforge](http://cf.way2muchnoise.eu/full_tnt-and-disparity_downloads.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_tnt-and-disparity_all.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity) [![License](https://img.shields.io/badge/License-GNU-blue.svg?style=flat-square)](https://opensource.org/licenses/LGPL-2.1)
+[![Curseforge](http://cf.way2muchnoise.eu/full_tnt-and-disparity_downloads.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_tnt-and-disparity_all.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity) [![License](https://img.shields.io/badge/License-GNU-blue.svg?style=flat-square)](https://opensource.org/licenses/LGPL-2.1) <a href="https://cla-assistant.io/Team-Burnuts/BurnutsPlusTNTandDisparityMod"><img src="https://cla-assistant.io/readme/badge/Team-Burnuts/BurnutsPlusTNTandDisparityMod" alt="CLA assistant" /></a>
 ## TNT and Disparity Mod
 
 Adventure with Burnuts.
