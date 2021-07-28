@@ -2,31 +2,37 @@
   "_fv": 23,
   "_type": "structure",
   "definition": {
-    "structure": "dlk_castle",
+    "structure": "dlk_house",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 10000,
+    "spawnProbability": 25000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",
-    "spawnHeightOffset": 10,
-    "spawnXOffset": 10,
-    "spawnZOffset": 10,
+    "spawnHeightOffset": 0,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
     "spawnWorldTypes": [
-      "CUSTOM:DLKLand"
+      "Surface"
     ],
     "restrictionBlocks": [
-      {
-        "value": "CUSTOM:GlueWater"
-      },
       {
         "value": "Blocks.VOID_AIR"
       },
       {
         "value": "Blocks.CAVE_AIR"
+      },
+      {
+        "value": "CUSTOM:GlueWater"
+      },
+      {
+        "value": "Blocks.FLOWING_WATER"
+      },
+      {
+        "value": "Blocks.FLOWING_LAVA"
       }
     ],
     "restrictionBiomes": [],
-    "ignoreBlocks": "AIR_AND_STRUCTURE_BLOCK"
+    "ignoreBlocks": "STRUCTURE_BLOCK"
   }
 }

@@ -35,7 +35,7 @@ import net.burnutsplus.tnt_and_disparity.block.GlueWaterBlock;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
-public class CarminiteBaseRareStructure {
+public class DLKHouseStructure {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -49,11 +49,11 @@ public class CarminiteBaseRareStructure {
 					int ck = (pos.getZ() >> 4) << 4;
 					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 					boolean dimensionCriteria = false;
-					if (dimensionType == World.THE_NETHER)
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("tnt_and_disparity:dlk_land")))
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 2000) {
+					if ((random.nextInt(1000000) + 1) <= 25000) {
 						int count = random.nextInt(1) + 1;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
@@ -81,11 +81,12 @@ public class CarminiteBaseRareStructure {
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
 							Template template = world.getWorld().getStructureTemplateManager()
-									.getTemplateDefaulted(new ResourceLocation("tnt_and_disparity", "carminite_base"));
+									.getTemplateDefaulted(new ResourceLocation("tnt_and_disparity", "dlk_house"));
 							if (template == null)
 								return false;
-							template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
-									.addProcessor(BlockIgnoreStructureProcessor.AIR_AND_STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false),
+							template.func_237144_a_(world, spawnTo,
+									new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
+											.addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false),
 									random);
 						}
 					}
@@ -94,9 +95,8 @@ public class CarminiteBaseRareStructure {
 			};
 			configuredFeature = feature.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
 					.withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG));
-			event.getRegistry().register(feature.setRegistryName("carminite_base_rare"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("tnt_and_disparity:carminite_base_rare"),
-					configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("dlk_house"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("tnt_and_disparity:dlk_house"), configuredFeature);
 		}
 	}
 	@SubscribeEvent

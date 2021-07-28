@@ -5,7 +5,7 @@
     "structure": "carminite_base",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 15000,
+    "spawnProbability": 2000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",
@@ -13,8 +13,7 @@
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [
-      "Nether",
-      "End"
+      "Nether"
     ],
     "restrictionBlocks": [
       {
@@ -22,6 +21,15 @@
       },
       {
         "value": "Blocks.CAVE_AIR"
+      },
+      {
+        "value": "CUSTOM:GlueWater"
+      },
+      {
+        "value": "Blocks.FLOWING_WATER"
+      },
+      {
+        "value": "Blocks.FLOWING_LAVA"
       }
     ],
     "restrictionBiomes": [],
