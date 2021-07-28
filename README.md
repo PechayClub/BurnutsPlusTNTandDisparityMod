@@ -71,13 +71,13 @@ You don't have to sign the CLA until after you've submitted your code for review
 
 ## 1.17 Port Status
 
-- Twilight Forest: Pending.
+- Twilight Forest: Waiting for Release. (Critical! When a version comes out we might need to remove some integrations.)
 
-- JEI: Pending.
+- JEI: Waiting for Release.
 
-- Curios: Pending.
+- Curios: Available.
 
-- Patchouli: Pending.
+- Patchouli: Waiting for Release.
 
 - CTM: Pending.
 
