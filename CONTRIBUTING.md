@@ -1,4 +1,4 @@
-# CLA
+## CLA
 
 Before we can use your code via Pull Request, you need to sign our CLA [(Burnuts CLA)](https://cla-assistant.io/Team-Burnuts/BurnutsPlusTNTandDisparityMod), which you can do online.
 The CLA is necessary mainly because you own the copyright to your changes, even after your contribution 
