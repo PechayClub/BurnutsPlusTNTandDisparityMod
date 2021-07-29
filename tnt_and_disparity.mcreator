@@ -1083,14 +1083,14 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.1alpha-build.0614",
+    "version": "0.4.1alpha-build.0615",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "GNU Lesser General Public License version 2.1 (LGPLv2.1)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
-    "updateURL": "https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/update.json",
+    "updateURL": "https://raw.githubusercontent.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/master/update.json",
     "modPicture": "channels4_profile",
     "requiredMods": [
       "twilightforest"
