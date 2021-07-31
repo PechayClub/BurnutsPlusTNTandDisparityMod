@@ -543,7 +543,7 @@
       "name": "DLKKing",
       "type": "livingentity",
       "sortid": 36,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "ids": {},
       "registry_name": "dlk_king"
@@ -1147,8 +1147,8 @@
     "en_us": {
       "subtitles.dryout": "DJVI - Dry Out 2.0",
       "effect.ekored": "Ekored",
-      "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
       "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
+      "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
       "advancements.big_bad_boom.title": "Big Bad Boom",
       "advancements.big_bad_boom.descr": "Use a Remote BBB.",
       "entity.tnt_and_disparity.stickman": "Stickman",
