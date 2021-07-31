@@ -93,7 +93,7 @@ Release Candidate - To Do.
 
 Preview - To Do. (Fixed the remaining bugs except the ones labeled wontfix.)
 
-Initial Release - To Do. (The mod is now in full issue free release thanks to MCreator.)
+Initial Release - To Do. (The mod is now in issue free release thanks to MCreator. For more bugs in the upcomming updates we will be prepared to fix them.)
 
 ## Notes
 
