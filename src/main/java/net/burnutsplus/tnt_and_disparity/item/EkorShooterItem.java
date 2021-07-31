@@ -30,10 +30,15 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
+import net.burnutsplus.tnt_and_disparity.procedures.EkorShooterWhileBulletFlyingTickProcedure;
+import net.burnutsplus.tnt_and_disparity.procedures.EkorShooterBulletHitsPlayerProcedure;
+import net.burnutsplus.tnt_and_disparity.procedures.EkorShooterBulletHitsLivingEntityProcedure;
 import net.burnutsplus.tnt_and_disparity.entity.renderer.EkorShooterRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @TntAndDisparityModElements.ModElement.Tag
 public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
@@ -125,9 +130,36 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 		}
 
 		@Override
+		public void onCollideWithPlayer(PlayerEntity entity) {
+			super.onCollideWithPlayer(entity);
+			Entity sourceentity = this.func_234616_v_();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			World world = this.world;
+			Entity imediatesourceentity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				EkorShooterBulletHitsPlayerProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
 		protected void arrowHit(LivingEntity entity) {
 			super.arrowHit(entity);
 			entity.setArrowCountInEntity(entity.getArrowCountInEntity() - 1);
+			Entity sourceentity = this.func_234616_v_();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			World world = this.world;
+			Entity imediatesourceentity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				EkorShooterBulletHitsLivingEntityProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -139,6 +171,14 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
 			Entity imediatesourceentity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EkorShooterWhileBulletFlyingTickProcedure.executeProcedure($_dependencies);
+			}
 			if (this.inGround) {
 				this.remove();
 			}

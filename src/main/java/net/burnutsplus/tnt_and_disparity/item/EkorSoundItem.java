@@ -53,7 +53,7 @@ public class EkorSoundItem extends TntAndDisparityModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Placeholder Item."));
+			list.add(new StringTextComponent("(Just a placeholder Item)"));
 		}
 	}
 }

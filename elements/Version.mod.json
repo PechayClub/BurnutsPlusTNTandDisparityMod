@@ -1,0 +1,31 @@
+{
+  "_fv": 23,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGHEST",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Version: Alpha 0.4.1 Build 620 Pre-Integration Test",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Version: Alpha 0.4.1 Build 620 Pre-Integration Test",
+          "x": 4,
+          "y": 3
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 5,
+      "sy": 5,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

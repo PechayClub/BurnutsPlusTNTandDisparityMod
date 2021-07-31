@@ -27,5 +27,5 @@
   "rewards": {
     "experience": 100
   },
-  "parent": "minecraft:adventure/root"
+  "parent": "minecraft:story/root"
 }

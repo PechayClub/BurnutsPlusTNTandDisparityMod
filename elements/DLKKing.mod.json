@@ -48,7 +48,7 @@
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 80,
     "attackKnockback": 0.0,
-    "knockbackResistance": 20.0,
+    "knockbackResistance": 100.0,
     "movementSpeed": 0.2,
     "armorBaseValue": 40.0,
     "trackingRange": 128,

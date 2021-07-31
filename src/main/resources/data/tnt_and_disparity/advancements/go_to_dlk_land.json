@@ -18,12 +18,12 @@
     "go_to_dlk_land": {
       "trigger": "minecraft:changed_dimension",
       "conditions": {
-        "to": "tnt_and_disparity:dlk_land"
+        "to": "minecraft:overworld"
       }
     }
   },
   "rewards": {
     "experience": 0
   },
-  "parent": "minecraft:adventure/root"
+  "parent": "minecraft:story/root"
 }

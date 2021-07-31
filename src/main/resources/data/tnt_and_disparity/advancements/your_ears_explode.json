@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "tnt_and_disparity:ekor_sound"
+    },
+    "title": {
+      "translate": "advancements.your_ears_explode.title"
+    },
+    "description": {
+      "translate": "advancements.your_ears_explode.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "your_ears_explode": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "minecraft:story/root"
+}

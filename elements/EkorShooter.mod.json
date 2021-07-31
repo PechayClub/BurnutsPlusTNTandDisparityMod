@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "stickshooter",
     "customModelName": "Normal",
-    "name": "Ekor Shooter",
+    "name": "Ekor Puppet",
     "specialInfo": [],
     "creativeTab": {
       "value": "COMBAT"
@@ -32,6 +32,15 @@
       "value": "CUSTOM:EkorSound"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": ""
+    "customBulletModelTexture": "",
+    "onBulletHitsPlayer": {
+      "name": "EkorShooterBulletHitsPlayer"
+    },
+    "onBulletHitsEntity": {
+      "name": "EkorShooterBulletHitsLivingEntity"
+    },
+    "onBulletFlyingTick": {
+      "name": "EkorShooterWhileBulletFlyingTick"
+    }
   }
 }
