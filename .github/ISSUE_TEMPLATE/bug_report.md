@@ -23,6 +23,9 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
+**TNT and Disparity Mod Details**
+- Mod Version: [e.g. Alpha 0.4.1 Build 620 Pre-Integration Test, or take a screenshot to see the version present in game.]
+
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]

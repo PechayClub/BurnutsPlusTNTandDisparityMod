@@ -3,6 +3,98 @@
 
 Adventure with Burnuts.
 
+## TNT and Disparity Features
+
+Potential Features: Incomplete.
+
+Music: None.
+
+Integraton with Twilight Forest: None.
+
+Potion Effects: Incomplete.
+
+Mobs: Incomplete.
+
+Bosses and Mini-Bosses: Incomplete.
+
+Progression: Incomplete
+
+Acheivements/Advancements: Incomplete.
+
+Particles: Incomplete.
+
+NPCs: None.
+
+Sponsors: Depending.
+
+The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
+
+## TNT and Disparity Roadmap
+
+### In Private Test (These versions are not released publically.)
+
+0.0 - Done.
+
+0.1 - Done.
+
+0.2 - Done.
+
+0.3.0 - Done.
+
+### Public Alpha
+
+0.3.1 - Done.
+
+0.4 - Done.
+
+0.4 Pre-Integration Test - Working in Progress. (Integration Test Prepared.)
+
+0.4 Integration Test - To Do. (Adding Twilight Forest with other mods.)
+
+0.5 Music Integration Test - To Do. (Kevin MacLeod's music is going to be added but we need to find which we will use.)
+
+0.6 Final Integration Test - To Do. (Adding the final touches.)
+
+### Public Post-Integration Test Alpha (After we added Twilight Forest and other mods we will add more features to the mod.)
+
+0.7 - To Do.
+
+0.8 - To Do.
+
+0.9 Beta Prepared - To Do.
+
+### Public Beta
+
+Beta 1.0 - To Do.
+
+Beta 1.1 - To Do.
+
+Beta 1.2 - To Do.
+
+Beta 1.3 - To Do.
+
+Beta 1.4 - To Do. (Content changing update.)
+
+Beta 1.5 - To Do.
+
+Beta 1.6 - To Do.
+
+Beta 1.7 - To Do.
+
+Beta 1.8 - To Do.
+
+### Public Release Prepared
+
+Beta 1.9 - To Do. (Post Beta)
+
+Pre - To Do.
+
+Release Candidate - To Do.
+
+Preview - To Do. (Fixed the remaining bugs except the ones labeled wontfix.)
+
+Initial Release - To Do. (The mod is now in issue free release thanks to MCreator. For more bugs in the upcomming updates we will be prepared to fix them.)
+
 ## Notes
 
 Comments are now allowed in our Curseforge project.
@@ -38,7 +130,7 @@ Press build icon or generate .jar file icon. (Please do not select the play butt
 
 If you wan't to use our non-code assets that we create then please ask for permission if you want to modify it for your mods or add-ons.
 
-All Non-code assets will fall under this license except [DJVI - Dry Out 2.0](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/src/main/resources/assets/tnt_and_disparity/sounds/djvi-dry-out-2.0-mp3.ogg).
+All Non-code assets will fall under this license except [DJVI - Dry Out 2.0](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/src/main/resources/assets/tnt_and_disparity/sounds/djvi-dry-out-2.0-mp3.ogg) and Kevin MacLeod's music. Kevin MacLeod's music is in a different Creative Commons License which is [here](https://creativecommons.org/licenses/by/3.0/).
 
 [(Located here)](src/main/resources/assets)
 
