@@ -7,25 +7,38 @@
       {
         "type": "label",
         "data": {
-          "text": "Version: Alpha 0.4.1 Build 620 Pre-Integration Test",
+          "text": "Version: Alpha 0.4.1 Build 621 Pre-Integration Test",
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "name": "Version: Alpha 0.4.1 Build 620 Pre-Integration Test",
-          "x": 4,
+          "name": "Version: Alpha 0.4.1 Build 621 Pre-Integration Test",
+          "x": 3,
           "y": 3
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "This is just a alpha, not the finished product.",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "This is just a alpha, not the finished product.",
+          "x": 3,
+          "y": 13
         }
       }
     ],
     "baseTexture": "",
     "overlayTarget": "Ingame",
     "gridSettings": {
-      "sx": 5,
+      "sx": 6,
       "sy": 5,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

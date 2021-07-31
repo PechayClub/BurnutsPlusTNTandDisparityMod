@@ -31,7 +31,7 @@ You landed in a world that is more than you expect.
     side="BOTH"
 
 [[dependencies.tnt_and_disparity]]
-    modId="   immersiveengineering"
+    modId=" curios"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
@@ -43,13 +43,19 @@ You landed in a world that is more than you expect.
     ordering="NONE"
     side="BOTH"
 [[dependencies.tnt_and_disparity]]
-    modId="     ctm"
+    modId="      ctm"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.tnt_and_disparity]]
     modId="immersiveengineering"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.tnt_and_disparity]]
+    modId="      patchouli"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
@@ -73,19 +79,13 @@ You landed in a world that is more than you expect.
     ordering="NONE"
     side="BOTH"
 [[dependencies.tnt_and_disparity]]
-    modId="     patchouli"
+    modId="  jei"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.tnt_and_disparity]]
     modId="ctm"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.tnt_and_disparity]]
-    modId=" jei"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
