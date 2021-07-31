@@ -31,7 +31,7 @@ The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-f
 
 ## TNT and Disparity Roadmap
 
-# In Private Test (These versions are not released publically.)
+### In Private Test (These versions are not released publically.)
 
 0.0 - Done.
 
@@ -41,7 +41,7 @@ The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-f
 
 0.3.0 - Done.
 
-# Public Alpha
+### Public Alpha
 
 0.3.1 - Done.
 
@@ -55,7 +55,7 @@ The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-f
 
 0.6 Final Integration Test - To Do. (Adding the final touches.)
 
-# Public Post-Integration Test Alpha (After we added Twilight Forest and other mods we will add more features to the mod.)
+### Public Post-Integration Test Alpha (After we added Twilight Forest and other mods we will add more features to the mod.)
 
 0.7 - To Do.
 
@@ -63,7 +63,7 @@ The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-f
 
 0.9 Beta Prepared - To Do.
 
-# Public Beta
+### Public Beta
 
 Beta 1.0 - To Do.
 
@@ -83,7 +83,7 @@ Beta 1.7 - To Do.
 
 Beta 1.8 - To Do.
 
-# Release Prepared
+### Public Release Prepared
 
 Beta 1.9 - To Do. (Post Beta)
 
