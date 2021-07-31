@@ -29,7 +29,71 @@ Sponsors: Depending.
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
 
+## TNT and Disparity Roadmap
 
+# In Private Test (These versions are not released publically.)
+
+0.0 - Done.
+
+0.1 - Done.
+
+0.2 - Done.
+
+0.3.0 - Done.
+
+# Public Alpha
+
+0.3.1 - Done.
+
+0.4 - Done.
+
+0.4 Pre-Integration Test - Working in Progress. (Integration Test Prepared.)
+
+0.4 Integration Test - To Do. (Adding Twilight Forest with other mods.)
+
+0.5 Music Integration Test - To Do. (Kevin MacLeod's music is going to be added but we need to find which we will use.)
+
+0.6 Final Integration Test - To Do. (Adding the final touches.)
+
+# Public Post-Integration Test Alpha (After we added Twilight Forest and other mods we will add more features to the mod.)
+
+0.7 - To Do.
+
+0.8 - To Do.
+
+0.9 Beta Prepared - To Do.
+
+# Public Beta
+
+Beta 1.0 - To Do.
+
+Beta 1.1 - To Do.
+
+Beta 1.2 - To Do.
+
+Beta 1.3 - To Do.
+
+Beta 1.4 - To Do. (Content changing update.)
+
+Beta 1.5 - To Do.
+
+Beta 1.6 - To Do.
+
+Beta 1.7 - To Do.
+
+Beta 1.8 - To Do.
+
+# Release Prepared
+
+Beta 1.9 - To Do. (Post Beta)
+
+Pre - To Do.
+
+Release Candidate - To Do.
+
+Preview - To Do. (Fixed the remaining bugs except the ones labeled wontfix.)
+
+Initial Release - To Do. (The mod is now in full issue free release thanks to MCreator.)
 
 ## Notes
 
