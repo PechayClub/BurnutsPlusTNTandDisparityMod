@@ -46,6 +46,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
+import net.burnutsplus.tnt_and_disparity.entity.DLKEntity;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingOnInitialEntitySpawnProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingItIsStruckByLightningProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingEntityIsHurtProcedure;
@@ -61,7 +62,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 @TntAndDisparityModElements.ModElement.Tag
-public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
+public class DLKKingEntity extends DLKEntity {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(1.2f, 2.1999999999999997f)).build("dlk_king").setRegistryName("dlk_king");
@@ -198,7 +199,7 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 				return false;
 			if (source.getDamageType().equals("witherSkull"))
 				return false;
-			if (source.getDamageType().equals("entitybulletekor_shooter"))
+			if (source.getDamageType().equals("tnt_and_disparity:entitybulletekor_shooter"))
 				return false;
 			return super.attackEntityFrom(source, amount);
 		}

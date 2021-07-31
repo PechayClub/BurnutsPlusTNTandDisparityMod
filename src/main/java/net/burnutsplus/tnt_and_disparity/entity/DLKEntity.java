@@ -183,7 +183,7 @@ public class DLKEntity extends TntAndDisparityModElements.ModElement {
 				return false;
 			if (source.getDamageType().equals("witherSkull"))
 				return false;
-			if (source.getDamageType().equals("entitybulletekor_shooter"))
+			if (source.getDamageType().equals("tnt_and_disparity:entitybulletekor_shooter"))
 				return false;
 			return super.attackEntityFrom(source, amount);
 		}
