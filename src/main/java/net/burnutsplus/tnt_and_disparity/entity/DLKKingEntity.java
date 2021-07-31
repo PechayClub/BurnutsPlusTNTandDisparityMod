@@ -62,7 +62,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 @TntAndDisparityModElements.ModElement.Tag
-public class DLKKingEntity extends DLKEntity {
+public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(1.2f, 2.1999999999999997f)).build("dlk_king").setRegistryName("dlk_king");

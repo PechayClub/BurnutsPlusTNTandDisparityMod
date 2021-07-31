@@ -48,7 +48,7 @@ import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 @TntAndDisparityModElements.ModElement.Tag
 public class EkorEntity extends TntAndDisparityModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(2f, 2f))
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(4f, 4f))
 					.build("ekor").setRegistryName("ekor");
 	public EkorEntity(TntAndDisparityModElements instance) {
 		super(instance, 41);
