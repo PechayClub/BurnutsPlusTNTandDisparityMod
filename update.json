@@ -1,10 +1,14 @@
 {
   "homepage": "https://minecraft.curseforge.com/projects/tnt-and-disparity",
   "promos": {
-    "1.16.5-latest": "0.4.1alpha-build.0615",
-    "1.16.5-recommended": "0.4.1alpha-build.0615"
+    "1.16.5-latest": "0.4.1alpha-build.0624-preintegrationtest",
+    "1.16.5-recommended": "0.4.1alpha-build.0624-preintegrationtest"
   },
   "1.16.5": {
+    "0.4.1alpha-build.0624-preintegrationtest": "Fixed DLK King procedure to prevent spawning too many DLKs.",
+    "0.4.1alpha-build.0623-preintegrationtest": "Stickmen can now attack Carminite Mobs.",
+    "0.4.1alpha-build.0621-preintegrationtest": "Fixed DLK, DLK King and Ekors.",
+    "0.4.1alpha-build.0620-preintegrationtest": "Added abilities to Ekors and DLKs and now in the Pre-Integration Test Stage.",
     "0.4.1alpha-build.0615": "Changed Update JSON URL.",
     "0.4.1alpha-build.0614": "Fixed missing Glue Water model at state 0.",
     "0.4.1alpha-build.0613": "Fixed missing Glue Water model.",
