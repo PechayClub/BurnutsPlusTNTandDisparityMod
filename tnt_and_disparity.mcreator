@@ -428,7 +428,7 @@
       "type": "livingentity",
       "sortid": 26,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "stickman"
     },
@@ -1211,7 +1211,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.1alpha-build.0621-preintegrationtest",
+    "version": "0.4.1alpha-build.0623-preintegrationtest",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",
@@ -1224,11 +1224,11 @@
       "twilightforest"
     ],
     "dependencies": [
-      " curios",
-      "      ctm",
-      "immersiveengineering",
-      "      patchouli",
-      "  jei"
+      "   jei",
+      "       patchouli",
+      " immersiveengineering",
+      "curios",
+      "       ctm"
     ],
     "dependants": [],
     "mcreatorDependencies": [

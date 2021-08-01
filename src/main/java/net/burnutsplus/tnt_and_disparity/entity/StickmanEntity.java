@@ -47,6 +47,13 @@ import net.burnutsplus.tnt_and_disparity.item.StickmanSpawnItem;
 import net.burnutsplus.tnt_and_disparity.entity.renderer.StickmanRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
+import twilightforest.entity.CarminiteGhastguardEntity;
+import twilightforest.entity.CarminiteGhastlingEntity;
+import twilightforest.entity.CarminiteGolemEntity;
+import twilightforest.entity.TowerBroodlingEntity;
+import twilightforest.entity.TowerwoodBorerEntity;
+import twilightforest.entity.boss.UrGhastEntity;
+
 @TntAndDisparityModElements.ModElement.Tag
 public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
@@ -113,6 +120,12 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 			this.goalSelector.addGoal(4, new TemptGoal(this, 2, Ingredient.fromItems(StickmanSpawnItem.block), false));
 			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
 			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
+			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CarminiteGhastguardEntity.class, true, true)); // Normally the Stickmen will attack the Carminite mobs, but the Carminite mobs will not attack the Stickmen since we are not yet in the Integration Test stage.
+			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CarminiteGhastlingEntity.class, true, true));
+			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CarminiteGolemEntity.class, true, true));
+			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, TowerBroodlingEntity.class, true, true));
+			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, TowerwoodBorerEntity.class, true, true));
+			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, UrGhastEntity.class, true, true));
 			this.goalSelector.addGoal(7, new SwimGoal(this));
 			this.goalSelector.addGoal(8, new LeapAtTargetGoal(this, (float) 2));
 			this.goalSelector.addGoal(9, new OpenDoorGoal(this, true));
