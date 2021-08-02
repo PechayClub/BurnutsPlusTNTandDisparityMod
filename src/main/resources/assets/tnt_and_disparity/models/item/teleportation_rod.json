@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tnt_and_disparity:items/stickshooter"
+    "layer0": "tnt_and_disparity:items/teleportationrod"
   },
   "display": {
     "thirdperson_righthand": {

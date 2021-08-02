@@ -31,10 +31,13 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
+import net.burnutsplus.tnt_and_disparity.procedures.StickmanSpawnRightClickedOnBlockProcedure;
 import net.burnutsplus.tnt_and_disparity.entity.renderer.StickShooterRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @TntAndDisparityModElements.ModElement.Tag
 public class StickShooterItem extends TntAndDisparityModElements.ModElement {
@@ -168,6 +171,14 @@ public class StickShooterItem extends TntAndDisparityModElements.ModElement {
 			Entity entity = this.func_234616_v_();
 			Entity imediatesourceentity = this;
 			if (this.inGround) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					$_dependencies.put("world", world);
+					StickmanSpawnRightClickedOnBlockProcedure.executeProcedure($_dependencies);
+				}
 				this.remove();
 			}
 		}

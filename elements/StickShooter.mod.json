@@ -32,6 +32,9 @@
       "value": ""
     },
     "bulletModel": "ModelStickman",
-    "customBulletModelTexture": "stickman.png"
+    "customBulletModelTexture": "stickman.png",
+    "onBulletHitsBlock": {
+      "name": "StickmanSpawnRightClickedOnBlock"
+    }
   }
 }

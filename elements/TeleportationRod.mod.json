@@ -3,44 +3,44 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "ekorpuppet",
+    "texture": "teleportationrod",
     "customModelName": "Normal",
-    "name": "Ekor Puppet",
+    "name": "Teleportation Rod",
     "specialInfo": [],
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "TOOLS"
     },
     "stackSize": 1,
     "ammoItem": {
       "value": ""
     },
     "shootConstantly": false,
-    "usageCount": 0,
+    "usageCount": 100,
     "actionSound": {
-      "value": "CUSTOM:ekorekors"
+      "value": "entity.arrow.shoot"
     },
     "hasGlow": false,
-    "animation": "none",
+    "animation": "bow",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "bulletPower": 10.0,
-    "bulletDamage": 40.0,
+    "bulletDamage": 0.0,
     "bulletKnockback": 0,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "CUSTOM:EkorSound"
+      "value": "Items.ENDER_PEARL"
     },
     "bulletModel": "Default",
     "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "Teleport"
+    },
     "onBulletHitsPlayer": {
-      "name": "EkorShooterBulletHitsPlayer"
+      "name": "Teleport"
     },
     "onBulletHitsEntity": {
-      "name": "EkorShooterBulletHitsLivingEntity"
-    },
-    "onBulletFlyingTick": {
-      "name": "EkorShooterWhileBulletFlyingTick"
+      "name": "Teleport"
     }
   }
 }

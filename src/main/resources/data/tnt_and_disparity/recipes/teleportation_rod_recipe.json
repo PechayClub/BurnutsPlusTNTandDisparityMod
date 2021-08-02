@@ -1,0 +1,24 @@
+{
+  "group": "tnt_and_disparity",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 4 ",
+    "6  "
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:ender_pearl"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "6": {
+      "item": "minecraft:end_crystal"
+    }
+  },
+  "result": {
+    "item": "tnt_and_disparity:teleportation_rod",
+    "count": 1
+  }
+}

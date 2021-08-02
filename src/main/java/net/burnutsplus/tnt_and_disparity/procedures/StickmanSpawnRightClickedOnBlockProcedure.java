@@ -42,9 +42,7 @@ public class StickmanSpawnRightClickedOnBlockProcedure {
 		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof ServerWorld) {
 			Entity entityToSpawn = new StickmanEntity.CustomEntity(StickmanEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles(Math.sqrt(x), Math.sqrt(y), Math.sqrt(z), (float) 0, (float) 0);
-			entityToSpawn.setRenderYawOffset((float) 0);
-			entityToSpawn.setRotationYawHead((float) 0);
+			entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 			if (entityToSpawn instanceof MobEntity)
 				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
 						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);

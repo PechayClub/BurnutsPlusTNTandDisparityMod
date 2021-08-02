@@ -41,6 +41,7 @@
   "advancements.go_boom.title": "Go Boom",
   "item.tnt_and_disparity.dry_out": "Dry Out",
   "block.tnt_and_disparity.bbb": "Big Bad Boom",
+  "item.tnt_and_disparity.ekor_puppet": "Ekor Puppet",
   "block.tnt_and_disparity.bounce_block": "Bounce Block",
   "item.tnt_and_disparity.dlk_spawn_egg": "DLK Spawn Egg",
   "advancements.dlk_in_the_trash.title": "DLK In The Trash",
@@ -53,7 +54,7 @@
   "entity.tnt_and_disparity.dlk_king": "DLK King",
   "subtitles.dlkhurt": "DLK Dying",
   "biome.tnt_and_disparity.dlk_forest": "DLK Forest",
-  "item.tnt_and_disparity.ekor_shooter": "Ekor Puppet",
+  "item.tnt_and_disparity.teleportation_rod": "Teleportation Rod",
   "fluid.glue_water": "Glue",
   "fluid.tnt_and_disparity.glue_water": "Glue"
 }

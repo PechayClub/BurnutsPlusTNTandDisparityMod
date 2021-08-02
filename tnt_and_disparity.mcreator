@@ -597,7 +597,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "ekor_shooter"
+      "registry_name": "ekor_puppet"
     },
     {
       "name": "Ekor",
@@ -1082,9 +1082,67 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "version"
+    },
+    {
+      "name": "Teleport",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleport",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeleportationRod",
+      "type": "rangeditem",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleportation_rod"
+    },
+    {
+      "name": "TeleportationRodRecipe",
+      "type": "recipe",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleportation_rod_recipe"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "EnchantmentLevel",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    }
+  ],
   "sound_elements": [
     {
       "name": "ekorekors",
@@ -1187,6 +1245,7 @@
       "advancements.go_boom.title": "Go Boom",
       "item.tnt_and_disparity.dry_out": "Dry Out",
       "block.tnt_and_disparity.bbb": "Big Bad Boom",
+      "item.tnt_and_disparity.ekor_puppet": "Ekor Puppet",
       "block.tnt_and_disparity.bounce_block": "Bounce Block",
       "item.tnt_and_disparity.dlk_spawn_egg": "DLK Spawn Egg",
       "advancements.dlk_in_the_trash.title": "DLK In The Trash",
@@ -1199,7 +1258,7 @@
       "entity.tnt_and_disparity.dlk_king": "DLK King",
       "subtitles.dlkhurt": "DLK Dying",
       "biome.tnt_and_disparity.dlk_forest": "DLK Forest",
-      "item.tnt_and_disparity.ekor_shooter": "Ekor Puppet",
+      "item.tnt_and_disparity.teleportation_rod": "Teleportation Rod",
       "fluid.glue_water": "Glue",
       "fluid.tnt_and_disparity.glue_water": "Glue"
     }
@@ -1211,7 +1270,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.1alpha-build.0624-preintegrationtest",
+    "version": "0.4.1alpha-build.0628-preintegrationtest",
     "description": "You landed in a world that is more than you expect.",
     "author": "Burnuts Gaming, MCreator",
     "websiteURL": "https://mcreator.net",
@@ -1224,11 +1283,11 @@
       "twilightforest"
     ],
     "dependencies": [
-      " curios",
-      "        patchouli",
-      "        ctm",
-      "  immersiveengineering",
-      "jei"
+      "   immersiveengineering",
+      "curios",
+      "         patchouli",
+      "         ctm",
+      " jei"
     ],
     "dependants": [],
     "mcreatorDependencies": [

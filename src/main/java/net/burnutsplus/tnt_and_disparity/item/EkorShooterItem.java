@@ -42,11 +42,11 @@ import java.util.HashMap;
 
 @TntAndDisparityModElements.ModElement.Tag
 public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
-	@ObjectHolder("tnt_and_disparity:ekor_shooter")
+	@ObjectHolder("tnt_and_disparity:ekor_puppet")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("entitybulletekor_shooter").setRegistryName("entitybulletekor_shooter");
+			.size(0.5f, 0.5f)).build("entitybulletekor_puppet").setRegistryName("entitybulletekor_puppet");
 	public EkorShooterItem(TntAndDisparityModElements instance) {
 		super(instance, 39);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EkorShooterRenderer.ModelRegisterHandler());
@@ -60,7 +60,7 @@ public class EkorShooterItem extends TntAndDisparityModElements.ModElement {
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1));
-			setRegistryName("ekor_shooter");
+			setRegistryName("ekor_puppet");
 		}
 
 		@Override
