@@ -82,7 +82,7 @@ public class TeleportProcedure {
 							"tp");
 		}
 		if (world instanceof ServerWorld) {
-			((ServerWorld) world).spawnParticle(ParticleTypes.PORTAL, (Math.floor(x)), (Math.floor(y)), (Math.floor(z)), (int) 10, 3, 3, 3, 1);
+			((ServerWorld) world).spawnParticle(ParticleTypes.PORTAL, (Math.floor(x)), (Math.floor(y)), (Math.floor(z)), (int) 10, 1, 1, 1, 1);
 		}
 		if (world instanceof World && !world.isRemote()) {
 			((World) world).playSound(null, new BlockPos((int) (Math.floor(x)), (int) (Math.floor(y)), (int) (Math.floor(z))),
