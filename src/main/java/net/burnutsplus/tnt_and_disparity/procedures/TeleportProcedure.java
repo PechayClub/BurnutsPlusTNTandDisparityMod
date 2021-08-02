@@ -11,6 +11,7 @@ import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.monster.EndermiteEntity;
@@ -22,7 +23,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
-import net.burnutsplus.tnt_and_disparity.particle.EkorParticlesParticle;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
 
 import java.util.Map;
@@ -82,8 +82,7 @@ public class TeleportProcedure {
 							"tp");
 		}
 		if (world instanceof ServerWorld) {
-			((ServerWorld) world).spawnParticle(EkorParticlesParticle.particle, (Math.floor(x)), (Math.floor(y)), (Math.floor(z)), (int) 10, 3, 3, 3,
-					1);
+			((ServerWorld) world).spawnParticle(ParticleTypes.PORTAL, (Math.floor(x)), (Math.floor(y)), (Math.floor(z)), (int) 10, 3, 3, 3, 1);
 		}
 		if (world instanceof World && !world.isRemote()) {
 			((World) world).playSound(null, new BlockPos((int) (Math.floor(x)), (int) (Math.floor(y)), (int) (Math.floor(z))),
