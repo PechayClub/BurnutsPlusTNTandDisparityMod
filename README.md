@@ -29,6 +29,8 @@ Sponsors: Depending.
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
 
+Twilight Forest mobs are atempted to be added earlier to the Integration test but we have to move it because were unable to compile their code with a newer version of Gradle so thats why we postphone Integration Test.
+
 ## TNT and Disparity Roadmap
 
 ### In Private Test (These versions are not released publically.)
@@ -41,7 +43,7 @@ The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-f
 
 0.3.0 - Done.
 
-### Public Alpha
+### Public Alpha (Adding more features like, bosses and mini-bosses, more mobs, and most importantly Twilight Forest integration)
 
 0.3.1 - Done.
 
@@ -63,7 +65,7 @@ The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-f
 
 0.9 Beta Prepared - To Do.
 
-### Public Beta
+### Public Beta (Adding things like progression, more bosses and mini-bosses, more NPC's, etc.)
 
 Beta 1.0 - To Do.
 
@@ -83,7 +85,7 @@ Beta 1.7 - To Do.
 
 Beta 1.8 - To Do.
 
-### Public Release Prepared
+### Public Release Prepared (Were almost close to make the mod in public release)
 
 Beta 1.9 - To Do. (Post Beta)
 
@@ -91,27 +93,9 @@ Pre - To Do.
 
 Release Candidate - To Do.
 
-Preview - To Do. (Fixed the remaining bugs except the ones labeled wontfix.)
+Preview - To Do. (Fixed the remaining issues except the ones labeled wontfix.)
 
 Initial Release - To Do. (The mod is now in issue free release thanks to MCreator. For more bugs in the upcomming updates we will be prepared to fix them.)
-
-## Notes
-
-Comments are now allowed in our Curseforge project.
-
-Forge 1.17.1 is now out and were waiting for the following mods to be ported before we port TNT and Disparity to 1.17.1.
-
-We will start to change the license to GNU LGPL 2.1 for the Twilight Forest Integration after adding the Carminite Bases to the mod. AKA Alpha 0.4.1 Integration Test.
-
-You noticed that we changed our logo. Go to this video for a announcement from News and Tips Shower. Video: https://youtu.be/a07i4ft1860
-
-The mod is now republished back in MCreator. Download Link: https://mcreator.net/modification/76770/tnt-and-disparity
-
-Note: Wanna use DJVI's music? Go to his YouTube Channel, his videos has download links and not all are free to download sometimes without copyright (Even if it's under free download you still need to credit him): https://www.youtube.com/user/DJVITechno
-
-Note: We now have a official YouTube Channel for TNT and Disparity. Link is here: https://www.youtube.com/channel/UCDqFoP1kjmFA_-qmCvQ8C9g
-
-We added support for update.json so you will be able to update TNT and Disparity
 
 ## How To Build
 
