@@ -20,128 +20,8 @@ public class EkoredOnEffectActiveTickProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		entity.attackEntityFrom(DamageSource.GENERIC, (float) (new Object() {
-			int check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == EkoredPotionEffect.potion)
-							return effect.getAmplifier();
-					}
-				}
-				return 0;
-			}
-		}.check(entity)));
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 1, (int) (new Object() {
+		if ((Math.random() <= 0.75)) {
+			entity.attackEntityFrom(DamageSource.GENERIC, (float) (((new Object() {
 				int check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -152,9 +32,10 @@ public class EkoredOnEffectActiveTickProcedure {
 					}
 					return 0;
 				}
-			}.check(entity)), (false), (false)));
+			}.check(entity)) * Math.acos(Math.random())) + (Math.random() * Math.asin(Math.random()))));
+		}
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.MINING_FATIGUE, (int) 1, (int) (new Object() {
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 1, (int) ((new Object() {
 				int check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -165,9 +46,9 @@ public class EkoredOnEffectActiveTickProcedure {
 					}
 					return 0;
 				}
-			}.check(entity)), (false), (false)));
+			}.check(entity)) + Math.log(Math.random())), (false), (false)));
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 1, (int) (new Object() {
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 1, (int) ((new Object() {
 				int check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -178,6 +59,19 @@ public class EkoredOnEffectActiveTickProcedure {
 					}
 					return 0;
 				}
-			}.check(entity)), (false), (false)));
+			}.check(entity)) + Math.log(Math.random())), (false), (false)));
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.MINING_FATIGUE, (int) 1, (int) ((new Object() {
+				int check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == EkoredPotionEffect.potion)
+								return effect.getAmplifier();
+						}
+					}
+					return 0;
+				}
+			}.check(entity)) + Math.log(Math.random())), (false), (false)));
 	}
 }

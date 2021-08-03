@@ -33,6 +33,7 @@ import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
@@ -118,19 +119,20 @@ public class StickmanEntity extends TntAndDisparityModElements.ModElement {
 			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
 			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 2));
 			this.goalSelector.addGoal(4, new TemptGoal(this, 2, Ingredient.fromItems(StickmanSpawnItem.block), false));
-			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
-			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CarminiteGhastguardEntity.class, true, true)); // Normally the Stickmen will attack the Carminite mobs, but the Carminite mobs will not attack the Stickmen since we are not yet in the Integration Test stage.
-			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CarminiteGhastlingEntity.class, true, true));
-			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CarminiteGolemEntity.class, true, true));
-			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, TowerBroodlingEntity.class, true, true));
-			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, TowerwoodBorerEntity.class, true, true));
-			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, UrGhastEntity.class, true, true));
-			this.goalSelector.addGoal(7, new SwimGoal(this));
-			this.goalSelector.addGoal(8, new LeapAtTargetGoal(this, (float) 2));
-			this.goalSelector.addGoal(9, new OpenDoorGoal(this, true));
-			this.goalSelector.addGoal(10, new OpenDoorGoal(this, false));
-			this.goalSelector.addGoal(11, new ReturnToVillageGoal(this, 0.6, false));
+			this.goalSelector.addGoal(5, new AvoidEntityGoal(this, StickmanEntity.CustomEntity.class, (float) 1, 4, 4));
+			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
+			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
+			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, CarminiteGhastguardEntity.class, false, false));
+			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CarminiteGhastlingEntity.class, false, false));
+			this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, CarminiteGolemEntity.class, false, false));
+			this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, TowerBroodlingEntity.class, false, false));
+			this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, TowerwoodBorerEntity.class, false, false));
+			this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, UrGhastEntity.class, false, false));
+			this.goalSelector.addGoal(14, new SwimGoal(this));
+			this.goalSelector.addGoal(15, new LeapAtTargetGoal(this, (float) 2));
+			this.goalSelector.addGoal(16, new OpenDoorGoal(this, true));
+			this.goalSelector.addGoal(17, new OpenDoorGoal(this, false));
+			this.goalSelector.addGoal(18, new ReturnToVillageGoal(this, 0.6, false));
 		}
 
 		@Override
