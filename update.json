@@ -5,7 +5,8 @@
     "1.16.5-recommended": "0.4.1alpha-build.0632-preintegrationtest"
   },
   "1.16.5": {
-    "0.4.1alpha-build.0629-preintegrationtest": "Ekor Bullets will do 0 damage when hit a mob and fixed Teleportation Rod particle effects.",
+    "0.4.1alpha-build.0632-preintegrationtest": "Added new painting, fixed Teleportation Rod particles and Carminite Bases will no longer spawn in the Nether and End.",
+    "0.4.1alpha-build.0632-preintegrationtest": "Ekor Bullets will do 0 damage when hit a mob and fixed Teleportation Rod particle effects.",
     "0.4.1alpha-build.0629-preintegrationtest": "Fixed particles for Teleportation Rod.",
     "0.4.1alpha-build.0628-preintegrationtest": "Added Teleportation Rod.",
     "0.4.1alpha-build.0624-preintegrationtest": "Fixed DLK King procedure to prevent spawning too many DLKs.",
