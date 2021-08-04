@@ -43,7 +43,7 @@ Twilight Forest mobs are atempted to be added earlier to the Integration test bu
 
 0.3.0 - Done.
 
-### Public Alpha (Adding more features like, bosses and mini-bosses, more mobs, and most importantly Twilight Forest integration)
+### Public Alpha (Adding more features like, bosses and mini-bosses, more mobs, and most importantly Twilight Forest integration.)
 
 0.3.1 - Done.
 
