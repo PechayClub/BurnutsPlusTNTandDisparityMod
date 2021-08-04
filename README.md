@@ -43,7 +43,7 @@ Twilight Forest mobs are atempted to be added earlier to the Integration test bu
 
 0.3.0 - Done.
 
-### Public Alpha (Adding more features like, bosses and mini-bosses, more mobs, and most importantly Twilight Forest integration)
+### Public Alpha (Adding more features like, bosses and mini-bosses, more mobs, and most importantly Twilight Forest integration.)
 
 0.3.1 - Done.
 
@@ -55,39 +55,17 @@ Twilight Forest mobs are atempted to be added earlier to the Integration test bu
 
 0.5 Music Integration Test - To Do. (Kevin MacLeod's music is going to be added but we need to find which we will use.)
 
-0.6 Final Integration Test - To Do. (Adding the final touches.)
+### Public Beta (Adding things like progression, more bosses and mini-bosses, more NPC's, etc.)
 
-### Public Post-Integration Test Alpha (After we added Twilight Forest and other mods we will add more features to the mod.)
+0.6 Final Integration Test - To Do. (Adding the final touches.)
 
 0.7 - To Do.
 
 0.8 - To Do.
 
-0.9 Beta Prepared - To Do.
-
-### Public Beta (Adding things like progression, more bosses and mini-bosses, more NPC's, etc.)
-
-Beta 1.0 - To Do.
-
-Beta 1.1 - To Do.
-
-Beta 1.2 - To Do.
-
-Beta 1.3 - To Do.
-
-Beta 1.4 - To Do. (Content changing update.)
-
-Beta 1.5 - To Do.
-
-Beta 1.6 - To Do.
-
-Beta 1.7 - To Do.
-
-Beta 1.8 - To Do.
+0.9  - To Do.
 
 ### Public Release Prepared (Were almost close to make the mod in public release)
-
-Beta 1.9 - To Do. (Post Beta)
 
 Pre - To Do.
 
