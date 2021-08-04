@@ -60,20 +60,6 @@ public class DLKHouseStructure {
 							int k = ck + random.nextInt(16);
 							int j = world.getHeight(Heightmap.Type.OCEAN_FLOOR_WG, i, k);
 							j -= 1;
-							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
-							boolean blockCriteria = false;
-							if (blockAt.getBlock() == Blocks.VOID_AIR)
-								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.CAVE_AIR)
-								blockCriteria = true;
-							if (blockAt.getBlock() == GlueWaterBlock.block)
-								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.WATER)
-								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.LAVA)
-								blockCriteria = true;
-							if (!blockCriteria)
-								continue;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
 							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);

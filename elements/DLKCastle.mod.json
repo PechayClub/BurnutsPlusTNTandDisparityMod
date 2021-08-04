@@ -15,17 +15,7 @@
     "spawnWorldTypes": [
       "CUSTOM:DLKLand"
     ],
-    "restrictionBlocks": [
-      {
-        "value": "CUSTOM:GlueWater"
-      },
-      {
-        "value": "Blocks.VOID_AIR"
-      },
-      {
-        "value": "Blocks.CAVE_AIR"
-      }
-    ],
+    "restrictionBlocks": [],
     "restrictionBiomes": [],
     "ignoreBlocks": "AIR_AND_STRUCTURE_BLOCK"
   }

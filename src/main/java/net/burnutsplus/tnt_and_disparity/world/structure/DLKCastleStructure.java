@@ -27,10 +27,6 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-
-import net.burnutsplus.tnt_and_disparity.block.GlueWaterBlock;
 
 import java.util.Random;
 
@@ -60,16 +56,6 @@ public class DLKCastleStructure {
 							int k = ck + random.nextInt(16);
 							int j = world.getHeight(Heightmap.Type.OCEAN_FLOOR_WG, i, k);
 							j -= 1;
-							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
-							boolean blockCriteria = false;
-							if (blockAt.getBlock() == GlueWaterBlock.block)
-								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.VOID_AIR)
-								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.CAVE_AIR)
-								blockCriteria = true;
-							if (!blockCriteria)
-								continue;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
 							BlockPos spawnTo = new BlockPos(i + 10, j + 10, k + 10);

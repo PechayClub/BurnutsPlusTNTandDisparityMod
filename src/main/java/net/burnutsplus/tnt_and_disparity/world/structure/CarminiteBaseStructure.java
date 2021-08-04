@@ -31,6 +31,7 @@ import net.minecraft.util.Mirror;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
+import net.burnutsplus.tnt_and_disparity.block.GlueWaterBlock;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
 
 import java.util.Random;
@@ -67,14 +68,6 @@ public class CarminiteBaseStructure extends TntAndDisparityModElements.ModElemen
 							int k = ck + random.nextInt(16);
 							int j = world.getHeight(Heightmap.Type.OCEAN_FLOOR_WG, i, k);
 							j -= 1;
-							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
-							boolean blockCriteria = false;
-							if (blockAt.getBlock() == Blocks.VOID_AIR.getDefaultState().getBlock())
-								blockCriteria = true;
-							if (blockAt.getBlock() == Blocks.CAVE_AIR.getDefaultState().getBlock())
-								blockCriteria = true;
-							if (!blockCriteria)
-								continue;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
 							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
