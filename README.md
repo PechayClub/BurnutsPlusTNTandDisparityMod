@@ -29,7 +29,11 @@ Sponsors: Depending.
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
 
-Twilight Forest mobs are atempted to be added earlier to the Integration test but we have to move it because were unable to compile their code with a newer version of Gradle so thats why we postphone Integration Test.
+Twilight Forest mobs are atempted to be added earlier to the Integration test but we have to move it because were unable to compile their code with a newer version of Gradle so thats why we postphone Integration Test until they update there Gradle version with a newer or similar one.
+
+Gradle 7.1, 6.9 or 6.8 with Gradle 4.9 Code = Can't Compile
+
+Gradle 7.1 with 7.2 Code = Uncomfirmed due to falied builds of Twilight Forest 1.17.
 
 ## TNT and Disparity Roadmap
 
