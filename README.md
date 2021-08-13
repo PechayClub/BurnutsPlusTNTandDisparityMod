@@ -9,7 +9,7 @@ Potential Features: Incomplete.
 
 Music: None.
 
-Integraton with Twilight Forest: None.
+Integraton with Twilight Forest: Incomplete.
 
 Potion Effects: Incomplete.
 
@@ -129,14 +129,16 @@ You don't have to sign the CLA until after you've submitted your code for review
 
 ## 1.17 Port Status
 
-- Twilight Forest: Waiting for Release. (Critical! When a version comes out we might need to remove some integrations.)
+- Twilight Forest: Available. (No builds are posted in Curseforge yet.)
 
-- JEI: Waiting for Release.
+- JEI: Unavailable.
 
-- Curios: Available.
+- Curios: Unavailable. (We can just make a pull request for Twilight Forest to make it available.)
 
-- Patchouli: Waiting for Release.
+- Patchouli: Unavailable.
 
-- CTM: Pending.
+- CTM: Unavailable.
 
-- Immersive Engineering: Pending.
+- Immersive Engineering: Unavailable.
+
+If you want to know why is these integrations unavailable, check the [build.gradle](https://github.com/TeamTwilight/twilightforest/blob/1.17.x/build.gradle) file.
