@@ -129,7 +129,7 @@ You don't have to sign the CLA until after you've submitted your code for review
 
 ## 1.17 Port Status
 
-- Twilight Forest: Available. (No builds are posted in Curseforge yet, but we can now compile the mod easier sync they updated their Gradle version.)
+- Twilight Forest: Available. (No builds are posted in Curseforge yet, but we can now compile the mod easier since they updated their Gradle version.)
 
 - JEI: Unavailable.
 
