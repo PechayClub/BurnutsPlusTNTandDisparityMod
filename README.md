@@ -142,3 +142,5 @@ You don't have to sign the CLA until after you've submitted your code for review
 - Immersive Engineering: Unavailable.
 
 If you want to know why is these integrations unavailable, check the [build.gradle](https://github.com/TeamTwilight/twilightforest/blob/1.17.x/build.gradle) file.
+
+There will be no TNT and Disparity 1.17 yet because were waiting for the first snapshot of MCreator 2021.3.
