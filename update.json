@@ -5,6 +5,7 @@
     "1.16.5-recommended": "0.4.1alpha-build.0635-preintegrationtest"
   },
   "1.16.5": {
+    "0.4.1alpha-build.0636-preintegrationtest": "Fixed structure generation issue.",
     "0.4.1alpha-build.0635-preintegrationtest": "Added new painting, fixed Teleportation Rod particles and Carminite Bases will no longer spawn in the Nether and End.",
     "0.4.1alpha-build.0632-preintegrationtest": "Ekor Bullets will do 0 damage when hit a mob and fixed Teleportation Rod particle effects.",
     "0.4.1alpha-build.0629-preintegrationtest": "Fixed particles for Teleportation Rod.",
