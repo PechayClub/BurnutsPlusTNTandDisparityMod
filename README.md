@@ -33,7 +33,7 @@ Twilight Forest mobs are atempted to be added earlier to the Integration test bu
 
 Gradle 7.1, 6.9 or 6.8 with Gradle 4.9 Code = Can't Compile
 
-Gradle 7.1 with 7.2 Code = Uncomfirmed due to falied builds of Twilight Forest 1.17.
+Gradle 7.1 with 7.2 Code = Uncomfirmed
 
 ## TNT and Disparity Roadmap
 
