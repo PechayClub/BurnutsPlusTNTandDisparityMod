@@ -75,7 +75,7 @@ Pre - To Do.
 
 Release Candidate - To Do.
 
-Preview - To Do. (Fixed the remaining issues except the ones labeled wontfix.)
+Preview - To Do. (Fixed the remaining issues except the ones labeled wontfix which is closed automatically but conversation is still open and you can chat us if you know how to fix it.)
 
 Initial Release - To Do. (The mod is now in issue free release thanks to MCreator. For more bugs in the upcomming updates we will be prepared to fix them.)
 
