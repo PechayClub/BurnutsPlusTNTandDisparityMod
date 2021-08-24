@@ -7,32 +7,35 @@
       {
         "type": "label",
         "data": {
-          "text": "Version: Alpha 0.4.1 Build 636 Pre-Integration Test",
+          "text": "Twilight Forest progrssion is broken.",
           "color": {
-            "value": -1,
+            "value": -65536,
             "falpha": 0.0
           },
-          "name": "Version: Alpha 0.4.1 Build 636 Pre-Integration Test",
+          "name": "Twilight Forest progrssion is broken.",
           "x": 3,
-          "y": 3
+          "y": 23
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "This is just a alpha, not the finished product.",
+          "text": "There is no way to reverse this. Make a new world instead.",
           "color": {
-            "value": -1,
+            "value": -65536,
             "falpha": 0.0
           },
-          "name": "This is just a alpha, not the finished product.",
+          "name": "There is no way to reverse this. Make a new world instead.",
           "x": 3,
-          "y": 13
+          "y": 33
         }
       }
     ],
     "baseTexture": "",
     "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "WarningDisplayOverlayIngame"
+    },
     "gridSettings": {
       "sx": 6,
       "sy": 5,

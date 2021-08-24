@@ -22,8 +22,6 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.ArrowEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.passive.SnowGolemEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.monster.MonsterEntity;
@@ -47,7 +45,6 @@ import net.burnutsplus.tnt_and_disparity.procedures.DLKItIsStruckByLightningProc
 import net.burnutsplus.tnt_and_disparity.procedures.DLKEntityDiesProcedure;
 import net.burnutsplus.tnt_and_disparity.entity.renderer.DLKRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
-import net.burnutsplus.tnt_and_disparity.item.EkorShooterItem;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -121,7 +118,7 @@ public class DLKEntity extends TntAndDisparityModElements.ModElement {
 			this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.8));
 			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
+			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, DLKEntity.CustomEntity.class, true, true));
 			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, VillagerEntity.class, true, true));
 			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, IronGolemEntity.class, true, true));
 			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SnowGolemEntity.class, true, true));
@@ -182,8 +179,6 @@ public class DLKEntity extends TntAndDisparityModElements.ModElement {
 			if (source == DamageSource.WITHER)
 				return false;
 			if (source.getDamageType().equals("witherSkull"))
-				return false;
-			if (source.getDamageType().equals("tnt_and_disparity:entitybulletekor_shooter"))
 				return false;
 			return super.attackEntityFrom(source, amount);
 		}

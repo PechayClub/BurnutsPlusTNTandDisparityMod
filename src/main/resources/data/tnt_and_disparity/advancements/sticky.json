@@ -19,7 +19,7 @@
       "trigger": "minecraft:placed_block",
       "conditions": {
         "item": {
-          "item": "tnt_and_disparity:glue_water"
+          "item": "tnt_and_disparity:gluewater"
         }
       }
     }
