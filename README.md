@@ -146,3 +146,5 @@ If you want to know why is these integrations unavailable, check the [build.grad
 There will be no TNT and Disparity 1.17 yet because were waiting for the first snapshot of MCreator 2021.3. 
 
 We will ask if they will allow Twilight Forest to be used in our mod first.
+
+Team Burnuts Discord: https://discord.gg/hDJCabNEz3
