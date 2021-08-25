@@ -46,12 +46,14 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
+import net.burnutsplus.tnt_and_disparity.entity.DLKEntity;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingOnInitialEntitySpawnProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingItIsStruckByLightningProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingEntityIsHurtProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingEntityDiesProcedure;
 import net.burnutsplus.tnt_and_disparity.entity.renderer.DLKKingRenderer;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
+import net.burnutsplus.tnt_and_disparity.item.EkorShooterItem;
 
 import javax.annotation.Nullable;
 
@@ -84,7 +86,7 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.2);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 800);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 4000);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 40);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 80);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 100);
@@ -187,6 +189,8 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 				return false;
 			if (source == DamageSource.CACTUS)
 				return false;
+			if (source.isExplosion())
+				return false;
 			if (source.getDamageType().equals("trident"))
 				return false;
 			if (source == DamageSource.ANVIL)
@@ -194,6 +198,8 @@ public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
 			if (source == DamageSource.WITHER)
 				return false;
 			if (source.getDamageType().equals("witherSkull"))
+				return false;
+			if (source.getDamageType().equals("tnt_and_disparity:entitybulletekor_shooter"))
 				return false;
 			return super.attackEntityFrom(source, amount);
 		}
