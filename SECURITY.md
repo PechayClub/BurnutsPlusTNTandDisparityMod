@@ -12,6 +12,8 @@ currently being supported with security updates.
 | 0.3.1   | :white_check_mark: |
 | < 0.3   | :x:                |
 
+Note: If version 0.6 beta was released, then we will drop support for alpha.
+
 ## Reporting a Vulnerability
 
 Use this section to tell people how to report a vulnerability.
