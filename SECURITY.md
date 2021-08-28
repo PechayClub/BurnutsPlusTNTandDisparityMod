@@ -8,9 +8,8 @@ currently being supported with security updates.
 | Version | Supported          |
 | ------- | ------------------ |
 | 0.5     |                    |
-| 0.4.1   | :white_check_mark: |
 | 0.4     | :white_check_mark: |
-| 0.3.1   | :white_check_mark: |
+| 0.3     | :white_check_mark: |
 | < 0.3   | Not Public         |
 
 Note: If version 0.6 beta was released, then we will drop support for alpha.
