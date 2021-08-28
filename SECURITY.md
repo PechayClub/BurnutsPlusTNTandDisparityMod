@@ -7,9 +7,9 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.4.1   | :circle:           |
+| 0.5     |                    |
 | 0.4.1   | :white_check_mark: |
-| 0.4.x   | :white_check_mark: |
+| 0.4     | :white_check_mark: |
 | 0.3.1   | :white_check_mark: |
 | < 0.3   | Not Public         |
 
