@@ -1148,11 +1148,28 @@
       "type": "procedure",
       "sortid": 80,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {},
       "registry_name": "warning_display_overlay_ingame",
       "metadata": {
         "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WarningScreenDisplay",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "warning_screen_display",
+      "metadata": {
         "dependencies": [
           {
             "name": "world",
@@ -1225,8 +1242,8 @@
     "en_us": {
       "subtitles.dryout": "DJVI - Dry Out 2.0",
       "effect.ekored": "Ekored",
-      "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
       "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
+      "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
       "advancements.big_bad_boom.title": "Big Bad Boom",
       "advancements.big_bad_boom.descr": "Use a Remote BBB.",
       "entity.tnt_and_disparity.stickman": "Stickman",
@@ -1312,5 +1329,5 @@
     "modElementsPackage": "net.burnutsplus.tnt_and_disparity",
     "lockBaseModFiles": true
   },
-  "mcreatorVersion": 202100233614
+  "mcreatorVersion": 202100235315
 }
