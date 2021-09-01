@@ -5,7 +5,7 @@
     "1.16.5-recommended": "0.4.1alpha-build.0639-preintegrationtest"
   },
   "1.16.5": {
-    "0.4.1alpha-build.0638-preintegrationtest": "Reformatted warning screen, removed redundant variable and fixed sticky achievement not loading again.",
+    "0.4.1alpha-build.0639-preintegrationtest": "Reformatted warning screen, removed redundant variable and fixed sticky achievement not loading again.",
     "0.4.1alpha-build.0638-preintegrationtest": "Prioritized structure generation, Removed some abilities from DLK and DLK King due to a bug, fixed Sticky achievement not loading, and added warning screen for breaking Twilight Forest Progression.",
     "0.4.1alpha-build.0636-preintegrationtest": "Fixed structure generation issue.",
     "0.4.1alpha-build.0635-preintegrationtest": "Added new painting, fixed Teleportation Rod particles and Carminite Bases will no longer spawn in the Nether and End.",
