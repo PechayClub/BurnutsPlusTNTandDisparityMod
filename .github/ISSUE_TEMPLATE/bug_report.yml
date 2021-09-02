@@ -18,28 +18,28 @@ body:
   attributes:
     label: Operating System Version
     description: If you select the bug occuring on multiple operating systems, select what version you tested.
-    placeholder: 
+    placeholder: 10.0.19041.935
   validations:
     required: true
 - type: textarea
   attributes:
     label: Mod Version
     description: We need to know what version of TNT and Disparity you used.
-    placeholder: 
+    placeholder: Alpha 0.4.1 Build 639 Pre-Integration Test
   validations:
     required: true
 - type: textarea
   attributes:
     label: Description of bug
     description: What did you expect to happen, what happened, and why is it incorrect?
-    placeholder: 
+    placeholder: When I launch the game it crashed.
   validations:
     required: true
 - type: textarea
   attributes:
     label: Steps to reproduce
     description: A bulleted list, or an exported instance if relevant.
-    placeholder: 
+    placeholder: Launch Minecraft.
   validations:
     required: true
 - type: textarea
