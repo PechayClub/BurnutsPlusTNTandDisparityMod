@@ -3,8 +3,7 @@ labels: [bug]
 body:
 - type: markdown
   attributes:
-    value: |
-    "If you need help running TNT and Disparity, please visit us on our Discord server: https://discord.gg/hDJCabNEz3":
+    value: "If you need help running TNT and Disparity, please visit us on our Discord server: https://discord.gg/hDJCabNEz3"
 - type: dropdown
   attributes:
     label: Operating System
