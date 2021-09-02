@@ -1,41 +1,60 @@
----
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: [bug]
 assignees: ''
-
----
-
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**TNT and Disparity Mod Details**
-- Mod Version: [e.g. Alpha 0.4.1 Build 620 Pre-Integration Test, or take a screenshot to see the version present in game.]
-
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+body:
+- type: markdown
+  attributes:
+    value: |
+    If you need help running TNT and Disparity, please visit us on our Discord server: https://discord.gg/hDJCabNEz3
+- type: dropdown
+  attributes:
+    label: Operating System
+    description: If you know this bug occurs on multiple operating systems, select all you have tested.
+    multiple: true
+    options:
+    - Windows
+    - macOS
+    - Linux
+    - Other
+- type: textarea
+  attributes:
+    label: Operating System Version
+    description: If you select the bug occuring on multiple operating systems, select what version you tested.
+    placeholder: 
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Mod Version
+    description: We need to know what version of TNT and Disparity you used.
+    placeholder: 
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Description of bug
+    description: What did you expect to happen, what happened, and why is it incorrect?
+    placeholder: 
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Steps to reproduce
+    description: A bulleted list, or an exported instance if relevant.
+    placeholder: 
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Suspected cause
+    description: If you know what could be causing this bug, describe it here.
+  validations:
+    required: false
+- type: checkboxes
+  attributes:
+    label: This issue is unique
+    options:
+    - label: I have searched the issue tracker and did not find an issue describing my bug.
+      required: true      
