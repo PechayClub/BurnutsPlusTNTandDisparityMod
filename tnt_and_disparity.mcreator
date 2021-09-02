@@ -1132,51 +1132,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "tn_tand_disparity"
-    },
-    {
-      "name": "Warning",
-      "type": "overlay",
-      "sortid": 79,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "warning"
-    },
-    {
-      "name": "WarningDisplayOverlayIngame",
-      "type": "procedure",
-      "sortid": 80,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "warning_display_overlay_ingame",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "WarningScreenDisplay",
-      "type": "procedure",
-      "sortid": 81,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "warning_screen_display",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
+      "registry_name": "tnt_and_disparity"
     }
   ],
   "variable_elements": [],
