@@ -1,5 +1,4 @@
 name: Bug report
-about: Exclusive to issue tracker only.
 labels: [bug]
 body:
 - type: markdown
