@@ -17,7 +17,7 @@ Mobs: Incomplete.
 
 Bosses and Mini-Bosses: Incomplete.
 
-Progression: Incomplete
+Progression: Incomplete.
 
 Acheivements/Advancements: Incomplete.
 
@@ -34,6 +34,20 @@ Twilight Forest mobs are atempted to be added earlier to the Integration test bu
 Gradle 7.1, 6.9 or 6.8 with Gradle 4.9 Code = Can't Compile
 
 Gradle 7.1 with 7.2 Code = Uncomfirmed
+
+## Requires Integration Test
+
+Kevin Macleod Music.
+
+Progression.
+
+Some NPCs. (Carminite Mobs and other mobs in TF.)
+
+Some Achivements/Advancents. (Some achivements are added.)
+
+Teams. (Carminite Clan.)
+
+Some Bosses. (Ysa the Ur-Ghast.)
 
 ## TNT and Disparity Roadmap
 
