@@ -25,6 +25,8 @@ Particles: Incomplete.
 
 NPCs: None.
 
+Real-Time Physics: None.
+
 Sponsors: Depending.
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
@@ -48,6 +50,10 @@ Some Achivements/Advancents. (Some achivements are added.)
 Teams. (Carminite Clan.)
 
 Some Bosses. (Ysa the Ur-Ghast.)
+
+Real-Time Physics form Physics Mod.
+
+Physics Mod is not compatible with macOS and can cause problems or crashes.
 
 ## TNT and Disparity Roadmap
 
