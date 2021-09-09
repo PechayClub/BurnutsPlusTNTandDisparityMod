@@ -11,6 +11,6 @@ import net.minecraft.entity.item.PaintingType;
 public class TNTandDisparityPainting {
 	@SubscribeEvent
 	public static void registerPaintingType(RegistryEvent.Register<PaintingType> event) {
-		event.getRegistry().register(new PaintingType(16, 16).setRegistryName("tn_tand_disparity"));
+		event.getRegistry().register(new PaintingType(16, 16).setRegistryName("tnt_and_disparity"));
 	}
 }

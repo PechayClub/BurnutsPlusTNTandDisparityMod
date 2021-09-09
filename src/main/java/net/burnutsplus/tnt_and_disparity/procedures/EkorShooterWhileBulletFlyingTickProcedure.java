@@ -1,6 +1,12 @@
 package net.burnutsplus.tnt_and_disparity.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
 
 import net.burnutsplus.tnt_and_disparity.particle.EkorParticlesParticle;
 import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
@@ -34,5 +40,14 @@ public class EkorShooterWhileBulletFlyingTickProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		world.addParticle(EkorParticlesParticle.particle, x, y, z, 0, 1, 0);
+		if (world instanceof World && !world.isRemote()) {
+			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:ekorekors")),
+					SoundCategory.HOSTILE, (float) 1, (float) 1);
+		} else {
+			((World) world).playSound(x, y, z,
+					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:ekorekors")),
+					SoundCategory.HOSTILE, (float) 1, (float) 1, false);
+		}
 	}
 }
