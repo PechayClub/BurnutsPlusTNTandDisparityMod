@@ -51,7 +51,7 @@ Teams. (Carminite Clan.)
 
 Some Bosses. (Ysa the Ur-Ghast.)
 
-Real-Time Physics form Physics Mod.
+Real-Time Physics from Physics Mod.
 
 Physics Mod is not compatible with macOS and can cause problems or crashes.
 
