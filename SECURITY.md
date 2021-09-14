@@ -32,6 +32,6 @@ These are the current Minecraft Versions supported by Forge Development Team.
 
 ## Legacy MCP Minecraft Versions
 
-These are the Minecraft Versions (1.12 and Below) that use Old MCP.
+These are the Minecraft Versions (1.12 and Below) that use old MCP.
 
-However we don't support these Minecraft Versions anymore, but there are MCP for Minecraft 1.14 and 1.15 also if ou wan't to use them.
+However we don't support these Minecraft Versions anymore, but there is old MCP for Minecraft 1.14 and 1.15 also if you wan't to use them.
