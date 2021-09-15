@@ -21,11 +21,6 @@ jobs:
           close-issue: true
           lock-issue: true
           issue-lock-reason: 'off-topic'
-
-jobs:
-  action:
-    runs-on: ubuntu-latest
-    steps:
       - uses: dessant/support-requests@v2
         with:
           github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
