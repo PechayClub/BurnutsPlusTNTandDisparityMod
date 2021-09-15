@@ -14,12 +14,19 @@ jobs:
     steps:
       - uses: dessant/support-requests@v2
         with:
-          github-token: ${{ github.token }}
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           support-label: 'support'
           issue-comment: >
-            :wave: @{issue-author}, we use the issue tracker exclusively for bug reports and feature requests. However, this issue appears to be a support request. Please use our support channels to get help with the project.
-            Go to Team Burnuts discord for support request in Discord channel #support-request-(supported-tnd-version).
-            https://discord.gg/hDJCabNEz3
+            :wave: @{issue-author}, we use the issue tracker exclusively for bug reports and feature requests. However, this issue appears to be a support request. Please to to Team Burnuts discord for support request in Discord channel #support-request-04 and #support-request-03. https://discord.gg/hDJCabNEz3
+          close-issue: true
+          lock-issue: true
+          issue-lock-reason: 'off-topic'
+      - uses: dessant/support-requests@v2
+        with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          support-label: 'eol'
+          issue-comment: >
+            :wave: @{issue-author}, we don't support the corsponding Minecraft or mod version anymore. You can fix this yourself by third-party/unofficial maintainment from a forked Github branch. Go to [SECURITY.md](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/SECURITY.md) for more info.
           close-issue: true
           lock-issue: true
           issue-lock-reason: 'off-topic'

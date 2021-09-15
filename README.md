@@ -25,6 +25,8 @@ Particles: Incomplete.
 
 NPCs: None.
 
+Real-Time Physics: None.
+
 Sponsors: Depending.
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
@@ -48,6 +50,10 @@ Some Achivements/Advancents. (Some achivements are added.)
 Teams. (Carminite Clan.)
 
 Some Bosses. (Ysa the Ur-Ghast.)
+
+Real-Time Physics from Physics Mod.
+
+Physics Mod is not compatible with macOS and can cause problems or crashes.
 
 ## TNT and Disparity Roadmap
 
@@ -162,3 +168,9 @@ There will be no TNT and Disparity 1.17 yet because were waiting for the first s
 We will ask if they will allow Twilight Forest to be used in our mod first.
 
 Team Burnuts Discord: https://discord.gg/hDJCabNEz3
+
+## Videos and Showcases by Burnuts Gaming and News and Tips Shower
+
+https://www.youtube.com/embed/V991KYNtXdk
+
+https://www.youtube.com/embed/Nkbc9_Mp-dM
