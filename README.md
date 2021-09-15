@@ -171,8 +171,6 @@ Team Burnuts Discord: https://discord.gg/hDJCabNEz3
 
 ## Videos and Showcases by Burnuts Gaming and News and Tips Shower
 
+https://www.youtube.com/embed/V991KYNtXdk
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/V991KYNtXdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Nkbc9_Mp-dM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/Nkbc9_Mp-dM
