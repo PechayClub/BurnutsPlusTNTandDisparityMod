@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are currently being supported with security updates.
+Use this section to tell people about which versions of your project are currently being supported.
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -10,8 +10,6 @@ Use this section to tell people about which versions of your project are current
 | 0.4     | :white_check_mark: |
 | 0.3     | :white_check_mark: |
 | < 0.3   | Not Public         |
-
-Note: If version 0.6 beta was released, then we will drop support for alpha.
 
 ## Reporting a Vulnerability
 
@@ -35,3 +33,5 @@ These are the current Minecraft Versions supported by Forge Development Team.
 These are the Minecraft Versions (1.12 and Below) that use old MCP.
 
 However we don't support these Minecraft Versions anymore, but there is old MCP for Minecraft 1.14 and 1.15 also if you wan't to use them.
+
+We also don't support third-party/unoffical maintaining, but you can fork this repository and fix it yourself. (You are not allowed to make pull request to fix issues for unsupported versions.)
