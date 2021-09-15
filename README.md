@@ -168,3 +168,9 @@ There will be no TNT and Disparity 1.17 yet because were waiting for the first s
 We will ask if they will allow Twilight Forest to be used in our mod first.
 
 Team Burnuts Discord: https://discord.gg/hDJCabNEz3
+
+## Videos and Showcases by Burnuts Gaming and News and Tips Shower
+
+<iframe width="560" height="315" src="" rel="noopener nofollow" target="_blank">https://www.youtube.com/embed/6uQ7vy2q_DA&quot; title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V991KYNtXdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
