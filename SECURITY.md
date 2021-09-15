@@ -27,8 +27,8 @@ These are the current Minecraft Versions supported by Forge Development Team.
 | ------- | ---------------------- |
 | 1.17    | :white_check_mark:     |
 | 1.16    | :white_check_mark: LTS |
-| 1.15    |                        |
-| 1.14    |                        |
+| 1.15    | :x:                    |
+| 1.14    | :x:                    |
 
 ## Legacy MCP Minecraft Versions
 
