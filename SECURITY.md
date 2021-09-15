@@ -19,7 +19,7 @@ Tell them where to go, how often they can expect to get an update on a reported 
 
 ## Supported Minecraft Versions
 
-These are the current Minecraft Versions supported by Forge Development Team.
+These are the current Minecraft Versions supported by Forge Development Team and Pylo.
 
 | Version | Supported          | Corsponding Mod Versions                            | MCreator Status |
 | ------- | ------------------ | --------------------------------------------------- | --------------- |
