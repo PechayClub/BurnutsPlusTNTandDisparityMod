@@ -28,6 +28,8 @@ These are the current Minecraft Versions supported by Forge Development Team and
 | 1.15    | :x:                |                                                     | Deprecated      |
 | 1.14    | :x:                |                                                     | Deprecated      |
 
+Data is self-modified because the data from MCreator is not accurate.
+
 ## Legacy MCP Minecraft Versions
 
 These are the Minecraft Versions (1.12 and Below) that use old MCP.
