@@ -22,3 +22,17 @@ jobs:
           close-issue: true
           lock-issue: true
           issue-lock-reason: 'off-topic'
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dessant/support-requests@v2
+        with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          support-label: 'eol'
+          issue-comment: >
+            :wave: @{issue-author}, we don't support the corsponding Minecraft or mod version anymore. You can fix this yourself by third-party/unofficial maintainment from a forked Github branch. Go to [SECURITY.md](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/SECURITY.md) for more info.
+          close-issue: true
+          lock-issue: true
+          issue-lock-reason: 'off-topic'
