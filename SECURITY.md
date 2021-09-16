@@ -24,7 +24,7 @@ These are the current Minecraft Versions supported by Forge Development Team and
 | Version | Supported          | Corsponding Mod Versions                            | MCreator Status |
 | ------- | ------------------ | --------------------------------------------------- | --------------- |
 | 1.17    | :white_check_mark: | 0.4.1 Integration Test                              | In Development  |
-| 1.16    | :white_check_mark: | 0.3 and 0.4 (Up to 0.4.1 Pre-Integration Test Only) | LTS             |
+| 1.16    | :white_check_mark: | 0.3 to 0.4.1 Pre-Integration                        | LTS (36.2.0)    |
 | 1.15    | :x:                |                                                     | Deprecated      |
 | 1.14    | :x:                |                                                     | Deprecated      |
 
