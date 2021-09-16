@@ -151,7 +151,7 @@ You don't have to sign the CLA until after you've submitted your code for review
 
 - Twilight Forest: Available. (No builds are posted in Curseforge yet, but we can now compile the mod easier since they updated their Gradle version.)
 
-- JEI: Unavailable.
+- JEI: Available.
 
 - Curios: Unavailable. (We can just make a pull request for Twilight Forest to make it available.)
 
