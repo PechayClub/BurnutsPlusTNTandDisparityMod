@@ -73,3 +73,14 @@ jobs:
           exempt-all-pr-assignees: Pechayland, Burnuts, Azar2477
           enable-statistics: true
           
+  BadgeUpdater:
+    name: Static Badge Updater
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Update README Discord Badge to Latest Upstream
+        uses: CodexLink/discord-activity-badge@v1
+        with:
+          DISCORD_USER_ID: ${{ secrets.DISCORD_USER_ID }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+  
