@@ -21,12 +21,12 @@ Tell them where to go, how often they can expect to get an update on a reported 
 
 These are the current Minecraft Versions supported by Forge Development Team and Pylo.
 
-| Version | Supported          | Corsponding Mod Versions                            | MCreator Status | Port Status |
-| ------- | ------------------ | --------------------------------------------------- | --------------- | ----------- |
-| 1.17    | :white_check_mark: | 0.4.1 Integration Test                              | In Development  |             |
-| 1.16    | :white_check_mark: | 0.3 to 0.4.1 Pre-Integration                        | LTS (36.2.0)    | Ported      |
-| 1.15    | :x:                |                                                     | Deprecated      |             |
-| 1.14    | :x:                |                                                     | Deprecated      |             |
+| Version | Supported          | Corsponding Mod Versions                            | MCreator Status | Port Status            |
+| ------- | ------------------ | --------------------------------------------------- | --------------- | ---------------------  |
+| 1.17    | :white_check_mark: | 0.4.1 Integration Test                              | In Development  | Available for porting. |
+| 1.16    | :white_check_mark: | 0.3 to 0.4.1 Pre-Integration                        | LTS (36.2.0)    | Ported.                |
+| 1.15    | :x:                |                                                     | Deprecated      |                        |
+| 1.14    | :x:                |                                                     | Deprecated      |                        |
 
 Data is self-modified because the data from MCreator is not accurate.
 
