@@ -43,7 +43,7 @@ jobs:
     - uses: crazy-max/ghaction-virustotal@v2.4.1
       with:
        vt_api_key: ${{ secrets.VT_API_KEY }}
-       files: /
+       files: ./
        vt_monitor: true
        update_release_body: true
        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
