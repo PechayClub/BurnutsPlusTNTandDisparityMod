@@ -98,7 +98,7 @@ jobs:
         with:
           github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          username: 'Burnuts DevEnv'
+          username: 'Burnuts Systems'
           title: '${{ github.workflow }}: {{STATUS}}'
           description: '${{ github.event_name }} trigged this {{STATUS}}!'
           include-details: 'true'
