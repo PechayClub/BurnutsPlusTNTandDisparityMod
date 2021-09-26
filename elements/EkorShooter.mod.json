@@ -17,7 +17,7 @@
     "shootConstantly": false,
     "usageCount": 0,
     "actionSound": {
-      "value": "CUSTOM:ekorekors"
+      "value": ""
     },
     "hasGlow": false,
     "animation": "none",

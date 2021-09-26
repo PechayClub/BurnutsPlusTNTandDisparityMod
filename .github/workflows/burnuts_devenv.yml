@@ -1,0 +1,107 @@
+
+name: 'Support Requests'
+
+on:
+  issues:
+    types: [labeled, unlabeled, reopened]
+
+permissions:
+  issues: write
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dessant/support-requests@v2
+        with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          support-label: 'support'
+          issue-comment: >
+            :wave: @{issue-author}, we use the issue tracker exclusively for bug reports and feature requests. However, this issue appears to be a support request. Please to to Team Burnuts discord for support request in Discord channel #support-request-04 and #support-request-03. https://discord.gg/hDJCabNEz3
+          close-issue: true
+          lock-issue: true
+          issue-lock-reason: 'off-topic'
+      - uses: dessant/support-requests@v2
+        with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts DevEnv. (NOT @Pechayland's ACCESS TOKEN.)
+          support-label: 'eol'
+          issue-comment: >
+            :wave: @{issue-author}, we don't support the corsponding Minecraft or mod version anymore. You can fix this yourself by third-party/unofficial maintainment from a forked Github branch. Go to [SECURITY.md](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/SECURITY.md) for more info.
+          close-issue: true
+          lock-issue: true
+          issue-lock-reason: 'off-topic'
+      -  uses: actions/stale@v4.0.0
+         with:
+          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts DevEnv. (NOT @Pechayland's ACCESS TOKEN.)
+          stale-issue-message: >
+           The issue is marked as stale, because there is no recent activity in this issue.
+          stale-pr-message: >
+           The pull request is marked as stale, because there is no recent activity in this pull request.
+          close-issue-message:  >
+           The issue is closed, because there is no recent activity in this issue for a week.
+          close-pr-message: >
+           The pull request is closed, because there is no recent activity in this pull request for a week.
+          days-before-stale: 2
+          days-before-issue-stale: 2
+          days-before-close: 7
+          days-before-issue-close: 7
+          days-before-pr-close: 7
+          stale-issue-label: stale
+          close-issue-label: stale
+          exempt-issue-labels: stale
+          stale-pr-label: stale
+          close-pr-label: stale
+          exempt-pr-labels: enhancement
+          exempt-milestones: Integration Test
+          exempt-issue-milestones: Integration Test
+          exempt-pr-milestones: Integration Test
+          exempt-all-milestones: Integration Test
+          exempt-all-issue-milestones: Integration Test
+          exempt-all-pr-milestones: Integration Test
+          operations-per-run: 120
+          remove-stale-when-updated: true
+          remove-issue-stale-when-updated: true
+          remove-pr-stale-when-updated: true
+          debug-only: true
+          ascending: true
+          delete-branch: true
+          exempt-assignees: Pechayland, Burnuts, Azar2477
+          exempt-issue-assignees: Pechayland, Burnuts, Azar2477
+          exempt-pr-assignees: Pechayland, Burnuts, Azar2477
+          exempt-all-assignees: Pechayland, Burnuts, Azar2477
+          exempt-all-issue-assignees: Pechayland, Burnuts, Azar2477
+          exempt-all-pr-assignees: Pechayland, Burnuts, Azar2477
+          enable-statistics: true
+          
+  BadgeUpdater:
+    name: Static Badge Updater
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Update README Discord Badge to Latest Upstream
+        uses: CodexLink/discord-activity-badge@v1
+        with:
+          DISCORD_USER_ID: ${{ secrets.DISCORD_USER_ID }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          
+  notify:
+    name: Discord Notification
+    runs-on: ubuntu-latest
+    needs:
+      - BadgeUpdater
+      - action
+    if: ${{ always() }} # You always want to be notified: success, failure, or cancelled
+
+    steps:
+      - name: Notify
+        uses: nobrayner/discord-webhook@v1
+        with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          username: 'Burnuts Systems'
+          title: '${{ github.workflow }}: {{STATUS}}'
+          description: '${{ github.event_name }} trigged this {{STATUS}}!'
+          include-details: 'true'
+          color-success: '#4287f5'
+          color-failure: 'eb4034'
+          color-cancelled: '0x42daf5'

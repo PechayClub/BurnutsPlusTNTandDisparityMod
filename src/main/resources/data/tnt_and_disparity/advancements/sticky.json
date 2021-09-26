@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "tnt_and_disparity:glue_water"
+      "item": "tnt_and_disparity:gluewater"
     },
     "title": {
       "translate": "advancements.sticky.title"

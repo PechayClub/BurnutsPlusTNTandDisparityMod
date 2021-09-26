@@ -17,13 +17,15 @@ Mobs: Incomplete.
 
 Bosses and Mini-Bosses: Incomplete.
 
-Progression: Incomplete
+Progression: Incomplete.
 
 Acheivements/Advancements: Incomplete.
 
 Particles: Incomplete.
 
 NPCs: None.
+
+Real-Time Physics: None.
 
 Sponsors: Depending.
 
@@ -34,6 +36,24 @@ Twilight Forest mobs are atempted to be added earlier to the Integration test bu
 Gradle 7.1, 6.9 or 6.8 with Gradle 4.9 Code = Can't Compile
 
 Gradle 7.1 with 7.2 Code = Uncomfirmed
+
+## Requires Integration Test
+
+Kevin Macleod Music.
+
+Progression.
+
+Some NPCs. (Carminite Mobs and other mobs in TF.)
+
+Some Achivements/Advancents. (Some achivements are added.)
+
+Teams. (Carminite Clan.)
+
+Some Bosses. (Ysa the Ur-Ghast.)
+
+Real-Time Physics from Physics Mod.
+
+Physics Mod is not compatible with macOS and can cause problems or crashes.
 
 ## TNT and Disparity Roadmap
 
@@ -131,7 +151,7 @@ You don't have to sign the CLA until after you've submitted your code for review
 
 - Twilight Forest: Available. (No builds are posted in Curseforge yet, but we can now compile the mod easier since they updated their Gradle version.)
 
-- JEI: Unavailable.
+- JEI: Available.
 
 - Curios: Unavailable. (We can just make a pull request for Twilight Forest to make it available.)
 
@@ -146,3 +166,17 @@ If you want to know why is these integrations unavailable, check the [build.grad
 There will be no TNT and Disparity 1.17 yet because were waiting for the first snapshot of MCreator 2021.3. 
 
 We will ask if they will allow Twilight Forest to be used in our mod first.
+
+Team Burnuts Discord: https://discord.gg/hDJCabNEz3
+
+## License and Trademark
+
+TNT and Disparity is licensed under GNU Lesser Public License with Twilight Forest mod.
+
+TNT and Disparity is a Trademark of Team Burnuts. TNT and Disparity logo should not be used in any product to prevent confusion with the mod.
+
+## Videos and Showcases by Burnuts Gaming and News and Tips Shower
+
+https://www.youtube.com/embed/V991KYNtXdk
+
+https://www.youtube.com/embed/Nkbc9_Mp-dM
