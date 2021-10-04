@@ -34,13 +34,13 @@ jobs:
          with:
           repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts DevEnv. (NOT @Pechayland's ACCESS TOKEN.)
           stale-issue-message: >
-           The issue is marked as stale, because there is no recent activity in this issue.
+             The issue is marked as stale, because there is no recent activity in this issue.
           stale-pr-message: >
-           The pull request is marked as stale, because there is no recent activity in this pull request.
+             The pull request is marked as stale, because there is no recent activity in this pull request.
           close-issue-message:  >
-           The issue is closed, because there is no recent activity in this issue for a week.
+             The issue is closed, because there is no recent activity in this issue for a week.
           close-pr-message: >
-           The pull request is closed, because there is no recent activity in this pull request for a week.
+             The pull request is closed, because there is no recent activity in this pull request for a week.
           days-before-stale: 2
           days-before-issue-stale: 2
           days-before-close: 7
@@ -118,4 +118,8 @@ jobs:
     steps:
       - uses: lee-dohm/no-response@v0.5.0
         with:
+          closeComment: >
+            This issue has been automatically closed because there has been no response to our request for more information from the original author. With only the information that is currently in the issue, we don't have enough information to take action. Please reach out if you have or find the answers we need so that we can investigate further.
+          daysUntilClose: 2
+          responseRequiredLabel: 'question'
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts DevEnv. (NOT @Pechayland's ACCESS TOKEN.)
