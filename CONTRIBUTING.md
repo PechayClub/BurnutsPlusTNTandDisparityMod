@@ -4,7 +4,7 @@
 - Make sure your pull request dosent contain patented or trademarked material.
 - Make pull request are for the versions only supported in [SECURITY.md](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/SECURITY.md.).
 - Our code should be edit using MCreator not by using GitHub manually or a notepad to edit the file because your changes will get overwritten.
-- Do not make a pull request that modifies anything it the .github folder.
+- Do not make a pull request that modifies anything it the .github folder and only collaborators can modify this folder.
 
 If your pull request won't follow these guidelines will be closed without warning and labeled declined.
 
@@ -18,9 +18,9 @@ You don't have to sign the CLA until after you've submitted your code for review
 
 ## For Collaborators
 
-If your using your access token in your forked version of this repository use it like this:
+If your using your access token in your forked version of this repository when editing our workflows use it like this:
 
-> token: ${{ github.token }}
+> token: ${{ secret.PERSONAL_ACCESS_TOKEN }}
 
 Not like this:
 
