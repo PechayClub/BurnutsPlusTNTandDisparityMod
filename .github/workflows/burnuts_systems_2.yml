@@ -1,0 +1,19 @@
+name: 'Burnuts Systems'
+
+on:
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: '5 * * * *'
+
+jobs:
+  noResponse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lee-dohm/no-response@v0.5.0
+        with:
+          closeComment: >
+            This issue has been automatically closed because there has been no response to our request for more information from the original author. With only the information that is currently in the issue, we don't have enough information to take action. Please reach out if you have or find the answers we need so that we can investigate further.
+          daysUntilClose: 2
+          responseRequiredLabel: 'question'
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts DevEnv. (NOT @Pechayland's ACCESS TOKEN.)
