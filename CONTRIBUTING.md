@@ -34,3 +34,5 @@ If you expose your access token it will put your account at risk.
 If you forked a repository, please press "Fletch Upstream" before creating a pull request to prevent any conflicts when merging.
 
 Your pull request are held for review depending if it's a feature request or a fix for any specific milestone or a pull request for the main version.
+
+Your forked repository will not be taken down by DMCA takedown request or forced deletion because this is licensed under a open source license GNU Lesser General Public License v2.1, But however this licnese allows modification and it requires license and copyright notice as required, so please ask permission from the copyright owner to use their code to your project even tho its under a open source license.
