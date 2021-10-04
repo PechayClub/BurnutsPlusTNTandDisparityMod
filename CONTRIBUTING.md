@@ -25,3 +25,11 @@ If your using your access token in your forked version of this repository when e
 Not like this:
 
 > token: 'xxx.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+
+If you expose your access token it will put your account at risk.
+
+## Forked Repositories
+
+If you forked a repository, please press "Fletch Upstream" before creating a pull request to prevent any conflicts when merging.
+
+Your pull request are held for review depending if it's a feature request or a fix for any specific milestone or a issue for the main version.
