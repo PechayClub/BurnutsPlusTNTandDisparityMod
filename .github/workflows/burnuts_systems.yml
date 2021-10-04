@@ -105,4 +105,4 @@ jobs:
           color-success: '#4287f5'
           color-failure: 'eb4034'
           color-cancelled: '0x42daf5
-          
+
