@@ -29,6 +29,9 @@ Not like this:
 
 If you expose your access token it will put your account at risk.
 
+Don't leave any pull request or merged it unreviewed.
+Make sure that everyone has reviewed that pull request before merging.
+
 ## Forked Repositories
 
 If you forked a repository, please press "Fletch Upstream" before creating a pull request to prevent any conflicts when merging.
