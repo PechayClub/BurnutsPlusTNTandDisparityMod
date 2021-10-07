@@ -71,3 +71,8 @@ jobs:
           exempt-all-issue-assignees: Pechayland, Burnuts, Azar2477
           exempt-all-pr-assignees: Pechayland, Burnuts, Azar2477
           enable-statistics: true
+      -  uses: CodexLink/discord-activity-badge@v1.0
+         with:
+          DISCORD_BOT_TOKEN: ${{ secret.DISCORD_BOT_TOKEN }}
+          DISCORD_USER_ID: ${{ secret.DISCORD_USER_ID }}
+          WORKFLOW_TOKEN: ${{ secret.PERSONAL_ACCESS_TOKEN }}
