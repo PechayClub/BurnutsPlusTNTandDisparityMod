@@ -171,7 +171,7 @@ Team Burnuts Discord: https://discord.gg/hDJCabNEz3
 
 ## License and Trademark
 
-TNT and Disparity is licensed under GNU Lesser Public License with Twilight Forest mod.
+TNT and Disparity is licensed under GNU Lesser General Public License v2.1 with Twilight Forest mod.
 
 TNT and Disparity is a Trademark of Team Burnuts. TNT and Disparity logo should not be used in any product to prevent confusion with the mod or any other product.
 
