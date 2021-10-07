@@ -75,4 +75,4 @@ jobs:
          with:
           DISCORD_BOT_TOKEN: ${{ secret.DISCORD_BOT_TOKEN }}
           DISCORD_USER_ID: ${{ secret.DISCORD_USER_ID }}
-          WORKFLOW_TOKEN: ${{ secret.PERSONAL_ACCESS_TOKEN }}
+          WORKFLOW_TOKEN: ${{ secret.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts DevEnv. (NOT @Pechayland's ACCESS TOKEN.)
