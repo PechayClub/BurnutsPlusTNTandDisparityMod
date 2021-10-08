@@ -16,7 +16,7 @@ jobs:
           github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts Systems. (NOT @Pechayland's ACCESS TOKEN.)
           support-label: 'support'
           issue-comment: >
-            :wave: @{issue-author}, we use the issue tracker exclusively for bug reports and feature requests. However, this issue appears to be a support request. Please to to Team Burnuts discord for support request in Discord channel #support-request-04 and #support-request-03. https://discord.gg/hDJCabNEz3
+            :wave: @{issue-author}, we use the issue tracker exclusively for bug reports and feature requests. However, this issue appears to be a support request. Please to Team Burnuts discord or our discussions tab in GitHub for support request in Discord channel #support-request-04 and #support-request-03. https://discord.gg/hDJCabNEz3
           close-issue: true
           lock-issue: true
           issue-lock-reason: 'off-topic'
