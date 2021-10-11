@@ -177,6 +177,6 @@ TNT and Disparity is a Trademark of Team Burnuts. TNT and Disparity logo should 
 
 ## Videos and Showcases by Burnuts Gaming and News and Tips Shower
 
-https://www.youtube.com/embed/V991KYNtXdk
+/i/https://www.youtube.com/embed/V991KYNtXdk
 
-https://www.youtube.com/embed/Nkbc9_Mp-dM
+/i/https://www.youtube.com/embed/Nkbc9_Mp-dM
