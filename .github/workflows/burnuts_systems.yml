@@ -45,11 +45,11 @@ jobs:
           days-before-close: 7
           days-before-issue-close: 7
           days-before-pr-close: 7
-          stale-issue-label: stale
-          close-issue-label: stale
-          exempt-issue-labels: stale
-          stale-pr-label: stale
-          close-pr-label: stale
+          stale-issue-label: wontfix
+          close-issue-label: wontfix
+          exempt-issue-labels: wontfix
+          stale-pr-label: wontfix
+          close-pr-label: wontfix
           exempt-pr-labels: enhancement
           exempt-milestones: Integration Test
           exempt-issue-milestones: Integration Test
