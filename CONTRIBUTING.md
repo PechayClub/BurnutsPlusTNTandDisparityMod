@@ -46,5 +46,5 @@ Your fork will get taken down if you:
 
 - Modify brand files without permission.
 
-- Modify the assets with permission.
+- Modify the assets without permission.
 
