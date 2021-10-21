@@ -29,7 +29,7 @@ Not like this:
 
 If you expose your access token it will put your account at risk.
 
-Don't leave any pull request or merged it unreviewed.
+Don't leave any pull request unreviewed.
 Make sure that everyone has reviewed that pull request before merging.
 
 ## Forked Repositories
@@ -39,3 +39,12 @@ If you forked a repository, please press "Fletch Upstream" before creating a pul
 Your pull request are held for review depending if it's a feature request or a fix for any specific milestone or a pull request for the main version.
 
 Your forked repository will not be taken down by DMCA takedown request or forced deletion because this is licensed under a open source license GNU Lesser General Public License v2.1, But however this license allows modification and it requires license and copyright notice for use, so please ask permission from the copyright owner to use their code to your project even tho its under a open source license.
+
+Your fork will get taken down if you:
+
+- Change or violate the current license used.
+
+- Modify brand files without permission.
+
+- Modify the assets with permission.
+
