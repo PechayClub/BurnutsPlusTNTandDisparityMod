@@ -116,7 +116,7 @@ Press build icon or generate .jar file icon. (Please do not select the play butt
 
 If you wan't to use our non-code assets that we create then please ask for permission if you want to modify it for your mods or add-ons.
 
-All Non-code assets will fall under this license except [DJVI - Dry Out 2.0](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/src/main/resources/assets/tnt_and_disparity/sounds/djvi-dry-out-2.0-mp3.ogg) and Kevin MacLeod's music. Kevin MacLeod's music is in a different Creative Commons License which is [here](https://creativecommons.org/licenses/by/3.0/).
+All Non-code assets will fall under this license except Kevin MacLeod's music. Kevin MacLeod's music is in a different Creative Commons License which is [here](https://creativecommons.org/licenses/by/3.0/).
 
 [(Located here)](src/main/resources/assets)
 
