@@ -133,33 +133,9 @@ You don't have to sign the CLA until after you've submitted your code for review
 
 - Twilight Forest: Working in Progress.
 
-- JEI: None.
-
-- Curios: None.
-
-- Patchouli: None.
-
-- CTM: None.
-
-- Immersive Engineering: None.
-
-- ~~Mantle and Tinker's Construct: Not Available in 1.16.5 Yet.~~
-
-- ~~Forestry: Not Available in 1.16.5 Yet.~~
-
 ## 1.17 Port Status
 
-- Twilight Forest: Available. (No builds are posted in Curseforge yet, but we can now compile the mod easier since they updated their Gradle version.)
-
-- JEI: Available.
-
-- Curios: Unavailable. (We can just make a pull request for Twilight Forest to make it available.)
-
-- Patchouli: Unavailable.
-
-- CTM: Unavailable.
-
-- Immersive Engineering: Unavailable.
+- Twilight Forest: Available.
 
 If you want to know why is these integrations unavailable, check the [build.gradle](https://github.com/TeamTwilight/twilightforest/blob/1.17.x/build.gradle) file.
 
@@ -173,7 +149,7 @@ Team Burnuts Discord: https://discord.gg/hDJCabNEz3
 
 TNT and Disparity is licensed under GNU Lesser General Public License v2.1 with Twilight Forest mod.
 
-TNT and Disparity is a Trademark of Team Burnuts. TNT and Disparity logo should not be used in any product to prevent confusion with the mod or any other product.
+TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that don't fall on any license. Even if a brand has a unregistered trademark, it can still get taken down.
 
 ## Videos and Showcases by Burnuts Gaming and News and Tips Shower
 
