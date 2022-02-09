@@ -20,4 +20,3 @@ jobs:
           DISCORD_BOT_TOKEN: ${{ secret.DISCORD_BOT_TOKEN }}
           DISCORD_USER_ID: ${{ secret.DISCORD_USER_ID }}
           WORKFLOW_TOKEN: ${{ secret.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts Systems. (NOT @Pechayland's ACCESS TOKEN.)
-      -  uses: scratch-for-discord/action-blocks@1.0.2

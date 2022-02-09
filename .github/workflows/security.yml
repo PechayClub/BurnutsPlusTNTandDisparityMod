@@ -22,5 +22,4 @@ jobs:
        vt_monitor: true
        update_release_body: true
        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts Systems. (NOT @Pechayland's ACCESS TOKEN.)
-    -  uses: scratch-for-discord/action-blocks@1.0.2
    
