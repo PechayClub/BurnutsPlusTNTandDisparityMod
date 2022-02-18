@@ -53,8 +53,6 @@ Some Bosses. (Ysa the Ur-Ghast.)
 
 Real-Time Physics from Physics Mod.
 
-Physics Mod is not compatible with macOS and can cause problems or crashes.
-
 ## TNT and Disparity Roadmap
 
 ### In Private Test (These versions are not released publically.)
@@ -75,7 +73,7 @@ Physics Mod is not compatible with macOS and can cause problems or crashes.
 
 0.4 Pre-Integration Test - Working in Progress. (Integration Test Prepared.)
 
-0.4 Integration Test - To Do. (Adding Twilight Forest with other mods.)
+0.4 Integration Test - Working in Progress. (Adding Twilight Forest with other mods.) (Were testing some of these features.)
 
 0.5 Music Integration Test - To Do. (Kevin MacLeod's music is going to be added but we need to find which we will use.)
 
@@ -122,28 +120,7 @@ All Non-code assets will fall under this license except Kevin MacLeod's music. K
 
 ## CLA
 
-Before we can use your code via Pull Request, you need to sign our CLA [(Burnuts CLA)](https://cla-assistant.io/Team-Burnuts/BurnutsPlusTNTandDisparityMod), which you can do online.
-The CLA is necessary mainly because you own the copyright to your changes, even after your contribution 
-becomes part of our codebase, so we need your permission to use and distribute your code. We also need to be sure 
-of various other things—for instance that you'll tell us if you know that your code infringes on other people's patents. 
-You don't have to sign the CLA until after you've submitted your code for review and we approved it, but you must do it before
- we can put your code into our codebase.
-
-## Integration Status
-
-- Twilight Forest: Working in Progress.
-
-## 1.17 Port Status
-
-- Twilight Forest: Available.
-
-If you want to know why is these integrations unavailable, check the [build.gradle](https://github.com/TeamTwilight/twilightforest/blob/1.17.x/build.gradle) file.
-
-There will be no TNT and Disparity 1.17 yet because were waiting for the first snapshot of MCreator 2021.3. 
-
-We will ask if they will allow Twilight Forest to be used in our mod first.
-
-Team Burnuts Discord: https://discord.gg/hDJCabNEz3
+Before we can use your code via Pull Request, you need to sign our CLA [(Burnuts CLA)](https://cla-assistant.io/Team-Burnuts/BurnutsPlusTNTandDisparityMod), which you can do online. The CLA is necessary mainly because you own the copyright to your changes, even after your contribution becomes part of our codebase, so we need your permission to use anddistribute your code. We also need to be sure of various other things—for instance that you'll tell us if you know that your code infringes on other people's patents. You don't have to sign the CLA until after you've submitted your code for review and we approved it, but you must do it before we can put your code into our codebase.
 
 ## License and Trademark
 
@@ -153,6 +130,10 @@ TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that 
 
 ## Videos and Showcases by Burnuts Gaming and News and Tips Shower
 
-/i/https://www.youtube.com/embed/V991KYNtXdk
+https://www.youtube.com/embed/V991KYNtXdk
 
-/i/https://www.youtube.com/embed/Nkbc9_Mp-dM
+https://www.youtube.com/embed/Nkbc9_Mp-dM
+
+## Contact
+
+Team Burnuts Discord: https://discord.gg/hDJCabNEz3
