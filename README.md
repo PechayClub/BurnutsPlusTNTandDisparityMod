@@ -128,6 +128,8 @@ TNT and Disparity is licensed under GNU Lesser General Public License v2.1 with 
 
 TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that don't fall on any license. Even if a brand has a unregistered trademark, it can still get taken down.
 
+[(Located here)](brands)
+
 ## Videos and Showcases by Burnuts Gaming and News and Tips Shower
 
 https://www.youtube.com/embed/V991KYNtXdk
