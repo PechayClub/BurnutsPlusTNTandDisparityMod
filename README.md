@@ -130,9 +130,9 @@ TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that 
 
 ## Videos and Showcases by Burnuts Gaming and News and Tips Shower
 
-/i/https://www.youtube.com/embed/V991KYNtXdk
+https://www.youtube.com/embed/V991KYNtXdk
 
-/i/https://www.youtube.com/embed/Nkbc9_Mp-dM
+https://www.youtube.com/embed/Nkbc9_Mp-dM
 
 ## Contact
 
