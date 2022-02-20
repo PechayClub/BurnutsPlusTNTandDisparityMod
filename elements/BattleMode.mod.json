@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "N",
+    "keyBindingName": "Battle Mode",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "BattleModeOnKeyPressed"
+    }
+  }
+}

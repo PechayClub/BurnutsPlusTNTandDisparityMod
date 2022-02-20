@@ -1,12 +1,11 @@
 {
-  "group": "tnt_and_disparity",
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
       "item": "minecraft:gunpowder"
     },
     {
-      "item": "tnt_and_disparity:glue_water_bucket"
+      "item": "tnt_and_disparity:glue_block"
     },
     {
       "item": "minecraft:gunpowder"

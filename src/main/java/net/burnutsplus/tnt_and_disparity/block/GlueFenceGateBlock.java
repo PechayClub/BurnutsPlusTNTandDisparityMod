@@ -1,66 +1,50 @@
 
 package net.burnutsplus.tnt_and_disparity.block;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.BlockPos;
 
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItem;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.block.material.PushReaction;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.FenceGateBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.burnutsplus.tnt_and_disparity.item.DrillBBBItem;
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
+import net.burnutsplus.tnt_and_disparity.init.TntAndDisparityModItems;
 
 import java.util.List;
 import java.util.Collections;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class GlueFenceGateBlock extends TntAndDisparityModElements.ModElement {
-	@ObjectHolder("tnt_and_disparity:glue_fence_gate")
-	public static final Block block = null;
-	public GlueFenceGateBlock(TntAndDisparityModElements instance) {
-		super(instance, 50);
+public class GlueFenceGateBlock extends FenceGateBlock {
+	public GlueFenceGateBlock() {
+		super(BlockBehaviour.Properties.of(Material.ICE).sound(SoundType.GRAVEL).strength(100f, 2400f));
+		setRegistryName("glue_fence_gate");
 	}
 
 	@Override
-	public void initElements() {
-		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
+	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+		return 0;
 	}
-	public static class CustomBlock extends FenceGateBlock {
-		public CustomBlock() {
-			super(Block.Properties.create(Material.ICE).sound(SoundType.GROUND).hardnessAndResistance(100f, 2400f).setLightLevel(s -> 0));
-			setRegistryName("glue_fence_gate");
-		}
 
-		@Override
-		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-			return new ItemStack(DrillBBBItem.block);
-		}
+	@Override
+	public ItemStack getPickBlock(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
+		return new ItemStack(TntAndDisparityModItems.DRILL_BBB);
+	}
 
-		@Override
-		public PushReaction getPushReaction(BlockState state) {
-			return PushReaction.IGNORE;
-		}
+	@Override
+	public PushReaction getPistonPushReaction(BlockState state) {
+		return PushReaction.IGNORE;
+	}
 
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
-		}
+	@Override
+	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
+		if (!dropsOriginal.isEmpty())
+			return dropsOriginal;
+		return Collections.singletonList(new ItemStack(this, 1));
 	}
 }

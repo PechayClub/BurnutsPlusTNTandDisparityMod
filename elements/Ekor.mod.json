@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Ekor",
     "mobLabel": "",
-    "mobModelName": "ModelEkor",
+    "mobModelName": "ModelEkorModel",
     "mobModelTexture": "ekor.png",
     "mobModelGlowTexture": "",
     "modelWidth": 4.0,

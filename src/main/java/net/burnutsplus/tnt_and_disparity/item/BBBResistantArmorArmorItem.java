@@ -1,74 +1,53 @@
 
 package net.burnutsplus.tnt_and_disparity.item;
 
-import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.World;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
 
 import net.burnutsplus.tnt_and_disparity.procedures.BBBResistantArmorArmorBootsTickEventProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.ArmorEffectProcedure;
-import net.burnutsplus.tnt_and_disparity.block.RenewableEnergyBlockBlock;
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
+import net.burnutsplus.tnt_and_disparity.init.TntAndDisparityModBlocks;
 
-import java.util.Map;
-import java.util.HashMap;
-
-@TntAndDisparityModElements.ModElement.Tag
-public class BBBResistantArmorArmorItem extends TntAndDisparityModElements.ModElement {
-	@ObjectHolder("tnt_and_disparity:bbb_resistant_armor_armor_helmet")
-	public static final Item helmet = null;
-	@ObjectHolder("tnt_and_disparity:bbb_resistant_armor_armor_chestplate")
-	public static final Item body = null;
-	@ObjectHolder("tnt_and_disparity:bbb_resistant_armor_armor_leggings")
-	public static final Item legs = null;
-	@ObjectHolder("tnt_and_disparity:bbb_resistant_armor_armor_boots")
-	public static final Item boots = null;
-	public BBBResistantArmorArmorItem(TntAndDisparityModElements instance) {
-		super(instance, 27);
-	}
-
-	@Override
-	public void initElements() {
-		IArmorMaterial armormaterial = new IArmorMaterial() {
+public abstract class BBBResistantArmorArmorItem extends ArmorItem {
+	public BBBResistantArmorArmorItem(EquipmentSlot slot, Item.Properties properties) {
+		super(new ArmorMaterial() {
 			@Override
-			public int getDurability(EquipmentSlotType slot) {
+			public int getDurabilityForSlot(EquipmentSlot slot) {
 				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 0;
 			}
 
 			@Override
-			public int getDamageReductionAmount(EquipmentSlotType slot) {
+			public int getDefenseForSlot(EquipmentSlot slot) {
 				return new int[]{100, 100, 100, 100}[slot.getIndex()];
 			}
 
 			@Override
-			public int getEnchantability() {
+			public int getEnchantmentValue() {
 				return 0;
 			}
 
 			@Override
-			public net.minecraft.util.SoundEvent getSoundEvent() {
-				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+			public SoundEvent getEquipSound() {
+				return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
 			}
 
 			@Override
-			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(RenewableEnergyBlockBlock.block));
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(TntAndDisparityModBlocks.RENEWABLE_ENERGY_BLOCK));
 			}
 
-			@OnlyIn(Dist.CLIENT)
 			@Override
 			public String getName() {
 				return "bbb_resistant_armor_armor";
@@ -83,95 +62,74 @@ public class BBBResistantArmorArmorItem extends TntAndDisparityModElements.ModEl
 			public float getKnockbackResistance() {
 				return 5f;
 			}
-		};
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "tnt_and_disparity:textures/models/armor/bbbresistantarmor_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
+		}, slot, properties);
+	}
 
-			@Override
-			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
-				super.onArmorTick(itemstack, world, entity);
-				double x = entity.getPosX();
-				double y = entity.getPosY();
-				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					ArmorEffectProcedure.executeProcedure($_dependencies);
-				}
-			}
-		}.setRegistryName("bbb_resistant_armor_armor_helmet"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "tnt_and_disparity:textures/models/armor/bbbresistantarmor_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
+	public static class Helmet extends BBBResistantArmorArmorItem {
+		public Helmet() {
+			super(EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			setRegistryName("bbb_resistant_armor_armor_helmet");
+		}
 
-			@Override
-			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
-				double x = entity.getPosX();
-				double y = entity.getPosY();
-				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					ArmorEffectProcedure.executeProcedure($_dependencies);
-				}
-			}
-		}.setRegistryName("bbb_resistant_armor_armor_chestplate"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "tnt_and_disparity:textures/models/armor/bbbresistantarmor_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
+		@Override
+		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
+			return "tnt_and_disparity:textures/models/armor/bbbresistantarmor_layer_1.png";
+		}
 
-			@Override
-			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
-				double x = entity.getPosX();
-				double y = entity.getPosY();
-				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					ArmorEffectProcedure.executeProcedure($_dependencies);
-				}
-			}
-		}.setRegistryName("bbb_resistant_armor_armor_leggings"));
-		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)) {
-			@Override
-			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "tnt_and_disparity:textures/models/armor/bbbresistantarmor_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-			}
+		@Override
+		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
+			ArmorEffectProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		}
+	}
 
-			@Override
-			public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
-				double x = entity.getPosX();
-				double y = entity.getPosY();
-				double z = entity.getPosZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					BBBResistantArmorArmorBootsTickEventProcedure.executeProcedure($_dependencies);
-				}
-			}
-		}.setRegistryName("bbb_resistant_armor_armor_boots"));
+	public static class Chestplate extends BBBResistantArmorArmorItem {
+		public Chestplate() {
+			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			setRegistryName("bbb_resistant_armor_armor_chestplate");
+		}
+
+		@Override
+		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
+			return "tnt_and_disparity:textures/models/armor/bbbresistantarmor_layer_1.png";
+		}
+
+		@Override
+		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
+			ArmorEffectProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		}
+	}
+
+	public static class Leggings extends BBBResistantArmorArmorItem {
+		public Leggings() {
+			super(EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			setRegistryName("bbb_resistant_armor_armor_leggings");
+		}
+
+		@Override
+		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
+			return "tnt_and_disparity:textures/models/armor/bbbresistantarmor_layer_2.png";
+		}
+
+		@Override
+		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
+			ArmorEffectProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		}
+	}
+
+	public static class Boots extends BBBResistantArmorArmorItem {
+		public Boots() {
+			super(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			setRegistryName("bbb_resistant_armor_armor_boots");
+		}
+
+		@Override
+		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
+			return "tnt_and_disparity:textures/models/armor/bbbresistantarmor_layer_1.png";
+		}
+
+		@Override
+		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
+			BBBResistantArmorArmorBootsTickEventProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		}
 	}
 }

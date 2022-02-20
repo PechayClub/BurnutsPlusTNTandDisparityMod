@@ -1,173 +1,141 @@
 
 package net.burnutsplus.tnt_and_disparity.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolActions;
+import net.minecraftforge.common.ToolAction;
 
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.core.BlockPos;
 
 import net.burnutsplus.tnt_and_disparity.procedures.RemoteBBBParticleProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DrillBBBDigProcedure;
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
-
-import java.util.Map;
-import java.util.HashMap;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class DrillBBBItem extends TntAndDisparityModElements.ModElement {
-	@ObjectHolder("tnt_and_disparity:drill_bbb")
-	public static final Item block = null;
-	public DrillBBBItem(TntAndDisparityModElements instance) {
-		super(instance, 13);
+public class DrillBBBItem extends TieredItem {
+	public DrillBBBItem() {
+		super(new Tier() {
+			public int getUses() {
+				return 0;
+			}
+
+			public float getSpeed() {
+				return 2000f;
+			}
+
+			public float getAttackDamageBonus() {
+				return 198f;
+			}
+
+			public int getLevel() {
+				return 20;
+			}
+
+			public int getEnchantmentValue() {
+				return 0;
+			}
+
+			public Ingredient getRepairIngredient() {
+				return Ingredient.EMPTY;
+			}
+		}, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
+		setRegistryName("drill_bbb");
 	}
 
 	@Override
-	public void initElements() {
-		elements.items.add(() -> new ItemToolCustom() {
-			@Override
-			public ActionResultType onItemUse(ItemUseContext context) {
-				ActionResultType retval = super.onItemUse(context);
-				World world = context.getWorld();
-				BlockPos pos = context.getPos();
-				PlayerEntity entity = context.getPlayer();
-				Direction direction = context.getFace();
-				BlockState blockstate = world.getBlockState(pos);
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
-				ItemStack itemstack = context.getItem();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					DrillBBBDigProcedure.executeProcedure($_dependencies);
-				}
-				return retval;
-			}
-
-			@Override
-			public boolean onBlockDestroyed(ItemStack itemstack, World world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
-				boolean retval = super.onBlockDestroyed(itemstack, world, blockstate, pos, entity);
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					DrillBBBDigProcedure.executeProcedure($_dependencies);
-				}
-				return retval;
-			}
-
-			@Override
-			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-				boolean retval = super.hitEntity(itemstack, entity, sourceentity);
-				double x = entity.getPosX();
-				double y = entity.getPosY();
-				double z = entity.getPosZ();
-				World world = entity.world;
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					DrillBBBDigProcedure.executeProcedure($_dependencies);
-				}
-				return retval;
-			}
-
-			@Override
-			public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
-				super.inventoryTick(itemstack, world, entity, slot, selected);
-				double x = entity.getPosX();
-				double y = entity.getPosY();
-				double z = entity.getPosZ();
-				if (selected) {
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					RemoteBBBParticleProcedure.executeProcedure($_dependencies);
-				}
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					RemoteBBBParticleProcedure.executeProcedure($_dependencies);
-				}
-			}
-		}.setRegistryName("drill_bbb"));
+	public boolean isCorrectToolForDrops(BlockState blockstate) {
+		int tier = 20;
+		if (tier < 3 && blockstate.is(BlockTags.NEEDS_DIAMOND_TOOL)) {
+			return false;
+		} else if (tier < 2 && blockstate.is(BlockTags.NEEDS_IRON_TOOL)) {
+			return false;
+		} else {
+			return tier < 1 && blockstate.is(BlockTags.NEEDS_STONE_TOOL)
+					? false
+					: (blockstate.is(BlockTags.MINEABLE_WITH_AXE) || blockstate.is(BlockTags.MINEABLE_WITH_HOE)
+							|| blockstate.is(BlockTags.MINEABLE_WITH_PICKAXE) || blockstate.is(BlockTags.MINEABLE_WITH_SHOVEL));
+		}
 	}
-	private static class ItemToolCustom extends Item {
-		protected ItemToolCustom() {
-			super(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(0));
-		}
 
-		@Override
-		public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot) {
-			if (equipmentSlot == EquipmentSlotType.MAINHAND) {
-				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-				builder.putAll(super.getAttributeModifiers(equipmentSlot));
-				builder.put(Attributes.ATTACK_DAMAGE,
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 198f, AttributeModifier.Operation.ADDITION));
-				builder.put(Attributes.ATTACK_SPEED,
-						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", 4, AttributeModifier.Operation.ADDITION));
-				return builder.build();
-			}
-			return super.getAttributeModifiers(equipmentSlot);
-		}
+	@Override
+	public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
+		return ToolActions.DEFAULT_AXE_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_HOE_ACTIONS.contains(toolAction)
+				|| ToolActions.DEFAULT_SHOVEL_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_PICKAXE_ACTIONS.contains(toolAction)
+				|| ToolActions.DEFAULT_SWORD_ACTIONS.contains(toolAction);
+	}
 
-		@Override
-		public boolean canHarvestBlock(BlockState state) {
-			return 20 >= state.getHarvestLevel();
-		}
+	@Override
+	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
+		return 2000f;
+	}
 
-		@Override
-		public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-			return 2000f;
+	@Override
+	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
+		if (equipmentSlot == EquipmentSlot.MAINHAND) {
+			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
+			builder.put(Attributes.ATTACK_DAMAGE,
+					new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 198f, AttributeModifier.Operation.ADDITION));
+			builder.put(Attributes.ATTACK_SPEED,
+					new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", 4, AttributeModifier.Operation.ADDITION));
+			return builder.build();
 		}
+		return super.getDefaultAttributeModifiers(equipmentSlot);
+	}
 
-		@Override
-		public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-			stack.damageItem(1, attacker, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
-			return true;
-		}
+	@Override
+	public boolean hurtEnemy(ItemStack stack, LivingEntity entity, LivingEntity sourceentity) {
+		stack.hurtAndBreak(2, sourceentity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+		double x = entity.getX();
+		double y = entity.getY();
+		double z = entity.getZ();
+		Level world = entity.level;
 
-		@Override
-		public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-			stack.damageItem(1, entityLiving, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
-			return true;
-		}
+		DrillBBBDigProcedure.execute(world, x, y, z);
+		return true;
+	}
 
-		@Override
-		public int getItemEnchantability() {
-			return 0;
-		}
+	@Override
+	public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity entity) {
+		stack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+
+		DrillBBBDigProcedure.execute(world, x, y, z);
+		return true;
+	}
+
+	@Override
+	public InteractionResult useOn(UseOnContext context) {
+		InteractionResult retval = super.useOn(context);
+		DrillBBBDigProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
+				context.getClickedPos().getZ());
+		return retval;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			RemoteBBBParticleProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
+		RemoteBBBParticleProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
 	}
 }

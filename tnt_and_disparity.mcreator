@@ -1,5 +1,4 @@
 {
-  "id_map": {},
   "mod_elements": [
     {
       "name": "BBB",
@@ -7,7 +6,6 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bbb"
     },
     {
@@ -16,7 +14,6 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bbb_explode",
       "metadata": {
         "dependencies": [
@@ -45,7 +42,6 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "remote_bbb_explode",
       "metadata": {
         "dependencies": [
@@ -74,7 +70,6 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "remote_bbb"
     },
     {
@@ -83,7 +78,6 @@
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "remote_bbb_particle",
       "metadata": {
         "dependencies": [
@@ -107,21 +101,11 @@
       }
     },
     {
-      "name": "BigBadBoom",
-      "type": "achievement",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "big_bad_boom"
-    },
-    {
       "name": "ShootableBBB",
       "type": "rangeditem",
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "shootable_bbb"
     },
     {
@@ -130,7 +114,6 @@
       "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bbb_recipe"
     },
     {
@@ -139,7 +122,6 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "remote_bbb_recipe"
     },
     {
@@ -148,7 +130,6 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "shootable_bbb_recipe"
     },
     {
@@ -157,7 +138,6 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bounce_block"
     },
     {
@@ -166,7 +146,6 @@
       "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bounce_block_recipe"
     },
     {
@@ -175,7 +154,6 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "renewable_energy_block_update_tick",
       "metadata": {
         "dependencies": [
@@ -204,7 +182,6 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "renewable_energy_block"
     },
     {
@@ -213,7 +190,6 @@
       "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drill_bbb_dig",
       "metadata": {
         "dependencies": [
@@ -242,7 +218,6 @@
       "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drill_bbb"
     },
     {
@@ -251,7 +226,6 @@
       "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_entity_dies",
       "metadata": {
         "dependencies": [
@@ -284,7 +258,6 @@
       "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk"
     },
     {
@@ -293,10 +266,13 @@
       "sortid": 16,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_it_is_struck_by_lightning",
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -317,24 +293,11 @@
       }
     },
     {
-      "name": "GlueWater",
-      "type": "fluid",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "glue_water",
-      "metadata": {
-        "gb": true
-      }
-    },
-    {
       "name": "Sticky",
       "type": "achievement",
       "sortid": 18,
       "compiles": true,
-      "locked_code": true,
-      "ids": {},
+      "locked_code": false,
       "registry_name": "sticky"
     },
     {
@@ -343,7 +306,6 @@
       "sortid": 19,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_block"
     },
     {
@@ -352,7 +314,6 @@
       "sortid": 19,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_water_update_tick",
       "metadata": {
         "dependencies": [
@@ -381,20 +342,7 @@
       "sortid": 20,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_forest"
-    },
-    {
-      "name": "DLKLand",
-      "type": "dimension",
-      "sortid": 21,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "dlk_land",
-      "metadata": {
-        "ep": true
-      }
     },
     {
       "name": "DLKLandPortalFrame",
@@ -402,7 +350,6 @@
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_land_portal_frame"
     },
     {
@@ -411,7 +358,6 @@
       "sortid": 23,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drill_bbb_recipe"
     },
     {
@@ -420,7 +366,6 @@
       "sortid": 24,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_land_portal_frame_recipe"
     },
     {
@@ -429,7 +374,6 @@
       "sortid": 26,
       "compiles": true,
       "locked_code": true,
-      "ids": {},
       "registry_name": "stickman"
     },
     {
@@ -438,7 +382,6 @@
       "sortid": 27,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bbb_resistant_armor_armor",
       "metadata": {
         "eh": true,
@@ -453,7 +396,6 @@
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bbb_resistant_armor_armor_helmet_recipe"
     },
     {
@@ -462,7 +404,6 @@
       "sortid": 29,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bbb_resistant_armor_armor_body_recipe"
     },
     {
@@ -471,7 +412,6 @@
       "sortid": 30,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bbb_resistant_armor_armor_leggings_recipe"
     },
     {
@@ -480,7 +420,6 @@
       "sortid": 31,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bbb_resistant_armor_armor_boots_recipe"
     },
     {
@@ -489,17 +428,7 @@
       "sortid": 32,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "renewable_energy_block_recipe"
-    },
-    {
-      "name": "StickShooter",
-      "type": "rangeditem",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "stick_shooter"
     },
     {
       "name": "StickmanSpawnRightClickedOnBlock",
@@ -507,21 +436,12 @@
       "sortid": 35,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "stickman_spawn_right_clicked_on_block",
       "metadata": {
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "world",
@@ -536,7 +456,6 @@
       "sortid": 35,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "stickman_spawn"
     },
     {
@@ -545,7 +464,6 @@
       "sortid": 36,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_king"
     },
     {
@@ -554,7 +472,6 @@
       "sortid": 38,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_king_on_initial_entity_spawn",
       "metadata": {
         "dependencies": [
@@ -587,7 +504,6 @@
       "sortid": 40,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ekor_sound"
     },
     {
@@ -596,7 +512,6 @@
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ekor_puppet"
     },
     {
@@ -605,7 +520,6 @@
       "sortid": 41,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ekor"
     },
     {
@@ -614,7 +528,6 @@
       "sortid": 42,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_king_entity_dies",
       "metadata": {
         "dependencies": [
@@ -647,7 +560,6 @@
       "sortid": 43,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "armor_effect",
       "metadata": {
         "dependencies": [
@@ -680,7 +592,6 @@
       "sortid": 44,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "go_to_dlk_land"
     },
     {
@@ -689,7 +600,6 @@
       "sortid": 45,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "go_boom"
     },
     {
@@ -698,7 +608,6 @@
       "sortid": 46,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "stickman_spawn_recipe"
     },
     {
@@ -707,7 +616,6 @@
       "sortid": 47,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_stairs"
     },
     {
@@ -716,7 +624,6 @@
       "sortid": 48,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_slab"
     },
     {
@@ -725,7 +632,6 @@
       "sortid": 49,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_fence"
     },
     {
@@ -734,7 +640,6 @@
       "sortid": 50,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_fence_gate"
     },
     {
@@ -743,7 +648,6 @@
       "sortid": 51,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_trap_door"
     },
     {
@@ -752,7 +656,6 @@
       "sortid": 52,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_castle"
     },
     {
@@ -761,7 +664,6 @@
       "sortid": 53,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_in_the_trash"
     },
     {
@@ -770,7 +672,6 @@
       "sortid": 54,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_king_entity_is_hurt",
       "metadata": {
         "dependencies": [
@@ -799,7 +700,6 @@
       "sortid": 55,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_king_it_is_struck_by_lightning",
       "metadata": {
         "dependencies": [
@@ -832,7 +732,6 @@
       "sortid": 56,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_stairs_recipe"
     },
     {
@@ -841,7 +740,6 @@
       "sortid": 57,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_slab_recipe"
     },
     {
@@ -850,7 +748,6 @@
       "sortid": 58,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_fence_recipe"
     },
     {
@@ -859,7 +756,6 @@
       "sortid": 59,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_fence_gate_recipe"
     },
     {
@@ -868,7 +764,6 @@
       "sortid": 60,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "dlk_land_portal_igniter_recipe"
     },
     {
@@ -877,17 +772,7 @@
       "sortid": 61,
       "compiles": true,
       "locked_code": true,
-      "ids": {},
       "registry_name": "carminite_base"
-    },
-    {
-      "name": "DryOut",
-      "type": "musicdisc",
-      "sortid": 63,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "dry_out"
     },
     {
       "name": "BBBResistantArmorArmorBootsTickEvent",
@@ -895,7 +780,6 @@
       "sortid": 65,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "bbb_resistant_armor_armor_boots_tick_event",
       "metadata": {
         "dependencies": [
@@ -923,21 +807,11 @@
       }
     },
     {
-      "name": "GlueBlockRecipe",
-      "type": "recipe",
-      "sortid": 64,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "glue_block_recipe"
-    },
-    {
       "name": "GlueTrapDoorRecipe",
       "type": "recipe",
       "sortid": 66,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "glue_trap_door_recipe"
     },
     {
@@ -945,8 +819,7 @@
       "type": "structure",
       "sortid": 67,
       "compiles": true,
-      "locked_code": true,
-      "ids": {},
+      "locked_code": false,
       "registry_name": "dlk_house"
     },
     {
@@ -955,7 +828,6 @@
       "sortid": 68,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ekored_on_effect_active_tick",
       "metadata": {
         "dependencies": [
@@ -972,7 +844,6 @@
       "sortid": 68,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ekored"
     },
     {
@@ -981,7 +852,6 @@
       "sortid": 69,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ekor_shooter_bullet_hits_living_entity",
       "metadata": {
         "dependencies": [
@@ -998,7 +868,6 @@
       "sortid": 70,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ekor_particles"
     },
     {
@@ -1007,7 +876,6 @@
       "sortid": 71,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ekor_shooter_while_bullet_flying_tick",
       "metadata": {
         "dependencies": [
@@ -1036,7 +904,6 @@
       "sortid": 72,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "your_ears_explode"
     },
     {
@@ -1045,7 +912,6 @@
       "sortid": 73,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ekor_shooter_bullet_hits_player",
       "metadata": {
         "dependencies": [
@@ -1057,21 +923,11 @@
       }
     },
     {
-      "name": "Integration",
-      "type": "tag",
-      "sortid": 74,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "integration"
-    },
-    {
       "name": "Version",
       "type": "overlay",
       "sortid": 75,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "version"
     },
     {
@@ -1080,7 +936,6 @@
       "sortid": 76,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "teleport",
       "metadata": {
         "dependencies": [
@@ -1113,7 +968,6 @@
       "sortid": 76,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "teleportation_rod"
     },
     {
@@ -1122,7 +976,6 @@
       "sortid": 77,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "teleportation_rod_recipe"
     },
     {
@@ -1130,12 +983,211 @@
       "type": "painting",
       "sortid": 78,
       "compiles": true,
-      "locked_code": true,
-      "ids": {},
+      "locked_code": false,
       "registry_name": "tnt_and_disparity"
+    },
+    {
+      "name": "Glue",
+      "type": "fluid",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glue",
+      "metadata": {
+        "gb": true
+      }
+    },
+    {
+      "name": "DLKHouseOnStructureInstanceGenerated",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dlk_house_on_structure_instance_generated",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Glow",
+      "type": "block",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glow"
+    },
+    {
+      "name": "GlowRecipe",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glow_recipe"
+    },
+    {
+      "name": "BattleModeOnKeyPressed",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battle_mode_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BattleMode",
+      "type": "keybind",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battle_mode"
+    },
+    {
+      "name": "DisableBattleModeOnKeyPressed",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable_battle_mode_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisableBattleMode",
+      "type": "keybind",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable_battle_mode"
+    },
+    {
+      "name": "DisulfideExplode",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disulfide_explode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisulfideExplodeOnChange",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disulfide_explode_on_change",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Disulfide",
+      "type": "fluid",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disulfide",
+      "metadata": {
+        "gb": true
+      }
+    },
+    {
+      "name": "DLKLand",
+      "type": "dimension",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dlk_land",
+      "metadata": {
+        "ep": true
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "BattleModeEnabled",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    }
+  ],
   "sound_elements": [
     {
       "name": "ekorekors",
@@ -1198,20 +1250,22 @@
     "en_us": {
       "subtitles.dryout": "DJVI - Dry Out 2.0",
       "effect.ekored": "Ekored",
-      "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
       "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
-      "advancements.big_bad_boom.title": "Big Bad Boom",
-      "advancements.big_bad_boom.descr": "Use a Remote BBB.",
-      "entity.tnt_and_disparity.stickman": "Stickman",
+      "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
+      "block.tnt_and_disparity.glow": "Glow",
+      "effect.tnt_and_disparity.ekored": "Ekored",
       "subtitles.ekorekors": "Ekor Ekors",
+      "entity.tnt_and_disparity.stickman": "Stickman",
       "advancements.go_to_dlk_land.descr": "The place were DLKs are.",
       "block.tnt_and_disparity.glue_stairs": "Glue Stairs",
       "item.tnt_and_disparity.remote_bbb": "Remote Big Bad Boom",
       "block.tnt_and_disparity.renewable_energy_block": "Renewable Energy Block",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_leggings": "Big Bad Boom Resistant Armor Leggings",
+      "item.tnt_and_disparity.glue_bucket": "Glue Bucket",
       "entity.tnt_and_disparity.ekor": "Ekor",
       "item.tnt_and_disparity.stickman_spawn": "Stickman Spawn",
       "advancements.go_to_dlk_land.title": "Go To DLK Land",
+      "item.tnt_and_disparity.disulfide_bucket": "Bottle of Disulfide",
       "item.tnt_and_disparity.drill_bbb": "Drill Big Bad Boom",
       "item.tnt_and_disparity.stickman_spawn_egg": "Stickman Spawn Egg",
       "advancements.your_ears_explode.descr": "Get Ekored by Ekor.",
@@ -1223,27 +1277,26 @@
       "item.tnt_and_disparity.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
       "block.tnt_and_disparity.dlk_land_portal_frame": "DLK Land Portal Frame",
       "block.tnt_and_disparity.glue_slab": "Glue Slab",
-      "block.tnt_and_disparity.glue_water": "Glue",
+      "key.tnt_and_disparity.battle_mode": "Battle Mode",
       "item.tnt_and_disparity.ekor_spawn_egg": "Ekor Spawn Egg",
-      "item.tnt_and_disparity.dry_out.desc": "DJVI - Dry Out 2.0",
       "entity.tnt_and_disparity.dlk": "DLK",
       "advancements.your_ears_explode.title": "Your Ears Exploded",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
+      "fluid.tnt_and_disparity.disulfide": "Disulfide",
       "subtitles.dlkkingstickman": "DLK King Saying about Stickman",
       "advancements.go_boom.descr": "DLKs explodese upon death.",
       "block.tnt_and_disparity.glue_block": "Glue Block",
-      "item.tnt_and_disparity.stick_shooter": "Stick Shooter",
+      "block.tnt_and_disparity.disulfide": "Disulfide",
       "item.tnt_and_disparity.bbb_resistant_armor_armor_boots": "Big Bad Boom Resistant Armor Boots",
       "block.tnt_and_disparity.glue_fence_gate": "Glue Fence Gate",
       "advancements.go_boom.title": "Go Boom",
-      "item.tnt_and_disparity.dry_out": "Dry Out",
       "block.tnt_and_disparity.bbb": "Big Bad Boom",
       "item.tnt_and_disparity.ekor_puppet": "Ekor Puppet",
       "block.tnt_and_disparity.bounce_block": "Bounce Block",
+      "fluid.tnt_and_disparity.glue": "Glue",
       "item.tnt_and_disparity.dlk_spawn_egg": "DLK Spawn Egg",
       "advancements.dlk_in_the_trash.title": "DLK In The Trash",
       "advancements.sticky.title": "Sticky",
-      "item.tnt_and_disparity.glue_water_bucket": "Glue Bucket",
       "subtitles.dlkdies": "DLK Dies",
       "subtitles.dlkdlks": "DLK DLKs",
       "item.tnt_and_disparity.ekor_sound": "Ekor Sound",
@@ -1253,7 +1306,8 @@
       "biome.tnt_and_disparity.dlk_forest": "DLK Forest",
       "item.tnt_and_disparity.teleportation_rod": "Teleportation Rod",
       "fluid.glue_water": "Glue",
-      "fluid.tnt_and_disparity.glue_water": "Glue"
+      "block.tnt_and_disparity.glue": "Glue",
+      "key.tnt_and_disparity.disable_battle_mode": "Disable Battle Mode"
     }
   },
   "foldersRoot": {
@@ -1263,27 +1317,27 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.1alpha-build.0641-preintegrationtest",
+    "version": "0.4.1alpha-build.0701-integrationtest",
     "description": "You landed in a world that is more than you expect.",
-    "author": "Burnuts Gaming, MCreator",
+    "author": "Team Burnuts, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "GNU Lesser General Public License version 2.1 (LGPLv2.1)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "updateURL": "https://raw.githubusercontent.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/master/update.json",
-    "modPicture": "channels4_profile",
+    "modPicture": "tnt_and_disparity",
     "requiredMods": [
       "twilightforest"
     ],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "twilightforest"
+      "twilightforest-1.17"
     ],
-    "currentGenerator": "forge-1.16.5",
+    "currentGenerator": "forge-1.17.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.burnutsplus.tnt_and_disparity",
-    "lockBaseModFiles": true
+    "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100235315
+  "mcreatorVersion": 202100354000
 }

@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "M",
+    "keyBindingName": "Disable Battle Mode",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "DisableBattleModeOnKeyPressed"
+    }
+  }
+}

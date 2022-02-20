@@ -1,7 +1,9 @@
 {
   "replace": false,
   "values": [
-    "tnt_and_disparity:glue_water",
-    "tnt_and_disparity:glue_water_flowing"
+    "tnt_and_disparity:glue",
+    "tnt_and_disparity:flowing_glue",
+    "tnt_and_disparity:disulfide",
+    "tnt_and_disparity:flowing_disulfide"
   ]
 }

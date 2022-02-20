@@ -15,7 +15,23 @@
     "spawnWorldTypes": [
       "Surface"
     ],
-    "restrictionBlocks": [],
+    "restrictionBlocks": [
+      {
+        "value": "Blocks.VOID_AIR"
+      },
+      {
+        "value": "Blocks.CAVE_AIR"
+      },
+      {
+        "value": "Blocks.FLOWING_WATER"
+      },
+      {
+        "value": "Blocks.FLOWING_LAVA"
+      },
+      {
+        "value": "CUSTOM:Glue"
+      }
+    ],
     "restrictionBiomes": [],
     "ignoreBlocks": "AIR_AND_STRUCTURE_BLOCK"
   }

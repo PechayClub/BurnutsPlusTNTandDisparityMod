@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "tnt_and_disparity:gluewater"
+      "item": "tnt_and_disparity:glue_block"
     },
     "title": {
       "translate": "advancements.sticky.title"
@@ -19,7 +19,9 @@
       "trigger": "minecraft:placed_block",
       "conditions": {
         "item": {
-          "item": "tnt_and_disparity:glue_water"
+          "items": [
+            "tnt_and_disparity:glue_block"
+          ]
         }
       }
     }

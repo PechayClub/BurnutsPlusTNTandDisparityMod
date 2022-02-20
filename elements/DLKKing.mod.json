@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "DLK King",
     "mobLabel": "",
-    "mobModelName": "ModelDLKKing",
+    "mobModelName": "ModelDLKKingModel",
     "mobModelTexture": "dlkking.png",
     "mobModelGlowTexture": "",
     "modelWidth": 1.2,

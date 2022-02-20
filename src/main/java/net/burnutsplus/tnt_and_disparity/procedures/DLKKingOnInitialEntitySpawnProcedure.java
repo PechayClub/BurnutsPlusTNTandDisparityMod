@@ -2,62 +2,29 @@ package net.burnutsplus.tnt_and_disparity.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
-
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityMod;
-
-import java.util.Map;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.core.BlockPos;
 
 public class DLKKingOnInitialEntitySpawnProcedure {
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TntAndDisparityMod.LOGGER.warn("Failed to load dependency entity for procedure DLKKingOnInitialEntitySpawn!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
+		if (world instanceof Level _level) {
+			if (!_level.isClientSide()) {
+				_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkkingsaying")), SoundSource.NEUTRAL, 1, 1);
+			} else {
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkkingsaying")),
+						SoundSource.NEUTRAL, 1, 1, false);
+			}
 		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TntAndDisparityMod.LOGGER.warn("Failed to load dependency x for procedure DLKKingOnInitialEntitySpawn!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TntAndDisparityMod.LOGGER.warn("Failed to load dependency y for procedure DLKKingOnInitialEntitySpawn!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TntAndDisparityMod.LOGGER.warn("Failed to load dependency z for procedure DLKKingOnInitialEntitySpawn!");
-			return;
-		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TntAndDisparityMod.LOGGER.warn("Failed to load dependency world for procedure DLKKingOnInitialEntitySpawn!");
-			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof World && !world.isRemote()) {
-			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkkingsaying")),
-					SoundCategory.NEUTRAL, (float) 1, (float) 1);
-		} else {
-			((World) world).playSound(x, y, z,
-					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkkingsaying")),
-					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-		}
-		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Do you wanna challenge me? Then lets fight."), (false));
-		}
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(new TextComponent("Do you wanna challenge me? Then lets fight."), (false));
 	}
 }

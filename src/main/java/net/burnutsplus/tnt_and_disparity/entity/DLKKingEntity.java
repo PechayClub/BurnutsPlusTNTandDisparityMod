@@ -2,288 +2,225 @@
 package net.burnutsplus.tnt_and_disparity.entity;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.network.NetworkHooks;
-import net.minecraftforge.fml.network.FMLPlayMessages;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.server.ServerBossInfo;
-import net.minecraft.world.World;
-import net.minecraft.world.IServerWorld;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.SnowGolem;
+import net.minecraft.world.entity.animal.IronGolem;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnGroupData;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.BossInfo;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.DamageSource;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.network.IPacket;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.entity.projectile.ArrowEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.passive.SnowGolemEntity;
-import net.minecraft.entity.passive.IronGolemEntity;
-import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.merchant.villager.VillagerEntity;
-import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.entity.ai.goal.RandomWalkingGoal;
-import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
-import net.minecraft.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.entity.ai.goal.LookRandomlyGoal;
-import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ILivingEntityData;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerBossEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.particles.ParticleTypes;
 
-import net.burnutsplus.tnt_and_disparity.entity.DLKEntity;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingOnInitialEntitySpawnProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingItIsStruckByLightningProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingEntityIsHurtProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKKingEntityDiesProcedure;
-import net.burnutsplus.tnt_and_disparity.entity.renderer.DLKKingRenderer;
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
-import net.burnutsplus.tnt_and_disparity.item.EkorShooterItem;
+import net.burnutsplus.tnt_and_disparity.init.TntAndDisparityModEntities;
 
 import javax.annotation.Nullable;
 
-import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
+public class DLKKingEntity extends Monster {
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.WHITE,
+			ServerBossEvent.BossBarOverlay.PROGRESS);
 
-@TntAndDisparityModElements.ModElement.Tag
-public class DLKKingEntity extends TntAndDisparityModElements.ModElement {
-	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(1.2f, 2.1999999999999997f)).build("dlk_king").setRegistryName("dlk_king");
-	public DLKKingEntity(TntAndDisparityModElements instance) {
-		super(instance, 36);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new DLKKingRenderer.ModelRegisterHandler());
-		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
+	public DLKKingEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
+		this(TntAndDisparityModEntities.DLK_KING, world);
+	}
+
+	public DLKKingEntity(EntityType<DLKKingEntity> type, Level world) {
+		super(type, world);
+		xpReward = 1000;
+		setNoAi(false);
+		setPersistenceRequired();
 	}
 
 	@Override
-	public void initElements() {
-		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("dlk_king_spawn_egg"));
+	public Packet<?> getAddEntityPacket() {
+		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
-	public void init(FMLCommonSetupEvent event) {
-	}
-	private static class EntityAttributesRegisterHandler {
-		@SubscribeEvent
-		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
-			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
-			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.2);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 4000);
-			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 40);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 80);
-			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 100);
-			event.put(entity, ammma.create());
-		}
+	protected void registerGoals() {
+		super.registerGoals();
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Villager.class, true, true));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, IronGolem.class, true, true));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SnowGolem.class, true, true));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, StickmanEntity.class, true, true));
 	}
 
-	public static class CustomEntity extends MonsterEntity {
-		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
-			this(entity, world);
-		}
+	@Override
+	public MobType getMobType() {
+		return MobType.UNDEFINED;
+	}
 
-		public CustomEntity(EntityType<CustomEntity> type, World world) {
-			super(type, world);
-			experienceValue = 1000;
-			setNoAI(false);
-			enablePersistence();
-		}
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
+	}
 
-		@Override
-		public IPacket<?> createSpawnPacket() {
-			return NetworkHooks.getEntitySpawningPacket(this);
-		}
+	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdlks"));
+	}
 
-		@Override
-		protected void registerGoals() {
-			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
-			this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.8));
-			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, VillagerEntity.class, true, true));
-			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, IronGolemEntity.class, true, true));
-			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SnowGolemEntity.class, true, true));
-			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, StickmanEntity.CustomEntity.class, true, true));
-		}
+	@Override
+	public SoundEvent getHurtSound(DamageSource ds) {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkhurt"));
+	}
 
-		@Override
-		public CreatureAttribute getCreatureAttribute() {
-			return CreatureAttribute.UNDEFINED;
-		}
+	@Override
+	public SoundEvent getDeathSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdies"));
+	}
 
-		@Override
-		public boolean canDespawn(double distanceToClosestPlayer) {
+	@Override
+	public void thunderHit(ServerLevel serverWorld, LightningBolt lightningBolt) {
+		super.thunderHit(serverWorld, lightningBolt);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+
+		DLKKingItIsStruckByLightningProcedure.execute(world, x, y, z, entity);
+	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+		Entity sourceentity = source.getEntity();
+
+		DLKKingEntityIsHurtProcedure.execute(world, x, y, z);
+		if (source.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		}
-
-		@Override
-		public net.minecraft.util.SoundEvent getAmbientSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdlks"));
-		}
-
-		@Override
-		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkhurt"));
-		}
-
-		@Override
-		public net.minecraft.util.SoundEvent getDeathSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdies"));
-		}
-
-		@Override
-		public void func_241841_a(ServerWorld serverWorld, LightningBoltEntity entityLightningBolt) {
-			super.func_241841_a(serverWorld, entityLightningBolt);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DLKKingItIsStruckByLightningProcedure.executeProcedure($_dependencies);
-			}
-		}
-
-		@Override
-		public boolean attackEntityFrom(DamageSource source, float amount) {
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			Entity sourceentity = source.getTrueSource();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DLKKingEntityIsHurtProcedure.executeProcedure($_dependencies);
-			}
-			if (source.getImmediateSource() instanceof ArrowEntity)
-				return false;
-			if (source == DamageSource.FALL)
-				return false;
-			if (source == DamageSource.CACTUS)
-				return false;
-			if (source.isExplosion())
-				return false;
-			if (source.getDamageType().equals("trident"))
-				return false;
-			if (source == DamageSource.ANVIL)
-				return false;
-			if (source == DamageSource.WITHER)
-				return false;
-			if (source.getDamageType().equals("witherSkull"))
-				return false;
-			if (source.getDamageType().equals("tnt_and_disparity:entitybulletekor_shooter"))
-				return false;
-			return super.attackEntityFrom(source, amount);
-		}
-
-		@Override
-		public void onDeath(DamageSource source) {
-			super.onDeath(source);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity sourceentity = source.getTrueSource();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DLKKingEntityDiesProcedure.executeProcedure($_dependencies);
-			}
-		}
-
-		@Override
-		public ILivingEntityData onInitialSpawn(IServerWorld world, DifficultyInstance difficulty, SpawnReason reason,
-				@Nullable ILivingEntityData livingdata, @Nullable CompoundNBT tag) {
-			ILivingEntityData retval = super.onInitialSpawn(world, difficulty, reason, livingdata, tag);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DLKKingOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
-			}
-			return retval;
-		}
-
-		@Override
-		public boolean isNonBoss() {
+		if (source == DamageSource.FALL)
 			return false;
-		}
-		private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.WHITE, BossInfo.Overlay.PROGRESS);
-		@Override
-		public void addTrackingPlayer(ServerPlayerEntity player) {
-			super.addTrackingPlayer(player);
-			this.bossInfo.addPlayer(player);
-		}
+		if (source == DamageSource.CACTUS)
+			return false;
+		if (source.getMsgId().equals("trident"))
+			return false;
+		if (source == DamageSource.ANVIL)
+			return false;
+		if (source == DamageSource.WITHER)
+			return false;
+		if (source.getMsgId().equals("witherSkull"))
+			return false;
+		return super.hurt(source, amount);
+	}
 
-		@Override
-		public void removeTrackingPlayer(ServerPlayerEntity player) {
-			super.removeTrackingPlayer(player);
-			this.bossInfo.removePlayer(player);
-		}
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity sourceentity = source.getEntity();
+		Entity entity = this;
+		Level world = this.level;
 
-		@Override
-		public void updateAITasks() {
-			super.updateAITasks();
-			this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
-		}
+		DLKKingEntityDiesProcedure.execute(world, x, y, z, entity);
+	}
 
-		public void livingTick() {
-			super.livingTick();
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Random random = this.rand;
-			Entity entity = this;
-			if (true)
-				for (int l = 0; l < 4; ++l) {
-					double d0 = (x + random.nextFloat());
-					double d1 = (y + random.nextFloat());
-					double d2 = (z + random.nextFloat());
-					int i1 = random.nextInt(2) * 2 - 1;
-					double d3 = (random.nextFloat() - 0.5D) * 0.5D;
-					double d4 = (random.nextFloat() - 0.5D) * 0.5D;
-					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
-					world.addParticle(ParticleTypes.EXPLOSION, d0, d1, d2, d3, d4, d5);
-				}
+	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason,
+			@Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+
+		DLKKingOnInitialEntitySpawnProcedure.execute(world, x, y, z, entity);
+		return retval;
+	}
+
+	@Override
+	public boolean canChangeDimensions() {
+		return false;
+	}
+
+	@Override
+	public void startSeenByPlayer(ServerPlayer player) {
+		super.startSeenByPlayer(player);
+		this.bossInfo.addPlayer(player);
+	}
+
+	@Override
+	public void stopSeenByPlayer(ServerPlayer player) {
+		super.stopSeenByPlayer(player);
+		this.bossInfo.removePlayer(player);
+	}
+
+	@Override
+	public void customServerAiStep() {
+		super.customServerAiStep();
+		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
+	}
+
+	public void aiStep() {
+		super.aiStep();
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+		for (int l = 0; l < 4; ++l) {
+			double x0 = x + random.nextFloat();
+			double y0 = y + random.nextFloat();
+			double z0 = z + random.nextFloat();
+			double dx = (random.nextFloat() - 0.5D) * 0.5D;
+			double dy = (random.nextFloat() - 0.5D) * 0.5D;
+			double dz = (random.nextFloat() - 0.5D) * 0.5D;
+			world.addParticle(ParticleTypes.EXPLOSION, x0, y0, z0, dx, dy, dz);
 		}
+	}
+
+	public static void init() {
+	}
+
+	public static AttributeSupplier.Builder createAttributes() {
+		AttributeSupplier.Builder builder = Mob.createMobAttributes();
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
+		builder = builder.add(Attributes.MAX_HEALTH, 800);
+		builder = builder.add(Attributes.ARMOR, 40);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 80);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
+		return builder;
 	}
 }

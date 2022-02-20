@@ -2,209 +2,166 @@
 package net.burnutsplus.tnt_and_disparity.entity;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.network.NetworkHooks;
-import net.minecraftforge.fml.network.FMLPlayMessages;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
-import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.gen.Heightmap;
-import net.minecraft.world.biome.MobSpawnInfo;
-import net.minecraft.world.World;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.DamageSource;
-import net.minecraft.network.IPacket;
-import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.entity.projectile.ArrowEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.passive.SnowGolemEntity;
-import net.minecraft.entity.passive.IronGolemEntity;
-import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.merchant.villager.VillagerEntity;
-import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.entity.ai.goal.RandomWalkingGoal;
-import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
-import net.minecraft.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.entity.ai.goal.LookRandomlyGoal;
-import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EntitySpawnPlacementRegistry;
-import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.biome.MobSpawnSettings;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.SnowGolem;
+import net.minecraft.world.entity.animal.IronGolem;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.Difficulty;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.Packet;
 
 import net.burnutsplus.tnt_and_disparity.procedures.DLKItIsStruckByLightningProcedure;
 import net.burnutsplus.tnt_and_disparity.procedures.DLKEntityDiesProcedure;
-import net.burnutsplus.tnt_and_disparity.entity.renderer.DLKRenderer;
-import net.burnutsplus.tnt_and_disparity.TntAndDisparityModElements;
-import net.burnutsplus.tnt_and_disparity.item.EkorShooterItem;
+import net.burnutsplus.tnt_and_disparity.init.TntAndDisparityModEntities;
 
-import java.util.Map;
-import java.util.HashMap;
+import java.util.Set;
 
-@TntAndDisparityModElements.ModElement.Tag
-public class DLKEntity extends TntAndDisparityModElements.ModElement {
-	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(1.2000000000000002f, 2.1999999999999997f)).build("dlk").setRegistryName("dlk");
-	public DLKEntity(TntAndDisparityModElements instance) {
-		super(instance, 14);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new DLKRenderer.ModelRegisterHandler());
-		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
-		MinecraftForge.EVENT_BUS.register(this);
-	}
-
-	@Override
-	public void initElements() {
-		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("dlk_spawn_egg"));
-	}
+@Mod.EventBusSubscriber
+public class DLKEntity extends Monster {
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("tnt_and_disparity:dlk_forest"));
 
 	@SubscribeEvent
-	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		boolean biomeCriteria = false;
-		if (new ResourceLocation("tnt_and_disparity:dlk_forest").equals(event.getName()))
-			biomeCriteria = true;
-		if (!biomeCriteria)
-			return;
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 100, 1, 1));
+	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
+		if (SPAWN_BIOMES.contains(event.getName()))
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(TntAndDisparityModEntities.DLK, 100, 1, 1));
+	}
+
+	public DLKEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
+		this(TntAndDisparityModEntities.DLK, world);
+	}
+
+	public DLKEntity(EntityType<DLKEntity> type, Level world) {
+		super(type, world);
+		xpReward = 50;
+		setNoAi(false);
 	}
 
 	@Override
-	public void init(FMLCommonSetupEvent event) {
-		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				MonsterEntity::canMonsterSpawn);
-	}
-	private static class EntityAttributesRegisterHandler {
-		@SubscribeEvent
-		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
-			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
-			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.1);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 80);
-			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 20);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 40);
-			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 100);
-			event.put(entity, ammma.create());
-		}
+	public Packet<?> getAddEntityPacket() {
+		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
-	public static class CustomEntity extends MonsterEntity {
-		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
-			this(entity, world);
-		}
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Villager.class, true, true));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, IronGolem.class, true, true));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SnowGolem.class, true, true));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, StickmanEntity.class, true, true));
+	}
 
-		public CustomEntity(EntityType<CustomEntity> type, World world) {
-			super(type, world);
-			experienceValue = 10;
-			setNoAI(false);
-		}
+	@Override
+	public MobType getMobType() {
+		return MobType.UNDEFINED;
+	}
 
-		@Override
-		public IPacket<?> createSpawnPacket() {
-			return NetworkHooks.getEntitySpawningPacket(this);
-		}
+	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdlks"));
+	}
 
-		@Override
-		protected void registerGoals() {
-			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
-			this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.8));
-			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, VillagerEntity.class, true, true));
-			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, IronGolemEntity.class, true, true));
-			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SnowGolemEntity.class, true, true));
-			this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, StickmanEntity.CustomEntity.class, true, true));
-		}
+	@Override
+	public SoundEvent getHurtSound(DamageSource ds) {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkhurt"));
+	}
 
-		@Override
-		public CreatureAttribute getCreatureAttribute() {
-			return CreatureAttribute.UNDEFINED;
-		}
+	@Override
+	public SoundEvent getDeathSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdies"));
+	}
 
-		@Override
-		public net.minecraft.util.SoundEvent getAmbientSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdlks"));
-		}
+	@Override
+	public void thunderHit(ServerLevel serverWorld, LightningBolt lightningBolt) {
+		super.thunderHit(serverWorld, lightningBolt);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
 
-		@Override
-		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkhurt"));
-		}
+		DLKItIsStruckByLightningProcedure.execute(world, x, y, z, entity);
+	}
 
-		@Override
-		public net.minecraft.util.SoundEvent getDeathSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tnt_and_disparity:dlkdies"));
-		}
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		if (source.getDirectEntity() instanceof AbstractArrow)
+			return false;
+		if (source == DamageSource.FALL)
+			return false;
+		if (source == DamageSource.CACTUS)
+			return false;
+		if (source.isExplosion())
+			return false;
+		if (source.getMsgId().equals("trident"))
+			return false;
+		if (source == DamageSource.ANVIL)
+			return false;
+		if (source == DamageSource.WITHER)
+			return false;
+		if (source.getMsgId().equals("witherSkull"))
+			return false;
+		return super.hurt(source, amount);
+	}
 
-		@Override
-		public void func_241841_a(ServerWorld serverWorld, LightningBoltEntity entityLightningBolt) {
-			super.func_241841_a(serverWorld, entityLightningBolt);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DLKItIsStruckByLightningProcedure.executeProcedure($_dependencies);
-			}
-		}
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity sourceentity = source.getEntity();
+		Entity entity = this;
+		Level world = this.level;
 
-		@Override
-		public boolean attackEntityFrom(DamageSource source, float amount) {
-			if (source.getImmediateSource() instanceof ArrowEntity)
-				return false;
-			if (source == DamageSource.FALL)
-				return false;
-			if (source == DamageSource.CACTUS)
-				return false;
-			if (source.isExplosion())
-				return false;
-			if (source.getDamageType().equals("trident"))
-				return false;
-			if (source == DamageSource.ANVIL)
-				return false;
-			if (source == DamageSource.WITHER)
-				return false;
-			if (source.getDamageType().equals("witherSkull"))
-				return false;
-			if (source.getDamageType().equals("tnt_and_disparity:entitybulletekor_shooter"))
-				return false;
-			return super.attackEntityFrom(source, amount);
-		}
+		DLKEntityDiesProcedure.execute(world, x, y, z, entity);
+	}
 
-		@Override
-		public void onDeath(DamageSource source) {
-			super.onDeath(source);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity sourceentity = source.getTrueSource();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DLKEntityDiesProcedure.executeProcedure($_dependencies);
-			}
-		}
+	public static void init() {
+		SpawnPlacements.register(TntAndDisparityModEntities.DLK, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
+						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+	}
+
+	public static AttributeSupplier.Builder createAttributes() {
+		AttributeSupplier.Builder builder = Mob.createMobAttributes();
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.1);
+		builder = builder.add(Attributes.MAX_HEALTH, 80);
+		builder = builder.add(Attributes.ARMOR, 20);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 40);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
+		return builder;
 	}
 }
