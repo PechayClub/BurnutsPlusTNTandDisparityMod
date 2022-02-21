@@ -50,7 +50,7 @@ jobs:
           exempt-issue-labels: wontfix
           stale-pr-label: wontfix
           close-pr-label: wontfix
-          exempt-pr-labels: enhancement
+          exempt-pr-labels: enhancement, hold
           exempt-milestones: Integration Test
           exempt-issue-milestones: Integration Test
           exempt-pr-milestones: Integration Test
