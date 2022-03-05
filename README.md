@@ -37,11 +37,11 @@ Due to Twilight Forest 1.18 not being released yet. They are not fixing the mod 
 
 ## Requires Integration Test
 
-Kevin Macleod Music.
+- Kevin Macleod Music.
 
-Progression.
+- Progression.
 
-Some NPCs. (Carminite Mobs and other mobs in TF.)
+- Some NPCs. (Carminite Mobs and other mobs in TF.)
 
 Some Achivements/Advancents. (Some achivements are added.)
 
@@ -53,47 +53,37 @@ Real-Time Physics from Physics Mod.
 
 ## TNT and Disparity Roadmap
 
-### In Private Test (These versions are not released publically.)
-
-0.0 - Done.
-
-0.1 - Done.
-
-0.2 - Done.
-
-0.3.0 - Done.
-
 ### Public Alpha (Adding more features like, bosses and mini-bosses, more mobs, and most importantly Twilight Forest integration.)
 
-0.3.1 - Done.
+- 0.3.1 - Done.
 
-0.4 - Done.
+- 0.4 - Done.
 
-0.4 Pre-Integration Test - Features Skipped to Integration Test. (Integration Test Prepared.)
+- 0.4 Pre-Integration Test - Features Skipped to Integration Test. (Integration Test Prepared.)
 
-0.4 Integration Test - Working in Progress. (Adding Twilight Forest with other mods.) (Were testing some of these features.)
+- 0.4 Integration Test - Working in Progress. (Adding Twilight Forest with other mods.) (Were testing some of these features.)
 
-0.5 Music Integration Test - To Do. (Kevin MacLeod's music is going to be added but we need to find which we will use.)
+- 0.5 Music Integration Test - To Do. (Kevin MacLeod's music is going to be added but we need to find which we will use.)
 
 ### Public Beta (Adding things like progression, more bosses and mini-bosses, more NPC's, etc.)
 
-0.6 Final Integration Test - To Do. (Adding the final touches.)
+- 0.6 Final Integration Test - To Do. (Adding the final touches.)
 
-0.7 - To Do.
+- 0.7 - To Do.
 
-0.8 - To Do.
+- 0.8 - To Do.
 
-0.9  - To Do.
+- 0.9  - To Do.
 
 ### Public Release Prepared (Were almost close to make the mod in public release)
 
-Pre - To Do.
+- Pre - To Do.
 
-Release Candidate - To Do.
+- Release Candidate - To Do.
 
-Preview - To Do. (Fixed the remaining issues except the ones labeled wontfix which is closed automatically but conversation is still open and you can chat us if you know how to fix it.)
+- Preview - To Do. (Fixed the remaining issues except the ones labeled wontfix which is closed automatically but conversation is still open and you can chat us if you know how to fix it.)
 
-Initial Release - To Do. (The mod is now in issue free release thanks to MCreator. For more bugs in the upcomming updates we will be prepared to fix them.)
+- Initial Release - To Do. (The mod is now in issue free release thanks to MCreator. For more bugs in the upcomming updates we will be prepared to fix them.)
 
 ## How To Build
 
