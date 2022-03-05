@@ -102,7 +102,7 @@ Do not use IntelliJ IDEA to build Minecraft Mods!
 ## TNT and Disparity Non-Code Assets
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
 
-If you wan't to use our non-code assets that we create then please ask for permission if you want to modify it for your mods or add-ons.
+If you wan't to modify our non-code assets that we created then please ask for permission if you want to modify it for your mods or add-ons.
 
 All Non-code assets will fall under this license except Kevin MacLeod's music. Kevin MacLeod's music is in a different Creative Commons License which is [here](https://creativecommons.org/licenses/by/3.0/).
 
@@ -122,9 +122,9 @@ TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that 
 
 ## Videos and Showcases by Burnuts Gaming and News and Tips Shower
 
-https://youtu.be/V991KYNtXdk
+[Teleportation Rod Showcase 1](https://youtu.be/V991KYNtXdk "Teleportation Rod Showcase 1")
 
-https://youtu.be/Nkbc9_Mp-dM
+[TNT and Disparity 0.4.0 Showcase](https://youtu.be/Nkbc9_Mp-dM "TNT and Disparity 0.4.0 Showcase")
 
 ## Contact
 
