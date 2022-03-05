@@ -64,12 +64,12 @@ jobs:
           debug-only: true
           ascending: true
           delete-branch: true
-          exempt-assignees: Pechayland, Burnuts, Azar2477
-          exempt-issue-assignees: Pechayland, Burnuts, Azar2477
-          exempt-pr-assignees: Pechayland, Burnuts, Azar2477
-          exempt-all-assignees: Pechayland, Burnuts, Azar2477
-          exempt-all-issue-assignees: Pechayland, Burnuts, Azar2477
-          exempt-all-pr-assignees: Pechayland, Burnuts, Azar2477
+          exempt-assignees: Pechayland, Burnuts, Azar2477, aaronschneider7797
+          exempt-issue-assignees: Pechayland, Burnuts, Azar2477, aaronschneider7797
+          exempt-pr-assignees: Pechayland, Burnuts, Azar2477, aaronschneider7797
+          exempt-all-assignees: Pechayland, Burnuts, Azar2477, aaronschneider7797
+          exempt-all-issue-assignees: Pechayland, Burnuts, Azar2477, aaronschneider7797
+          exempt-all-pr-assignees: Pechayland, Burnuts, Azar2477, aaronschneider7797
           enable-statistics: true
       -  uses: CodexLink/discord-activity-badge@v1.0
          with:
