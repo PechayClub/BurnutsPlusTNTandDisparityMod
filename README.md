@@ -43,13 +43,13 @@ Due to Twilight Forest 1.18 not being released yet. They are not fixing the mod 
 
 - Some NPCs. (Carminite Mobs and other mobs in TF.)
 
-Some Achivements/Advancents. (Some achivements are added.)
+- Some Achivements/Advancents. (Some achivements are added.)
 
-Teams. (Carminite Clan.)
+- Teams. (Carminite Clan.)
 
-Some Bosses. (Ysa the Ur-Ghast.)
+- Some Bosses. (Ysa the Ur-Ghast.)
 
-Real-Time Physics from Physics Mod.
+- Real-Time Physics from Physics Mod.
 
 ## TNT and Disparity Roadmap
 
