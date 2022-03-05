@@ -25,7 +25,7 @@ jobs:
           github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # The Secret PERSONAL_ACCESS_TOKEN is used by Burnuts Systems. (NOT @Pechayland's ACCESS TOKEN.)
           support-label: 'eol'
           issue-comment: >
-            :wave: @{issue-author}, we don't support the corsponding Minecraft or mod version anymore. You can fix this yourself by third-party/unofficial maintainment from a forked Github branch. Go to [SECURITY.md](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/SECURITY.md) for more info.
+            :wave: @{issue-author}, we don't support the corsponding Minecraft or mod version anymore. You can fix this yourself by third-party/unofficial maintainment from a forked Github branch. Go read our [Security Policy](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/SECURITY.md) for more info.
           close-issue: true
           lock-issue: true
           issue-lock-reason: 'off-topic'
@@ -37,9 +37,9 @@ jobs:
           stale-pr-message: >
              The pull request is marked as stale, because there is no recent activity in this pull request.
           close-issue-message:  >
-             The issue is closed, because there is no recent activity in this issue for a week.
+             The issue is closed, because there is no recent activity in this issue for a week. Thanks for your contributions.
           close-pr-message: >
-             The pull request is closed, because there is no recent activity in this pull request for a week.
+             The pull request is closed, because there is no recent activity in this pull request for a week. Thanks for your contributions.
           days-before-stale: 2
           days-before-issue-stale: 2
           days-before-close: 7
@@ -47,7 +47,7 @@ jobs:
           days-before-pr-close: 7
           stale-issue-label: wontfix
           close-issue-label: wontfix
-          exempt-issue-labels: wontfix
+          exempt-issue-labels: wontfix, enhancement
           stale-pr-label: wontfix
           close-pr-label: wontfix
           exempt-pr-labels: enhancement, hold
