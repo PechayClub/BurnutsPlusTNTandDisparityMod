@@ -55,7 +55,7 @@ Due to Twilight Forest 1.18 not being released yet. They are not fixing the mod 
 
 ### Public Alpha (Adding more features like, bosses and mini-bosses, more mobs, and most importantly Twilight Forest integration.)
 
-- 0.3.1 - Done.
+- 0.3 - Done.
 
 - 0.4 - Done.
 
