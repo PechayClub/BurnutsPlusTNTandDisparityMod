@@ -1,41 +1,39 @@
 [![Curseforge](http://cf.way2muchnoise.eu/full_tnt-and-disparity_downloads.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_tnt-and-disparity_all.svg)](https://minecraft.curseforge.com/projects/tnt-and-disparity) [![License](https://img.shields.io/badge/License-GNU-blue.svg?style=flat-square)](https://opensource.org/licenses/LGPL-2.1) [![CLA assistant](https://cla-assistant.io/readme/badge/Team-Burnuts/BurnutsPlusTNTandDisparityMod)](https://cla-assistant.io/Team-Burnuts/BurnutsPlusTNTandDisparityMod)
-## TNT and Disparity Mod
+# TNT and Disparity Mod
 
 Adventure with Burnuts.
 
 ## TNT and Disparity Features
 
-Potential Features: Incomplete.
+- Potential Features: Incomplete.
 
-Music: None.
+- Music: None.
 
-Integraton with Twilight Forest: Incomplete.
+- Integraton with Twilight Forest: Incomplete.
 
-Potion Effects: Incomplete.
+- Potion Effects: Incomplete.
 
-Mobs: Incomplete.
+- Mobs: Incomplete.
 
-Bosses and Mini-Bosses: Incomplete.
+- Bosses and Mini-Bosses: Incomplete.
 
-Progression: Incomplete.
+- Progression: Incomplete.
 
-Acheivements/Advancements: Incomplete.
+- Acheivements/Advancements: Incomplete.
 
-Particles: Incomplete.
+- Particles: Incomplete.
 
-NPCs: None.
+- NPCs: None.
 
-Real-Time Physics: None.
+- Real-Time Physics: None.
 
-Sponsors: Depending.
+- ~~Sponsors: Depending.~~
+
+### Notes
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
 
-Twilight Forest mobs are atempted to be added earlier to the Integration test but we have to move it because were unable to compile their code with a newer version of Gradle so thats why we postphone Integration Test until they update there Gradle version with a newer or similar one.
-
-Gradle 7.1, 6.9 or 6.8 with Gradle 4.9 Code = Can't Compile
-
-Gradle 7.1 with 7.2 Code = Uncomfirmed
+Due to Twilight Forest 1.18 not being released yet. They are not fixing the mod for some reason. No TNT and Disparity port to 1.18 soon.
 
 ## Requires Integration Test
 
@@ -71,7 +69,7 @@ Real-Time Physics from Physics Mod.
 
 0.4 - Done.
 
-0.4 Pre-Integration Test - Working in Progress. (Integration Test Prepared.)
+0.4 Pre-Integration Test - Features Skipped to Integration Test. (Integration Test Prepared.)
 
 0.4 Integration Test - Working in Progress. (Adding Twilight Forest with other mods.) (Were testing some of these features.)
 
@@ -99,15 +97,17 @@ Initial Release - To Do. (The mod is now in issue free release thanks to MCreato
 
 ## How To Build
 
-Prequisites:
+**Prequisites:**
 
 MCreator Latest EAP or Build
 
 Twilight Forest Dependancy Plugin: https://mcreator.net/plugin/76688/twilight-forest-dependancies
 
-Step 1:
+**How:**
 
-Press build icon or generate .jar file icon. (Please do not select the play button or server button because it can freeze the game when loading a world.)
+Build the mod with the MCreator or use command and type 'Gradlew Build' to build the mod.
+
+Do not use IntelliJ IDEA to build Minecraft Mods!
 
 ## TNT and Disparity Non-Code Assets
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
@@ -126,7 +126,7 @@ Before we can use your code via Pull Request, you need to sign our CLA [(Burnuts
 
 TNT and Disparity is licensed under GNU Lesser General Public License v2.1 with Twilight Forest mod.
 
-TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that don't fall on any license. Even if a brand has a unregistered trademark, it can still get taken down.
+TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that don't fall on any license. Even if a brand has a unregistered trademark, it can still get taken down. For more info see [https://docs.github.com/en/github/site-policy/github-trademark-policy](GitHub Trademark Policy)
 
 [(Located here)](brands)
 
