@@ -97,20 +97,20 @@ Initial Release - To Do. (The mod is now in issue free release thanks to MCreato
 
 ## How To Build
 
-**Prequisites:**
+### Prequisites
 
 MCreator Latest EAP or Build
 
 Twilight Forest Dependancy Plugin: https://mcreator.net/plugin/76688/twilight-forest-dependancies
 
-**How:**
+### How
 
 Build the mod with the MCreator or use command and type 'Gradlew Build' to build the mod.
 
 Do not use IntelliJ IDEA to build Minecraft Mods!
 
 ## TNT and Disparity Non-Code Assets
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
 
 If you wan't to use our non-code assets that we create then please ask for permission if you want to modify it for your mods or add-ons.
 
@@ -132,7 +132,7 @@ TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that 
 
 ## Videos and Showcases by Burnuts Gaming and News and Tips Shower
 
-https://www.youtube.com/embed/V991KYNtXdk
+https://www.youtube.com/watch?v=V991KYNtXdk
 
 https://www.youtube.com/embed/Nkbc9_Mp-dM
 
