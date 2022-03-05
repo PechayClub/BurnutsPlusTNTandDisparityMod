@@ -4,7 +4,9 @@ labels: [bug]
 body:
 - type: markdown
   attributes:
-    value: "If you need help running TNT and Disparity, please visit us on our Discord server: https://discord.gg/hDJCabNEz3"
+    value: |
+      # Use this form if you wan't to report a bug to TNT and Disparity Mod.
+      If you need help running TNT and Disparity, please visit us on our Discord server: https://discord.gg/hDJCabNEz3
 - type: dropdown
   attributes:
     label: Operating System
@@ -15,21 +17,21 @@ body:
     - macOS
     - Linux
     - Other
-- type: textarea
+- type: input
   attributes:
     label: Operating System Version
     description: If you select the bug occuring on multiple operating systems, select what version you tested.
     placeholder: 10.0.19041.935
   validations:
     required: true
-- type: textarea
+- type: input
   attributes:
     label: Mod Version
     description: We need to know what version of TNT and Disparity you used.
     placeholder: Alpha 0.4.1 Build 639 Pre-Integration Test
   validations:
     required: true
-- type: textarea
+- type: input
   attributes:
     label: Minecraft Version
     description: We need to know what version of Minecraft you used.
@@ -58,7 +60,7 @@ body:
     required: false
 - type: checkboxes
   attributes:
-    label: This issue is unique
+    label: This issue is unique and has not been reported already.
     options:
     - label: I have searched the issue tracker and did not find an issue describing my bug.
       required: true      
