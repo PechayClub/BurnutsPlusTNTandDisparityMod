@@ -7,12 +7,15 @@ body:
     value: |
       ### Use this form if you wan't to request a feature to TNT and Disparity Mod.
       **Note: Feature Request will be added to a specific milestone before being added to our mod.**
-- type: input
+- type: textarea
   attributes:
     label: Suggestion
     description: What do feature do you want for TNT and Disparity mod?
   validations:
     required: true
-- type: input
+- type: textarea
   attributes:
     label: Benefit
+    description: Is your/our benefit for this feature request.
+  validations:
+    required: true
