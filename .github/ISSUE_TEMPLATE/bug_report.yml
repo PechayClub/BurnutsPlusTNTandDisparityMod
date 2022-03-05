@@ -5,7 +5,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      # Use this form if you wan't to report a bug to TNT and Disparity Mod.
+      ## Use this form if you wan't to report a bug to TNT and Disparity Mod.
       If you need help running TNT and Disparity, please visit us on our Discord server: https://discord.gg/hDJCabNEz3
 - type: dropdown
   attributes:
