@@ -29,7 +29,7 @@ Adventure with Burnuts.
 
 - ~~Sponsors: Depending.~~
 
-### Notes
+## Notes
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
 
