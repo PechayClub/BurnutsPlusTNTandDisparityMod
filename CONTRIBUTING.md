@@ -29,4 +29,4 @@ Your pull request are held for review depending if it's a feature request or a f
 
 - Modify or use brand files or trademark without permission.
 
-- Modify or use any of the assets without permission.
+- Modify any of the assets without permission.
