@@ -17,8 +17,8 @@ body:
     - macOS
     - Linux
     - Other
-    validations:
-      required: true
+  validations:
+    required: true
 - type: input
   attributes:
     label: Operating System Version
