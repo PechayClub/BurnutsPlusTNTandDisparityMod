@@ -116,7 +116,7 @@ Before we can use your code via Pull Request, you need to sign our CLA [(Burnuts
 
 TNT and Disparity is licensed under GNU Lesser General Public License v2.1 with Twilight Forest mod.
 
-TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that don't fall on any license. Even if a brand has a unregistered trademark, it can still get taken down. For more info see [GitHub Trademark Policy](https://docs.github.com/en/github/site-policy/github-trademark-policy)
+TNT and Disparity is a Trademark of Team Burnuts. Brand files are the ones that don't fall on any license. Even if a brand has a unregistered trademark, it can still get taken down. For more info see [GitHub Trademark Policy](https://docs.github.com/en/github/site-policy/github-trademark-policy).
 
 [(Located here)](brands)
 
