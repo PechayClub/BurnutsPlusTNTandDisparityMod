@@ -95,7 +95,7 @@ Twilight Forest Dependancy Plugin: https://mcreator.net/plugin/76688/twilight-fo
 
 ### How
 
-Build the mod with the MCreator or use command and type 'Gradlew Build' to build the mod.
+Build the mod with the MCreator or use command and type `gradlew build` to build the mod.
 
 Do not use IntelliJ IDEA to build Minecraft Mods!
 
