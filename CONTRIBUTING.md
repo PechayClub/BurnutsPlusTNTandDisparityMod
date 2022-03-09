@@ -23,6 +23,6 @@ Your pull request are held for review depending if it's a feature request or a f
 
 - Change or violate the current license used.
 
-- Modify or use brand files or trademark without permission.
+- Modify or use brand files or trademark without permission especially making money out of it.
 
-- Modify any of the assets without permission.
+- Modify or make money with any of the assets without permission.
