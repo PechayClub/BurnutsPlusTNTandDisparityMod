@@ -1,6 +1,6 @@
 ## Conributing
 
-- Your pull request should pass all checks. (Security, Build, and Azure DevOps)
+- Your pull request should pass all checks.
 - Make sure your pull request dosent contain patented or trademarked material.
 - Make pull request are for the versions only supported in [SECURITY.md](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/SECURITY.md.).
 - Our code should be edit using MCreator not by using GitHub, a notepad or other progarms to edit the file because your changes will get overwritten without locking it.
