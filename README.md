@@ -59,7 +59,7 @@ Due to Twilight Forest 1.18 not being released yet. They are not fixing the mod 
 
 - 0.4 - Done.
 
-- 0.4 Pre-Integration Test - Features Skipped to Integration Test. (Integration Test Prepared.)
+- 0.4 Pre-Integration Test - Done. (Integration Test Prepared.)
 
 - 0.4 Integration Test - Working in Progress. (Adding Twilight Forest with other mods.) (Were testing some of these features.)
 
