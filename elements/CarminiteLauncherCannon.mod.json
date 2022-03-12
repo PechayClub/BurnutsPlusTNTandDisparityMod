@@ -1,0 +1,49 @@
+{
+  "_fv": 24,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "carminitelaunchercannon",
+    "customModelName": "Normal",
+    "name": "Carminite Launcher Cannon",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.firework.shoot"
+    },
+    "hasGlow": false,
+    "animation": "none",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 40.0,
+    "bulletKnockback": 3,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "ModelCarminiteRocket",
+    "customBulletModelTexture": "carminiterocket.png",
+    "onBulletHitsBlock": {
+      "name": "CarminiteLauncherCannonProjectileExplode"
+    },
+    "onBulletHitsPlayer": {
+      "name": "CarminiteLauncherCannonProjectileExplode"
+    },
+    "onBulletHitsEntity": {
+      "name": "CarminiteLauncherCannonProjectileExplode"
+    },
+    "onBulletFlyingTick": {
+      "name": "CarminiteLauncherCannonWhileProjectileFlyingTick"
+    }
+  }
+}

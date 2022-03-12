@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "tnt_and_disparity:empty"
+    },
+    "title": {
+      "translate": "advancements.the_final_ending.title"
+    },
+    "description": {
+      "translate": "advancements.the_final_ending.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "the_final_ending": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "experience": 12000
+  },
+  "parent": "twilightforest:progress_ur_ghast"

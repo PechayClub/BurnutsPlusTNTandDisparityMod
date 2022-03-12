@@ -23,9 +23,9 @@
     "animation": "none",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "bulletPower": 8.0,
-    "bulletDamage": 80.0,
-    "bulletKnockback": 80,
+    "bulletPower": 5.0,
+    "bulletDamage": 10.0,
+    "bulletKnockback": 5,
     "bulletParticles": true,
     "bulletIgnitesFire": true,
     "bulletItemTexture": {

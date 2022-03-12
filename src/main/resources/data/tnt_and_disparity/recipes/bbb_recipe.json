@@ -19,7 +19,7 @@
       "item": "minecraft:tnt"
     },
     "4": {
-      "item": "tnt_and_disparity:glue_block"
+      "item": "tnt_and_disparity:bottle_of_disulfide"
     },
     "5": {
       "item": "minecraft:tnt"
@@ -35,7 +35,7 @@
     }
   },
   "result": {
-    "item": "tnt_and_disparity:bbb",
+    "item": "tnt_and_disparity:big_bad_boom",
     "count": 1
   }
 }

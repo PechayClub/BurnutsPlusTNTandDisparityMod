@@ -1,0 +1,48 @@
+{
+  "_fv": 24,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "carminiteradioemitter",
+    "customModelName": "Normal",
+    "name": "Carminite Radio Emitter",
+    "rarity": "UNCOMMON",
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "Emits radio waves to lure Carmimite made tech"
+    ],
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "CarminiteRadioEmitterActivate"
+    },
+    "onRightClickedOnBlock": {
+      "name": "CarminiteRadioEmitterActivate"
+    },
+    "onEntityHitWith": {
+      "name": "CarminiteRadioEmitterActivate"
+    },
+    "onEntitySwing": {
+      "name": "CarminiteRadioEmitterActivate"
+    },
+    "hasDispenseBehavior": false
+  }
+}

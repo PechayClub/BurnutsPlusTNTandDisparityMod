@@ -21,17 +21,20 @@
     "sleepResult": "ALLOW",
     "hasSkyLight": true,
     "imitateOverworldBehaviour": true,
+    "onPlayerEntersDimension": {
+      "name": "DLKLandPlayerEntersDimension"
+    },
     "portalFrame": {
       "value": "CUSTOM:DLKLandPortalFrame"
     },
     "portalParticles": {
-      "value": "CUSTOM:EkorParticles"
+      "value": "EXPLOSION_NORMAL"
     },
     "portalLuminance": 0,
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "igniterName": "DLK Land Portal Igniter",
+    "igniterName": "DLK Portal Igniter",
     "igniterTab": {
       "value": "TOOLS"
     },

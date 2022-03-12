@@ -7,7 +7,7 @@
       "value": "Blocks.GRASS"
     },
     "undergroundBlock": {
-      "value": "Blocks.STONE#3"
+      "value": "Blocks.STONE#0"
     },
     "airColor": {
       "value": -1,
@@ -30,7 +30,7 @@
       "falpha": 0.0
     },
     "ambientSound": {
-      "value": "CUSTOM:dlkdlks"
+      "value": ""
     },
     "additionsSound": {
       "value": ""

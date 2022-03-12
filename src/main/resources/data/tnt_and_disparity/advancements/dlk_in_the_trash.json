@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "tnt_and_disparity:bbb"
+      "item": "tnt_and_disparity:big_bad_boom"
     },
     "title": {
       "translate": "advancements.dlk_in_the_trash.title"
@@ -9,10 +9,10 @@
     "description": {
       "translate": "advancements.dlk_in_the_trash.descr"
     },
-    "frame": "goal",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false
+    "hidden": true
   },
   "criteria": {
     "dlk_in_the_trash": {

@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "particle",
+  "definition": {
+    "texture": "signal.png",
+    "animate": false,
+    "frameDuration": 1,
+    "width": 0.2,
+    "height": 0.2,
+    "scale": 1.0,
+    "speedFactor": 10.0,
+    "gravity": 0.0,
+    "maxAge": 1200,
+    "maxAgeDiff": 0,
+    "angularVelocity": 40.0,
+    "angularAcceleration": 20.0,
+    "canCollide": false,
+    "alwaysShow": true,
+    "renderType": "LIT"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_ingot"
+    },
+    "1": {
+      "item": "minecraft:daylight_detector"
+    },
+    "2": {
+      "item": "minecraft:iron_ingot"
+    },
+    "3": {
+      "item": "twilightforest:carminite"
+    },
+    "4": {
+      "item": "minecraft:comparator"
+    },
+    "5": {
+      "item": "twilightforest:carminite"
+    },
+    "6": {
+      "item": "tnt_and_disparity:carminite_launcher_cannon"
+    },
+    "7": {
+      "item": "minecraft:compass"
+    },
+    "8": {
+      "item": "tnt_and_disparity:carminite_launcher_cannon"
+    }
+  },
+  "result": {
+    "item": "tnt_and_disparity:carminite_cannon_package",
+    "count": 1
+  }
+}

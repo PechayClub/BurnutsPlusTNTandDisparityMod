@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "tnt_and_disparity:bbb"
+      "item": "tnt_and_disparity:big_bad_boom"
     },
     "title": {
       "translate": "advancements.go_boom.title"
@@ -9,7 +9,7 @@
     "description": {
       "translate": "advancements.go_boom.descr"
     },
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

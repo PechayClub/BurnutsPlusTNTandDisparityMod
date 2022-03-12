@@ -5,14 +5,14 @@
       "item": "minecraft:arrow"
     },
     {
-      "item": "tnt_and_disparity:remote_bbb"
+      "item": "tnt_and_disparity:remote_big_bad_boom"
     },
     {
       "item": "minecraft:crossbow"
     }
   ],
   "result": {
-    "item": "tnt_and_disparity:shootable_bbb",
+    "item": "tnt_and_disparity:shootable_big_bad_boom",
     "count": 1
   }
 }

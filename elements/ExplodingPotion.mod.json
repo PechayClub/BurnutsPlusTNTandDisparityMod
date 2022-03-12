@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Exploding Potion",
+    "splashName": "Exploding Splash Potion",
+    "lingeringName": "Exploding Lingering Potion",
+    "arrowName": "Exploding Arrow",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Explode"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": true,
+        "showParticles": true
+      }
+    ]
+  }
+}

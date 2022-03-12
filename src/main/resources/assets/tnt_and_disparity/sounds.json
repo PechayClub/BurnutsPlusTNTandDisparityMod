@@ -1,30 +1,10 @@
 {
-  "ekorekors": {
-    "category": "hostile",
-    "subtitle": "subtitles.ekorekors",
-    "sounds": [
-      {
-        "name": "tnt_and_disparity:ekorekor",
-        "stream": false
-      }
-    ]
-  },
   "dlkdies": {
     "category": "hostile",
     "subtitle": "subtitles.dlkdies",
     "sounds": [
       {
         "name": "tnt_and_disparity:dlkdies",
-        "stream": false
-      }
-    ]
-  },
-  "dlkdlks": {
-    "category": "neutral",
-    "subtitle": "subtitles.dlkdlks",
-    "sounds": [
-      {
-        "name": "tnt_and_disparity:dlkdlks",
         "stream": false
       }
     ]
@@ -39,6 +19,26 @@
       }
     ]
   },
+  "dlkdlks": {
+    "category": "hostile",
+    "subtitle": "subtitles.dlkdlks",
+    "sounds": [
+      {
+        "name": "tnt_and_disparity:dlkdlks",
+        "stream": false
+      }
+    ]
+  },
+  "ekorekors": {
+    "category": "hostile",
+    "subtitle": "subtitles.ekorekors",
+    "sounds": [
+      {
+        "name": "tnt_and_disparity:ekorekor",
+        "stream": false
+      }
+    ]
+  },
   "dlkkingsaying": {
     "category": "hostile",
     "subtitle": "subtitles.dlkkingsaying",
@@ -46,16 +46,6 @@
       {
         "name": "tnt_and_disparity:dlkkingsaying",
         "stream": false
-      }
-    ]
-  },
-  "dryout": {
-    "category": "record",
-    "subtitle": "subtitles.dryout",
-    "sounds": [
-      {
-        "name": "tnt_and_disparity:djvi-dry-out-2.0-mp3",
-        "stream": true
       }
     ]
   },

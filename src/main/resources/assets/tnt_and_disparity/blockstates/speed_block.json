@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "tnt_and_disparity:block/speed_block"
+    },
+    "facing=east": {
+      "model": "tnt_and_disparity:block/speed_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "tnt_and_disparity:block/speed_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tnt_and_disparity:block/speed_block",
+      "y": 270
+    }
+  }
+}

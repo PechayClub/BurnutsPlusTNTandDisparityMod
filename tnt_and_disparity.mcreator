@@ -6,7 +6,7 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "bbb"
+      "registry_name": "big_bad_boom"
     },
     {
       "name": "BBBExplode",
@@ -14,7 +14,7 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "bbb_explode",
+      "registry_name": "big_bad_boom_explode",
       "metadata": {
         "dependencies": [
           {
@@ -42,7 +42,7 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "remote_bbb_explode",
+      "registry_name": "remote_big_bad_boom_explode",
       "metadata": {
         "dependencies": [
           {
@@ -70,7 +70,7 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "remote_bbb"
+      "registry_name": "remote_big_bad_boom"
     },
     {
       "name": "RemoteBBBParticle",
@@ -78,7 +78,7 @@
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "remote_bbb_particle",
+      "registry_name": "remote_big_bad_boom_particle",
       "metadata": {
         "dependencies": [
           {
@@ -106,7 +106,7 @@
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "shootable_bbb"
+      "registry_name": "shootable_big_bad_boom"
     },
     {
       "name": "BBBRecipe",
@@ -190,7 +190,7 @@
       "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "drill_bbb_dig",
+      "registry_name": "drill_big_bad_boom_dig",
       "metadata": {
         "dependencies": [
           {
@@ -218,7 +218,7 @@
       "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "drill_bbb"
+      "registry_name": "drill_big_bad_boom"
     },
     {
       "name": "DLKEntityDies",
@@ -373,7 +373,7 @@
       "type": "livingentity",
       "sortid": 26,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "stickman"
     },
     {
@@ -382,7 +382,7 @@
       "sortid": 27,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "bbb_resistant_armor_armor",
+      "registry_name": "big_bad_boom_resistant_armor_armor",
       "metadata": {
         "eh": true,
         "el": true,
@@ -475,10 +475,6 @@
       "registry_name": "dlk_king_on_initial_entity_spawn",
       "metadata": {
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -780,7 +776,7 @@
       "sortid": 65,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "bbb_resistant_armor_armor_boots_tick_event",
+      "registry_name": "big_bad_boom_resistant_armor_armor_boots_tick_event",
       "metadata": {
         "dependencies": [
           {
@@ -1126,17 +1122,113 @@
       }
     },
     {
-      "name": "DisulfideExplodeOnChange",
-      "type": "procedure",
-      "sortid": 89,
+      "name": "DLKLand",
+      "type": "dimension",
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "disulfide_explode_on_change",
+      "registry_name": "dlk_land",
+      "metadata": {
+        "ep": true
+      }
+    },
+    {
+      "name": "BattleModeOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battle_mode_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BattleModeOverlay",
+      "type": "overlay",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battle_mode_overlay"
+    },
+    {
+      "name": "DLKLandPlayerEntersDimension",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dlk_land_player_enters_dimension",
       "metadata": {
         "dependencies": [
           {
-            "name": "blockstate",
-            "type": "blockstate"
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpeedBlock",
+      "type": "block",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_block"
+    },
+    {
+      "name": "GhostArmor",
+      "type": "livingentity",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost_armor"
+    },
+    {
+      "name": "CarminiteLauncherCannonProjectileExplode",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carminite_launcher_cannon_projectile_explode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CarminiteLauncherCannonWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carminite_launcher_cannon_while_projectile_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "imediatesourceentity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -1158,26 +1250,260 @@
       }
     },
     {
-      "name": "Disulfide",
-      "type": "fluid",
-      "sortid": 88,
+      "name": "CarminiteLauncherCannon",
+      "type": "rangeditem",
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "disulfide",
+      "registry_name": "carminite_launcher_cannon"
+    },
+    {
+      "name": "CarminiteCannon",
+      "type": "livingentity",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "carminite_cannon"
+    },
+    {
+      "name": "CarminiteCannonFlying",
+      "type": "livingentity",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "carminite_cannon_flying"
+    },
+    {
+      "name": "CarminiteCannonExplode",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carminite_cannon_explode",
       "metadata": {
-        "gb": true
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
-      "name": "DLKLand",
-      "type": "dimension",
-      "sortid": 90,
+      "name": "CarminiteCannonFlyingForPlayer",
+      "type": "livingentity",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "carminite_cannon_flying_for_player"
+    },
+    {
+      "name": "DeployCarminiteCannon",
+      "type": "procedure",
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "dlk_land",
+      "registry_name": "deploy_carminite_cannon",
       "metadata": {
-        "ep": true
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
+    },
+    {
+      "name": "CarminiteCannonPackage",
+      "type": "item",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carminite_cannon_package"
+    },
+    {
+      "name": "CarminiteCannonFlyingRecipe",
+      "type": "recipe",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "carminite_cannon_flying_recipe"
+    },
+    {
+      "name": "Signal",
+      "type": "particle",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "signal"
+    },
+    {
+      "name": "CarminiteRadioEmitterActivate",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carminite_radio_emitter_activate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CarminiteRadioEmitter",
+      "type": "item",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carminite_radio_emitter"
+    },
+    {
+      "name": "CarminiteRadioEmitterRecipe",
+      "type": "recipe",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "carminite_radio_emitter_recipe"
+    },
+    {
+      "name": "Empty",
+      "type": "item",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty"
+    },
+    {
+      "name": "TheFinalEnding",
+      "type": "achievement",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "the_final_ending"
+    },
+    {
+      "name": "ExplodeEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_effect_startedapplied",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Explode",
+      "type": "potioneffect",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode"
+    },
+    {
+      "name": "ExplodingPotion",
+      "type": "potion",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exploding_potion"
+    },
+    {
+      "name": "ExplodingPotionEnhanced",
+      "type": "potion",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exploding_potion_enhanced"
+    },
+    {
+      "name": "ExplodingPotionRecipe",
+      "type": "recipe",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exploding_potion_recipe"
+    },
+    {
+      "name": "BottleOfDisulfide",
+      "type": "item",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bottle_of_disulfide"
     }
   ],
   "variable_elements": [
@@ -1190,28 +1516,12 @@
   ],
   "sound_elements": [
     {
-      "name": "ekorekors",
-      "files": [
-        "ekorekor"
-      ],
-      "category": "hostile",
-      "subtitle": "Ekor Ekors"
-    },
-    {
       "name": "dlkdies",
       "files": [
         "dlkdies"
       ],
       "category": "hostile",
       "subtitle": "DLK Dies"
-    },
-    {
-      "name": "dlkdlks",
-      "files": [
-        "dlkdlks"
-      ],
-      "category": "neutral",
-      "subtitle": "DLK DLKs"
     },
     {
       "name": "dlkhurt",
@@ -1222,20 +1532,28 @@
       "subtitle": "DLK Dying"
     },
     {
+      "name": "dlkdlks",
+      "files": [
+        "dlkdlks"
+      ],
+      "category": "hostile",
+      "subtitle": "DLK DLKs"
+    },
+    {
+      "name": "ekorekors",
+      "files": [
+        "ekorekor"
+      ],
+      "category": "hostile",
+      "subtitle": "Ekor Ekors"
+    },
+    {
       "name": "dlkkingsaying",
       "files": [
         "dlkkingsaying"
       ],
       "category": "hostile",
       "subtitle": "DLK King Saying"
-    },
-    {
-      "name": "dryout",
-      "files": [
-        "djvi-dry-out-2.0-mp3"
-      ],
-      "category": "record",
-      "subtitle": "DJVI - Dry Out 2.0"
     },
     {
       "name": "dlkkingstickman",
@@ -1247,67 +1565,171 @@
     }
   ],
   "language_map": {
+    "de_ch": {
+      "effect.ekored": "Ekored |",
+      "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK König Laich Ei",
+      "item.tnt_and_disparity.dlk_land": "DLK Portalzünder",
+      "item.tnt_and_disparity.remote_big_bad_boom": "Abgelegen Großer Schlechter Dröhnen",
+      "block.tnt_and_disparity.glow": "Glühen",
+      "item.tnt_and_disparity.big_bad_boom_resistant_armor_armor_leggings": "Großer schlechter Dröhnen Widerstandsfähige Rüstung Leggings",
+      "item.tnt_and_disparity.carminite_cannon_spawn_egg": "Carminit-Kanone Laich Ei",
+      "effect.tnt_and_disparity.ekored": "Ekored |",
+      "entity.tnt_and_disparity.stickman": "Strichmännchen",
+      "subtitles.ekorekors": "Ekor Ekors",
+      "advancements.go_to_dlk_land.descr": "Der Ort, an dem DLKs sind",
+      "block.tnt_and_disparity.glue_stairs": "Klebetreppen",
+      "block.tnt_and_disparity.speed_block": "Geschwindigkeitsblock",
+      "item.tnt_and_disparity.carminite_cannon_package": "Carminit-Kanone Paket",
+      "block.tnt_and_disparity.renewable_energy_block": "Block für erneuerbare Energien",
+      "item.tnt_and_disparity.glue_bucket": "Leimeimer",
+      "item.minecraft.lingering_potion.effect.exploding_potion": "Exploding Lingering Potion",
+      "entity.tnt_and_disparity.ekor": "Ekor",
+      "item.tnt_and_disparity.stickman_spawn": "Strichmännchen Laichen",
+      "advancements.go_to_dlk_land.title": "Zum DLK Land",
+      "item.minecraft.tipped_arrow.effect.exploding_potion": "Exploding Arrow",
+      "item.tnt_and_disparity.stickman_spawn_egg": "Strichmännchen Laich Ei",
+      "item.minecraft.lingering_potion.effect.exploding_potion_enhanced": "Exploding Lingering Potion",
+      "entity.tnt_and_disparity.ghost_armor": "Geisterrüstung",
+      "item.tnt_and_disparity.big_bad_boom_resistant_armor_armor_chestplate": "Großer schlechter Dröhnen Widerstandsfähige Panzerung Brustplatte",
+      "advancements.your_ears_explode.descr": "Holen Sie sich Ekored von Ekor",
+      "subtitles.dlkkingsaying": "DLK König Spruch",
+      "item.tnt_and_disparity.big_bad_boom_resistant_armor_armor_helmet": "Großer schlechter Dröhnen Widerstandsfähiger Panzerhelm",
+      "item.tnt_and_disparity.carminite_cannon_flying_spawn_egg": "Carminite Kanone Fliegen Laich Ei",
+      "advancements.sticky.descr": "Es ist Klebstoff",
+      "item.tnt_and_disparity.empty": "Empty",
+      "advancements.dlk_in_the_trash.descr": "Töte den DLK König",
+      "item.tnt_and_disparity.shootable_big_bad_boom": "Schießbarer Großer Schlechter Dröhnen",
+      "block.tnt_and_disparity.glue_trap_door": "Klebefallentür",
+      "block.tnt_and_disparity.big_bad_boom": "Großer schlechter Dröhnen",
+      "entity.tnt_and_disparity.carminite_cannon_flying_for_player": "Carminit-Kanone Fliegen für Spieler",
+      "block.tnt_and_disparity.dlk_land_portal_frame": "DLK Landportalrahmen",
+      "block.tnt_and_disparity.glue_slab": "Leimplatte",
+      "item.minecraft.potion.effect.exploding_potion": "Exploding Potion",
+      "key.tnt_and_disparity.battle_mode": "Kampfmodus",
+      "item.tnt_and_disparity.ekor_spawn_egg": "Ekor Laich Ei",
+      "item.minecraft.potion.effect.exploding_potion_enhanced": "Exploding Potion",
+      "entity.tnt_and_disparity.dlk": "DLK",
+      "advancements.your_ears_explode.title": "Deine Ohren sind explodiert",
+      "item.minecraft.tipped_arrow.effect.exploding_potion_enhanced": "Exploding Arrow",
+      "subtitles.dlkkingstickman": "DLK-König Spruch über Strichmännchen",
+      "advancements.go_boom.descr": "DLKs explodieren beim Tod",
+      "effect.tnt_and_disparity.explode": "Explode",
+      "advancements.the_final_ending.descr": "Du hast schließlich Ysa der Ur-Ghast besiegt und die Welt vor den bösen Händen dieses Diktators gerettet",
+      "block.tnt_and_disparity.glue_block": "Klebeblock",
+      "item.tnt_and_disparity.carminite_cannon_flying_for_player_spawn_egg": "Carminit-Kanone Fliegen für Spieler Laich Ei",
+      "item.tnt_and_disparity.bottle_of_disulfide": "Bottle Of Disulfide",
+      "block.tnt_and_disparity.glue_fence_gate": "Leimzaun Tor",
+      "advancements.go_boom.title": "Gehen Dröhnen",
+      "item.tnt_and_disparity.carminite_radio_emitter": "Carminite Radio Emitter",
+      "entity.tnt_and_disparity.carminite_cannon_flying": "Carminit-Kanone Fliegen",
+      "item.tnt_and_disparity.ekor_puppet": "Ekor Marionette",
+      "block.tnt_and_disparity.bounce_block": "Abprallen Block",
+      "fluid.tnt_and_disparity.glue": "Leim",
+      "advancements.the_final_ending.title": "Das endgültige Ende",
+      "item.tnt_and_disparity.dlk_spawn_egg": "DLK Laich Ei",
+      "advancements.dlk_in_the_trash.title": "DLK im Papierkorb",
+      "advancements.sticky.title": "Klebrig",
+      "subtitles.dlkdies": "DLK Stirbt",
+      "item.tnt_and_disparity.drill_big_bad_boom": "Bohrer Großer Schlechter Dröhnen",
+      "subtitles.dlkdlks": "DLK DLKs",
+      "item.tnt_and_disparity.ekor_sound": "Ekor Klang",
+      "item.tnt_and_disparity.ghost_armor_spawn_egg": "Geisterrüstung Laich Ei",
+      "block.tnt_and_disparity.glue_fence": "Leimzaun",
+      "entity.tnt_and_disparity.carminite_cannon": "Carminit-Kanone",
+      "entity.tnt_and_disparity.dlk_king": "DLK König",
+      "item.tnt_and_disparity.big_bad_boom_resistant_armor_armor_boots": "Großer Schlechter Dröhnen Widerstandsfähige Rüstungsstiefel",
+      "subtitles.dlkhurt": "DLK Sterben",
+      "biome.tnt_and_disparity.dlk_forest": "DLK Wald",
+      "item.tnt_and_disparity.teleportation_rod": "Teleportationsstab",
+      "item.tnt_and_disparity.carminite_launcher_cannon": "Carminite Werferkanone",
+      "item.minecraft.splash_potion.effect.exploding_potion_enhanced": "Exploding Splash Potion",
+      "fluid.glue_water": "Leim",
+      "block.tnt_and_disparity.glue": "Leim",
+      "key.tnt_and_disparity.disable_battle_mode": "Gefechtsmodus deaktivieren",
+      "item.minecraft.splash_potion.effect.exploding_potion": "Exploding Splash Potion"
+    },
     "en_us": {
-      "subtitles.dryout": "DJVI - Dry Out 2.0",
       "effect.ekored": "Ekored",
-      "item.tnt_and_disparity.dlk_land": "DLK Land Portal Igniter",
+      "item.tnt_and_disparity.dlk_land": "DLK Portal Igniter",
       "item.tnt_and_disparity.dlk_king_spawn_egg": "DLK King Spawn Egg",
       "block.tnt_and_disparity.glow": "Glow",
+      "item.tnt_and_disparity.remote_big_bad_boom": "Remote Big Bad Boom",
+      "item.tnt_and_disparity.big_bad_boom_resistant_armor_armor_leggings": "Big Bad Boom Resistant Armor Leggings",
+      "item.tnt_and_disparity.carminite_cannon_spawn_egg": "Carminite Cannon Spawn Egg",
       "effect.tnt_and_disparity.ekored": "Ekored",
       "subtitles.ekorekors": "Ekor Ekors",
       "entity.tnt_and_disparity.stickman": "Stickman",
       "advancements.go_to_dlk_land.descr": "The place were DLKs are.",
       "block.tnt_and_disparity.glue_stairs": "Glue Stairs",
-      "item.tnt_and_disparity.remote_bbb": "Remote Big Bad Boom",
+      "block.tnt_and_disparity.speed_block": "Speed Block",
+      "item.tnt_and_disparity.carminite_cannon_package": "Carminite Cannon Package",
       "block.tnt_and_disparity.renewable_energy_block": "Renewable Energy Block",
-      "item.tnt_and_disparity.bbb_resistant_armor_armor_leggings": "Big Bad Boom Resistant Armor Leggings",
       "item.tnt_and_disparity.glue_bucket": "Glue Bucket",
+      "item.minecraft.lingering_potion.effect.exploding_potion": "Exploding Lingering Potion",
       "entity.tnt_and_disparity.ekor": "Ekor",
       "item.tnt_and_disparity.stickman_spawn": "Stickman Spawn",
       "advancements.go_to_dlk_land.title": "Go To DLK Land",
-      "item.tnt_and_disparity.disulfide_bucket": "Bottle of Disulfide",
-      "item.tnt_and_disparity.drill_bbb": "Drill Big Bad Boom",
+      "item.minecraft.tipped_arrow.effect.exploding_potion": "Exploding Arrow",
       "item.tnt_and_disparity.stickman_spawn_egg": "Stickman Spawn Egg",
-      "advancements.your_ears_explode.descr": "Get Ekored by Ekor.",
-      "item.tnt_and_disparity.shootable_bbb": "Shootable Big Bad Boom",
+      "item.minecraft.lingering_potion.effect.exploding_potion_enhanced": "Exploding Lingering Potion",
+      "entity.tnt_and_disparity.ghost_armor": "Ghost Armor",
+      "item.tnt_and_disparity.big_bad_boom_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
+      "advancements.your_ears_explode.descr": "Get Ekored by Ekor",
       "subtitles.dlkkingsaying": "DLK King Saying",
+      "item.tnt_and_disparity.big_bad_boom_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
+      "item.tnt_and_disparity.carminite_cannon_flying_spawn_egg": "Carminite Cannon Flying Spawn Egg",
       "advancements.sticky.descr": "It\u0027s glue.",
+      "item.tnt_and_disparity.empty": "Empty",
       "advancements.dlk_in_the_trash.descr": "Kill the DLK King",
+      "item.tnt_and_disparity.shootable_big_bad_boom": "Shootable Big Bad Boom",
       "block.tnt_and_disparity.glue_trap_door": "Glue Trap Door",
-      "item.tnt_and_disparity.bbb_resistant_armor_armor_helmet": "Big Bad Boom Resistant Armor Helmet",
+      "block.tnt_and_disparity.big_bad_boom": "Big Bad Boom",
+      "entity.tnt_and_disparity.carminite_cannon_flying_for_player": "Carminite Cannon Flying For Players",
       "block.tnt_and_disparity.dlk_land_portal_frame": "DLK Land Portal Frame",
       "block.tnt_and_disparity.glue_slab": "Glue Slab",
+      "item.minecraft.potion.effect.exploding_potion": "Exploding Potion",
       "key.tnt_and_disparity.battle_mode": "Battle Mode",
       "item.tnt_and_disparity.ekor_spawn_egg": "Ekor Spawn Egg",
+      "item.minecraft.potion.effect.exploding_potion_enhanced": "Exploding Potion",
       "entity.tnt_and_disparity.dlk": "DLK",
       "advancements.your_ears_explode.title": "Your Ears Exploded",
-      "item.tnt_and_disparity.bbb_resistant_armor_armor_chestplate": "Big Bad Boom Resistant Armor Chestplate",
-      "fluid.tnt_and_disparity.disulfide": "Disulfide",
+      "item.minecraft.tipped_arrow.effect.exploding_potion_enhanced": "Exploding Arrow",
       "subtitles.dlkkingstickman": "DLK King Saying about Stickman",
-      "advancements.go_boom.descr": "DLKs explodese upon death.",
+      "advancements.go_boom.descr": "DLKs explodese upon death",
+      "effect.tnt_and_disparity.explode": "Explode",
+      "advancements.the_final_ending.descr": "You finally defeated Ysa the Ur-Ghast and saved the world from that evil hands of that dictator",
       "block.tnt_and_disparity.glue_block": "Glue Block",
-      "block.tnt_and_disparity.disulfide": "Disulfide",
-      "item.tnt_and_disparity.bbb_resistant_armor_armor_boots": "Big Bad Boom Resistant Armor Boots",
+      "item.tnt_and_disparity.carminite_cannon_flying_for_player_spawn_egg": "Carminite Cannon Flying For Players Spawn Egg",
+      "item.tnt_and_disparity.bottle_of_disulfide": "Bottle Of Disulfide",
       "block.tnt_and_disparity.glue_fence_gate": "Glue Fence Gate",
       "advancements.go_boom.title": "Go Boom",
-      "block.tnt_and_disparity.bbb": "Big Bad Boom",
+      "item.tnt_and_disparity.carminite_radio_emitter": "Carminite Radio Emitter",
+      "entity.tnt_and_disparity.carminite_cannon_flying": "Carminite Cannon Flying",
       "item.tnt_and_disparity.ekor_puppet": "Ekor Puppet",
       "block.tnt_and_disparity.bounce_block": "Bounce Block",
       "fluid.tnt_and_disparity.glue": "Glue",
+      "advancements.the_final_ending.title": "The Final Ending",
       "item.tnt_and_disparity.dlk_spawn_egg": "DLK Spawn Egg",
       "advancements.dlk_in_the_trash.title": "DLK In The Trash",
       "advancements.sticky.title": "Sticky",
       "subtitles.dlkdies": "DLK Dies",
+      "item.tnt_and_disparity.drill_big_bad_boom": "Drill Big Bad Boom",
       "subtitles.dlkdlks": "DLK DLKs",
       "item.tnt_and_disparity.ekor_sound": "Ekor Sound",
+      "item.tnt_and_disparity.ghost_armor_spawn_egg": "Ghost Armor Spawn Egg",
       "block.tnt_and_disparity.glue_fence": "Glue Fence",
+      "entity.tnt_and_disparity.carminite_cannon": "Carminite Cannon",
       "entity.tnt_and_disparity.dlk_king": "DLK King",
+      "item.tnt_and_disparity.big_bad_boom_resistant_armor_armor_boots": "Big Bad Boom Resistant Armor Boots",
       "subtitles.dlkhurt": "DLK Dying",
       "biome.tnt_and_disparity.dlk_forest": "DLK Forest",
       "item.tnt_and_disparity.teleportation_rod": "Teleportation Rod",
+      "item.tnt_and_disparity.carminite_launcher_cannon": "Carminite Launcher Cannon",
+      "item.minecraft.splash_potion.effect.exploding_potion_enhanced": "Exploding Splash Potion",
       "fluid.glue_water": "Glue",
       "block.tnt_and_disparity.glue": "Glue",
-      "key.tnt_and_disparity.disable_battle_mode": "Disable Battle Mode"
+      "key.tnt_and_disparity.disable_battle_mode": "Disable Battle Mode",
+      "item.minecraft.splash_potion.effect.exploding_potion": "Exploding Splash Potion"
     }
   },
   "foldersRoot": {
@@ -1317,7 +1739,7 @@
   "workspaceSettings": {
     "modid": "tnt_and_disparity",
     "modName": "TNT and Disparity",
-    "version": "0.4.1alpha-build.0701-integrationtest",
+    "version": "0.4.1alpha-build.0703-integrationtest",
     "description": "You landed in a world that is more than you expect.",
     "author": "Team Burnuts, MCreator",
     "websiteURL": "https://mcreator.net",
@@ -1336,7 +1758,7 @@
     ],
     "currentGenerator": "forge-1.17.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
-    "modElementsPackage": "net.burnutsplus.tnt_and_disparity",
+    "modElementsPackage": "ch.teamburnuts.tnt_and_disparity",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202100354000

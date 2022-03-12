@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Go Boom",
-    "achievementDescription": "DLKs explodese upon death.",
+    "achievementDescription": "DLKs explodese upon death",
     "achievementIcon": {
       "value": "CUSTOM:BBB"
     },
@@ -16,7 +16,7 @@
     "rewardRecipes": [],
     "rewardFunction": "No function",
     "rewardXP": 50,
-    "achievementType": "task",
+    "achievementType": "goal",
     "parent": {
       "value": "CUSTOM:GoToDLKLand"
     },
