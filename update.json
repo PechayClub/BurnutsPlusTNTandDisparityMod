@@ -1,13 +1,14 @@
 {
   "homepage": "https://minecraft.curseforge.com/projects/tnt-and-disparity",
   "promos": {
-    "1.17.1-latest": "0.4.1alpha-build.0701-integrationtest",
-    "1.17.1-recommended": "0.4.1alpha-build.0701-integrationtest",
+    "1.17.1-latest": "0.4.1alpha-build.0703-integrationtest",
+    "1.17.1-recommended": "0.4.1alpha-build.0703-integrationtest",
     "1.16.5-latest": "0.4.1alpha-build.0641-preintegrationtest",
     "1.16.5-recommended": "0.4.1alpha-build.0641-preintegrationtest"
   },
   "1.17.1": {
-    "0.4.1alpha-build.0701-integrationtest": "Changelog: https://www.curseforge.com/minecraft/mc-mods/tnt-and-disparity/files/3654905"
+    "0.4.1alpha-build.0703-integrationtest": "Changelog: https://www.curseforge.com/minecraft/mc-mods/tntanddisparity/files/3686371",
+    "0.4.1alpha-build.0701-integrationtest": "Changelog: https://www.curseforge.com/minecraft/mc-mods/tntanddisparity/files/3654905"
   },
   "1.16.5": {
     "0.4.1alpha-build.0641-preintegrationtest": "Added sound to Ekor bullets and removed from Ekor puppet to prevent high pitched sounds, and fixed typo in TNT and Disparity painting.",
