@@ -16,6 +16,6 @@ body:
 - type: textarea
   attributes:
     label: Benefit
-    description: Is your/our benefit for this feature request.
+    description: Is your/our benefit for this feature request?
   validations:
     required: true
