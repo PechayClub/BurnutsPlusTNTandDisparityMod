@@ -25,5 +25,5 @@ body:
     options:
     - label: I have searched the issue tracker and did not find an issue suggesting my idea.
       required: true
-    - label: I read the [Code of Conduct](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/CODE_OF_CONDUCT.md) and pledge to follow it.
+    - label: I read the [Code of Conduct](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/CODE_OF_CONDUCT.md) and pledged to follow it.
       required: true 
