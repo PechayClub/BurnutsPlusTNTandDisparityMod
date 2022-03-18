@@ -62,7 +62,9 @@ body:
     required: false
 - type: checkboxes
   attributes:
-    label: This issue is unique and has not been reported already.
+    label: Check the following if you have followed.
     options:
     - label: I have searched the issue tracker and did not find an issue describing my bug.
-      required: true      
+      required: true
+    - label: I read the [Code of Conduct](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/CODE_OF_CONDUCT.md) and pledge to follow it.
+      required: true 
