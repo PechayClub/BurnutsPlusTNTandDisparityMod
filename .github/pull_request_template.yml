@@ -19,3 +19,17 @@ body:
     description: Is your/our benefit for this feature you want to add?
   validations:
     required: true
+- type: checkboxes
+  attributes:
+    label: Check the following if you have followed.
+    options:
+    - label: I have searched the issue tracker and did not find an issue suggesting my idea.
+      required: true
+    - label: I read the [Code of Conduct](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/CODE_OF_CONDUCT.md) and pledged to follow it.
+      required: true
+    - label: I read the [Contributing Guidelines](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/CONTRIBUTING.md) and pledged to follow it.
+      required: true
+    - label: I used [MCreator](https://mcreator.net/download) to add this feature.
+      required: true
+    - label: Me and my commiters signed the [Burnuts CLA](https://cla-assistant.io/Team-Burnuts/BurnutsPlusTNTandDisparityMod).
+      required: true
