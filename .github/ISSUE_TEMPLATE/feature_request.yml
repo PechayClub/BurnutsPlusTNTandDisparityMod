@@ -19,3 +19,11 @@ body:
     description: Is your/our benefit for this feature request?
   validations:
     required: true
+- type: checkboxes
+  attributes:
+    label: Check the following if you have followed.
+    options:
+    - label: I have searched the issue tracker and did not find an issue suggesting my idea.
+      required: true
+    - label: I read the [Code of Conduct](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/CODE_OF_CONDUCT.md) and pledge to follow it.
+      required: true 
