@@ -6,9 +6,14 @@ Use this section to tell people about which versions of your project are current
 
 | Version | Supported          |
 | ------- | ------------------ |
+| 1.0     |                    |
+| 0.9     |                    |
+| 0.8     |                    |
+| 0.7     |                    |
+| 0.6     |                    |
 | 0.5     |                    |
-| 0.4     | :white_check_mark: |
-| 0.3     | :white_check_mark: |
+| 0.4     | :heavy_check_mark: |
+| 0.3     | :heavy_check_mark: |
 
 ## Reporting a Vulnerability
 
@@ -22,7 +27,7 @@ These are the current Minecraft Versions supported by Forge Development Team and
 
 | Version | Supported          | Corsponding Mod Versions                            | MCreator Status | Port Status                                                        |
 | ------- | ------------------ | --------------------------------------------------- | --------------- | ------------------------------------------------------------------ |
-| 1.18    | :o: | 0.4.1 Integration Test                              | Stable  | Unavailable for Porting due to Twilight Forest mod not being released even for testing. |
+| 1.18    | :o:                | 0.4.1 Integration Test                              | Stable  | Unavailable for Porting due to Twilight Forest mod not being released even for testing. |
 | 1.17    | :heavy_check_mark:                | 0.4.1 Integration Test                              | Stable          | Ported.                                                            |
 | 1.16    | :heavy_check_mark: | 0.3 to 0.4.1 Pre-Integration                        | LTS (36.2.0)    | Ported.                                                            |
 | 1.15    | :x:                |                                                     | Deprecated      | Unavailable for Porting.                                           |
