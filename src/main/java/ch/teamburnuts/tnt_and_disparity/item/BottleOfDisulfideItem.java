@@ -26,7 +26,7 @@ import java.util.List;
 import ch.teamburnuts.tnt_and_disparity.procedures.DisulfideExplodeProcedure;
 import ch.teamburnuts.tnt_and_disparity.init.TntAndDisparityModItems;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BottleOfDisulfideItem extends Item {
 	public BottleOfDisulfideItem() {
 		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(64).rarity(Rarity.UNCOMMON));

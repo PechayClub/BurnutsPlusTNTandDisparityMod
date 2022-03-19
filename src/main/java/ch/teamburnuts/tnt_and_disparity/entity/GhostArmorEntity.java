@@ -130,11 +130,16 @@ public class GhostArmorEntity extends Monster {
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 2, true));
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 2, true) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
+			}
+		});
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(8, new MoveBackToVillageGoal(this, 0.6, false));
 		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(10, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
+		this.targetSelector.addGoal(10, new HurtByTargetGoal(this).setAlertOthers());
 	}
 
 	@Override

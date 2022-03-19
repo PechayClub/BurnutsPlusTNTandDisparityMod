@@ -44,8 +44,8 @@ public class BBBBlock extends Block
 
 			EntityBlock {
 	public BBBBlock() {
-		super(BlockBehaviour.Properties.of(Material.EXPLOSIVE).sound(SoundType.STONE).strength(80f, 11f).requiresCorrectToolForDrops().randomTicks()
-				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true));
+		super(BlockBehaviour.Properties.of(Material.EXPLOSIVE, MaterialColor.FIRE).sound(SoundType.STONE).strength(80f, 11f)
+				.requiresCorrectToolForDrops().randomTicks().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true));
 		setRegistryName("big_bad_boom");
 	}
 
@@ -63,11 +63,6 @@ public class BBBBlock extends Block
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 0;
-	}
-
-	@Override
-	public MaterialColor defaultMaterialColor() {
-		return MaterialColor.FIRE;
 	}
 
 	@Override

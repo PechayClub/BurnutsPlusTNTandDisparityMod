@@ -16,7 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Registry;
+import net.minecraft.core.Registry;
 
 import java.util.Set;
 
@@ -38,14 +38,14 @@ public class CarminiteBaseFeature extends Feature<NoneFeatureConfiguration> {
 		if (dimensionType == Level.OVERWORLD)
 			dimensionCriteria = true;
 		if (dimensionType == ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("twilightforest:twilight_forest")))
-			dimensionCriteria = true;	
+			dimensionCriteria = true;
 		if (!dimensionCriteria)
 			return false;
 		if (template == null)
 			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("tnt_and_disparity", "carminite_base"));
 		if (template == null)
 			return false;
-		if ((context.random().nextInt(1000000) + 1) <= 15000) {
+		if ((context.random().nextInt(1000000) + 1) <= 2500) {
 			boolean anyPlaced = false;
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {

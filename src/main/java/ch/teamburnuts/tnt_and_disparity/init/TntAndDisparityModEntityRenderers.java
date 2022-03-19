@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import ch.teamburnuts.tnt_and_disparity.client.renderer.StickmanRenderer;
+import ch.teamburnuts.tnt_and_disparity.client.renderer.LiveHomingRocketRenderer;
 import ch.teamburnuts.tnt_and_disparity.client.renderer.GhostArmorRenderer;
 import ch.teamburnuts.tnt_and_disparity.client.renderer.EkorRenderer;
 import ch.teamburnuts.tnt_and_disparity.client.renderer.DLKRenderer;
@@ -37,5 +38,6 @@ public class TntAndDisparityModEntityRenderers {
 		event.registerEntityRenderer(TntAndDisparityModEntities.CARMINITE_CANNON, CarminiteCannonRenderer::new);
 		event.registerEntityRenderer(TntAndDisparityModEntities.CARMINITE_CANNON_FLYING, CarminiteCannonFlyingRenderer::new);
 		event.registerEntityRenderer(TntAndDisparityModEntities.CARMINITE_CANNON_FLYING_FOR_PLAYER, CarminiteCannonFlyingForPlayerRenderer::new);
+		event.registerEntityRenderer(TntAndDisparityModEntities.LIVE_HOMING_ROCKET, LiveHomingRocketRenderer::new);
 	}
 }

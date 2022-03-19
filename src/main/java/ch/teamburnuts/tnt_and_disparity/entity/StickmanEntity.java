@@ -33,6 +33,7 @@ import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
@@ -69,8 +70,13 @@ public class StickmanEntity extends PathfinderMob {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 3, true));
-		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers(this.getClass()));
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 3, true) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
+			}
+		});
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 2));
 		this.goalSelector.addGoal(4, new TemptGoal(this, 3, Ingredient.of(TntAndDisparityModItems.STICKMAN_SPAWN), false));
 		this.goalSelector.addGoal(5, new AvoidEntityGoal<>(this, StickmanEntity.class, (float) 0.1, 2, 3));

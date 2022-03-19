@@ -36,7 +36,7 @@ public class VersionOverlay {
 			double y = _y;
 			double z = _z;
 			if (true) {
-				Minecraft.getInstance().font.draw(event.getMatrixStack(), "Version: Alpha 0.4.1 Build 701 Integration Test", posX + -210, posY + -117,
+				Minecraft.getInstance().font.draw(event.getMatrixStack(), "Version: Alpha 0.4.1 Build 709 Integration Test", posX + -210, posY + -117,
 						-1);
 				Minecraft.getInstance().font.draw(event.getMatrixStack(), "This is just a alpha, not the finished product.", posX + -210, posY + -107,
 						-1);

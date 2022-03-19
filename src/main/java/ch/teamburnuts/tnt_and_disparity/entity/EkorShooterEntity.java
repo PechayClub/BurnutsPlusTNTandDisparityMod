@@ -7,6 +7,7 @@ import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -62,28 +63,34 @@ public class EkorShooterEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
+	protected void doPostHurtEffects(LivingEntity entity) {
+		super.doPostHurtEffects(entity);
+		entity.setArrowCount(entity.getArrowCount() - 1);
+	}
+
+	@Override
 	public void playerTouch(Player entity) {
 		super.playerTouch(entity);
 		Entity sourceentity = this.getOwner();
+		Entity imediatesourceentity = this;
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
 		Level world = this.level;
-		Entity imediatesourceentity = this;
 
 		EkorShooterBulletHitsPlayerProcedure.execute(entity);
 	}
 
 	@Override
-	protected void doPostHurtEffects(LivingEntity entity) {
-		super.doPostHurtEffects(entity);
-		entity.setArrowCount(entity.getArrowCount() - 1);
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		Entity entity = entityHitResult.getEntity();
 		Entity sourceentity = this.getOwner();
+		Entity imediatesourceentity = this;
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
 		Level world = this.level;
-		Entity imediatesourceentity = this;
 
 		EkorShooterBulletHitsLivingEntityProcedure.execute(entity);
 	}
@@ -99,14 +106,13 @@ public class EkorShooterEntity extends AbstractArrow implements ItemSupplier {
 		Entity imediatesourceentity = this;
 
 		EkorShooterWhileBulletFlyingTickProcedure.execute(world, x, y, z);
-		if (this.inGround) {
+		if (this.inGround)
 			this.discard();
-		}
 	}
 
 	public static EkorShooterEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		EkorShooterEntity entityarrow = new EkorShooterEntity(TntAndDisparityModEntities.EKOR_PUPPET, entity, world);
-		entityarrow.shoot(entity.getLookAngle().x, entity.getLookAngle().y, entity.getLookAngle().z, power * 2, 0);
+		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
 		entityarrow.setBaseDamage(damage);
