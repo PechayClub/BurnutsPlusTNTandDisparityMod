@@ -37,7 +37,7 @@ public class DLKLandPortalBlock extends NetherPortalBlock {
 	}
 
 	@Override
-	public void tick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
 	}
 
 	@Override

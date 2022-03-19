@@ -7,6 +7,8 @@ import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -60,27 +62,46 @@ public class CarminiteLauncherCannonEntity extends AbstractArrow implements Item
 	}
 
 	@Override
+	protected void doPostHurtEffects(LivingEntity entity) {
+		super.doPostHurtEffects(entity);
+		entity.setArrowCount(entity.getArrowCount() - 1);
+	}
+
+	@Override
 	public void playerTouch(Player entity) {
 		super.playerTouch(entity);
 		Entity sourceentity = this.getOwner();
+		Entity imediatesourceentity = this;
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
 		Level world = this.level;
-		Entity imediatesourceentity = this;
 
 		CarminiteLauncherCannonProjectileExplodeProcedure.execute(world, x, y, z);
 	}
 
 	@Override
-	protected void doPostHurtEffects(LivingEntity entity) {
-		super.doPostHurtEffects(entity);
-		entity.setArrowCount(entity.getArrowCount() - 1);
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		Entity entity = entityHitResult.getEntity();
 		Entity sourceentity = this.getOwner();
+		Entity imediatesourceentity = this;
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
 		Level world = this.level;
+
+		CarminiteLauncherCannonProjectileExplodeProcedure.execute(world, x, y, z);
+	}
+
+	@Override
+	public void onHitBlock(BlockHitResult blockHitResult) {
+		super.onHitBlock(blockHitResult);
+		double x = blockHitResult.getBlockPos().getX();
+		double y = blockHitResult.getBlockPos().getY();
+		double z = blockHitResult.getBlockPos().getZ();
+		Level world = this.level;
+		Entity entity = this.getOwner();
 		Entity imediatesourceentity = this;
 
 		CarminiteLauncherCannonProjectileExplodeProcedure.execute(world, x, y, z);
@@ -97,17 +118,14 @@ public class CarminiteLauncherCannonEntity extends AbstractArrow implements Item
 		Entity imediatesourceentity = this;
 
 		CarminiteLauncherCannonWhileProjectileFlyingTickProcedure.execute(world, x, y, z, imediatesourceentity);
-		if (this.inGround) {
-
-			CarminiteLauncherCannonProjectileExplodeProcedure.execute(world, x, y, z);
+		if (this.inGround)
 			this.discard();
-		}
 	}
 
 	public static CarminiteLauncherCannonEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		CarminiteLauncherCannonEntity entityarrow = new CarminiteLauncherCannonEntity(TntAndDisparityModEntities.CARMINITE_LAUNCHER_CANNON, entity,
 				world);
-		entityarrow.shoot(entity.getLookAngle().x, entity.getLookAngle().y, entity.getLookAngle().z, power * 2, 0);
+		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
 		entityarrow.setBaseDamage(damage);

@@ -90,6 +90,9 @@ public class TntAndDisparityModItems {
 	public static final Item CARMINITE_RADIO_EMITTER = register(new CarminiteRadioEmitterItem());
 	public static final Item EMPTY = register(new EmptyItem());
 	public static final Item BOTTLE_OF_DISULFIDE = register(new BottleOfDisulfideItem());
+	public static final Item LIVE_HOMING_ROCKET = register(
+			new SpawnEggItem(TntAndDisparityModEntities.LIVE_HOMING_ROCKET, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC))
+					.setRegistryName("live_homing_rocket_spawn_egg"));
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

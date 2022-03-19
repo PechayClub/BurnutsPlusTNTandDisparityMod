@@ -28,8 +28,8 @@ import ch.teamburnuts.tnt_and_disparity.init.TntAndDisparityModBlocks;
 
 public class GlowBlock extends Block {
 	public GlowBlock() {
-		super(BlockBehaviour.Properties.of(Material.BARRIER).sound(SoundType.STONE).instabreak().lightLevel(s -> 15).noCollission().randomTicks()
-				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true));
+		super(BlockBehaviour.Properties.of(Material.BARRIER, MaterialColor.NONE).sound(SoundType.STONE).instabreak().lightLevel(s -> 15)
+				.noCollission().randomTicks().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true));
 		setRegistryName("glow");
 	}
 
@@ -46,11 +46,6 @@ public class GlowBlock extends Block {
 	@Override
 	public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
 		return context.getItemInHand().getItem() != this.asItem();
-	}
-
-	@Override
-	public MaterialColor defaultMaterialColor() {
-		return MaterialColor.NONE;
 	}
 
 	@Override

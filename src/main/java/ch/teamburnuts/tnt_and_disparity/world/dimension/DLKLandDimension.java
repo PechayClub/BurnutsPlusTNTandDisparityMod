@@ -67,7 +67,7 @@ public class DLKLandDimension {
 	}
 
 	@SubscribeEvent
-	public void onPlayerChangedDimensionEvent(PlayerEvent.PlayerChangedDimensionEvent event) {
+	public static void onPlayerChangedDimensionEvent(PlayerEvent.PlayerChangedDimensionEvent event) {
 		Entity entity = event.getPlayer();
 		Level world = entity.level;
 		double x = entity.getX();
