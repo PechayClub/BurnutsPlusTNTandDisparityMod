@@ -33,7 +33,7 @@ Adventure with Burnuts.
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
 
-Due to Twilight Forest 1.18 not being released yet. They are not fixing the mod for some reason. No TNT and Disparity port to 1.18 soon.
+Due to Twilight Forest mod not going to be ported to 1.18, we are stuck in 1.17 for the meantime.
 
 ## Requires Integration Test
 
