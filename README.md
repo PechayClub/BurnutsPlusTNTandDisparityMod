@@ -63,11 +63,11 @@ Due to Twilight Forest 1.18 not being released yet. They are not fixing the mod 
 
 - 0.4 Integration Test - Working in Progress. (Adding Twilight Forest with other mods.) (Were testing some of these features.)
 
-- 0.5 Music Integration Test - To Do. (Kevin MacLeod's music is going to be added but we need to find which we will use.)
-
-### Public Beta (Adding things like progression, more bosses and mini-bosses, more NPC's, etc.)
+- 0.5 Music Integration Test - To Do. (Kevin MacLeod's music is going to be added but we need to find which we will use.) (This might be fast like a Junopane. If we add a Junopane vehicle.)
 
 - 0.6 Final Integration Test - To Do. (Adding the final touches.)
+
+### Public Beta (Adding things like progression, more bosses and mini-bosses, more NPC's, etc.)
 
 - 0.7 - To Do.
 
