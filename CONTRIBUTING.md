@@ -5,7 +5,7 @@
 - Make pull request are for the versions only supported in [SECURITY.md](https://github.com/Team-Burnuts/BurnutsPlusTNTandDisparityMod/blob/master/SECURITY.md.).
 - Our code should be edit using MCreator not by using GitHub, a notepad or other progarms to edit the file because your changes will get overwritten without locking it.
 - Do not make a pull request that modifies anything it the .github folder and only collaborators can modify this folder.
-- Do not make a pull request that modifies the license, conributing guidelines, readme.md, code of conduct, or security policy and only the organization owners can modify these.
+- Do not make a pull request that modifies the license, conributing guidelines, readme.md, code of conduct, or security policy and only the authorized organization members can modify these.
 
 If your pull request won't follow these guidelines will be closed without warning and labeled declined.
 
@@ -23,6 +23,6 @@ Your pull request are held for review depending if it's a feature request or a f
 
 - Change or violate the current license used.
 
-- Modify or use brand files or trademark without permission especially making money out of it.
+- Modify or make money with the brand files or trademark without permission.
 
 - Modify or make money with any of the assets without permission.
