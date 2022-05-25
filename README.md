@@ -31,7 +31,7 @@ Adventure with Burnuts.
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
 
-We will have to restart from scratch this time by using Mixin.
+We will have to restart from scratch this time. It will be a fork of Twilight Foest Mod.
 
 ## Requires Integration Test
 
