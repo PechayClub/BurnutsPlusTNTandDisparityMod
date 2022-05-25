@@ -27,11 +27,11 @@ Adventure with Burnuts.
 
 - Real-Time Physics: None.
 
-- ~~Sponsors: Depending.~~
-
 ## Notes
 
 The music like [Kevin MacLeod - Go Cart](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300006) Requires the mod to be in Integration Test stage and that music wll be for the battle music of Ysa the Ur-Ghast. 
+
+We will have to restart from scratch this time by using Mixin.
 
 ## Requires Integration Test
 
@@ -98,7 +98,8 @@ Build the mod with the MCreator or use command and type `gradlew build` to build
 Do not use IntelliJ IDEA to build Minecraft Mods!
 
 ## TNT and Disparity Non-Code Assets
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
+[![Creative Commons License](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/4.0/)  
+This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 If you wan't to modify our non-code assets that we created then please ask for permission if you want to modify it for your mods or add-ons.
 
