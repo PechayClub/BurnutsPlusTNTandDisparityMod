@@ -87,15 +87,11 @@ We will have to restart from scratch this time by using Mixin.
 
 ### Prequisites
 
-MCreator Latest EAP or Build
-
-Twilight Forest Dependancy Plugin: https://mcreator.net/plugin/76688/twilight-forest-dependancies
+Any IDE that supports java.
 
 ### How
 
-Build the mod with the MCreator or use command and type `gradlew build` to build the mod.
-
-Do not use IntelliJ IDEA to build Minecraft Mods!
+Use command and type `gradlew build` to build the mod.
 
 ## TNT and Disparity Non-Code Assets
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/4.0/)  
